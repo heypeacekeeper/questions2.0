@@ -1,6 +1,6 @@
 # For Kids — Animal Edition
 
-55 questions. The first seven use the supplied examples with minor wording edits. Saved separately from the school batch and assigned to the existing For Kids category.
+55 questions, including 13 user-supplied questions with minor wording edits. Saved separately from the school batch and assigned to the existing For Kids category.
 
 1. Would you rather **fly above the mountains on a giant eagle** or **swim beneath the ice with a friendly whale**?
 
@@ -34,7 +34,7 @@
 
 16. Would you rather **have duck feet for paddling** or **have gecko feet for climbing**?
 
-17. Would you rather **have long rabbit ears** or **have twitchy cat whiskers**?
+17. Would you rather **be able to breathe underwater like a fish** or **be able to fly through the sky like a falcon**?
 
 18. Would you rather **have eight arms like an octopus** or **have colorful wings like a butterfly**?
 
@@ -54,7 +54,7 @@
 
 26. Would you rather **help researchers count penguins on a snowy island** or **help researchers count turtle nests on a sandy beach**?
 
-27. Would you rather **take amazing photographs of animals** or **draw amazing pictures of animals**?
+27. Would you rather **paint a picture with an elephant** or **make music with a group of birds**?
 
 28. Would you rather **read stories to dogs at a shelter** or **play with cats at a shelter**?
 
@@ -72,7 +72,7 @@
 
 35. Would you rather **have a puppy that brings you your slippers** or **have a parrot that reminds you to pack your lunch**?
 
-36. Would you rather **let your pet choose its own name** or **let your pet choose a nickname for you**?
+36. Would you rather **learn teamwork from a wolf pack** or **learn kindness from a herd of elephants**?
 
 37. Would you rather **have a dog that can find anything you lose** or **have a cat that can show you hidden shortcuts**?
 
@@ -80,7 +80,7 @@
 
 39. Would you rather **spend a rainy afternoon teaching a dog a new trick** or **spend a rainy afternoon setting up a hamster maze**?
 
-40. Would you rather **wear a backpack shaped like a turtle shell** or **wear a hat shaped like a lion mane**?
+40. Would you rather **shrink to the size of a ladybug** or **grow as tall as a giraffe**?
 
 41. Would you rather **sleep in a cozy treehouse beside birds' nests** or **sleep in an underwater room beside a coral reef**?
 
@@ -90,7 +90,7 @@
 
 44. Would you rather **follow a beaver on a tour of its dam** or **follow an ant on a tour of its tunnels**?
 
-45. Would you rather **watch fireflies light up a summer evening** or **watch butterflies fill a sunny garden**?
+45. Would you rather **watch fireflies light up a forest** or **watch glowing fish light up the ocean**?
 
 46. Would you rather **learn a silly dance from a peacock** or **learn a silly walk from a penguin**?
 
@@ -108,6 +108,6 @@
 
 53. Would you rather **help a lost duckling find its pond with a park ranger** or **help a lost puppy find its home with a shelter worker**?
 
-54. Would you rather **discover a new animal deep in the ocean** or **discover a new animal high in the rainforest trees**?
+54. Would you rather **discover a new kind of butterfly** or **discover a new kind of frog**?
 
 55. Would you rather **invent a game that every dog loves** or **invent a game that every cat loves**?
