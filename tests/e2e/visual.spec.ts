@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 
 async function prepare(page: import('@playwright/test').Page): Promise<void> {
   await page.addInitScript(() => {
+    Math.random = () => 0.25;
     const consent = {
       decided: true,
       analytics: false,
@@ -15,6 +16,7 @@ async function prepare(page: import('@playwright/test').Page): Promise<void> {
 }
 
 async function waitForLocalFonts(page: import('@playwright/test').Page): Promise<void> {
+  await expect(page.locator('#game-stage')).toHaveAttribute('data-entry-ready', '1');
   await page.evaluate(async () => {
     await Promise.all([
       document.fonts.load('800 64px "Bricolage Grotesque"'),

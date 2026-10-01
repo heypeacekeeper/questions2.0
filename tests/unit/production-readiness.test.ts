@@ -123,6 +123,38 @@ describe('Favorites capacity', () => {
 });
 
 describe('network and session recovery', () => {
+  it('starts at a random pack and visits every pack once without repeating questions', async () => {
+    const fetched: string[] = [];
+    const engine = new GameEngine(
+      new SessionSeenStore('random-start', null),
+      async (url) => {
+        fetched.push(url);
+        return [0, 1].map((i) => ({ id: `${url}-${i}`, a: 'A', b: 'B', s: 'abc2345' }));
+      },
+      1,
+      () => 0.6,
+    );
+    const entry = {
+      slug: 'mixed',
+      name: 'Mixed',
+      icon: '',
+      requiresAgeGate: false,
+      total: 6,
+      packs: ['/first', '/second', '/third'],
+    };
+    await engine.useSet(entry);
+    expect(fetched).toEqual(['/second']);
+    const shown: string[] = [];
+    for (let i = 0; i < 6; i++) {
+      const question = await engine.next(shown.at(-1) ?? null);
+      expect(question).not.toBeNull();
+      shown.push(question!.id);
+      await engine.ensureSupply();
+    }
+    expect(new Set(shown).size).toBe(6);
+    expect(fetched).toEqual(['/second', '/third', '/first']);
+    expect(entry.packs).toEqual(['/first', '/second', '/third']);
+  });
   it('aborts a stalled download within its time budget', async () => {
     vi.useFakeTimers();
     vi.stubGlobal(

@@ -105,6 +105,12 @@ export function initGame(): void {
   let activeSet = config.set;
   let activeLabel: string | undefined;
   let initialSetReady = config.mode === 'single' || config.mode === 'favorites';
+  let openingEngaged = false;
+  let openingLoad: Promise<void> | null = null;
+  function engageOpeningQuestion(): void {
+    openingEngaged = true;
+    if (current) engine.markSeen(current.id);
+  }
   const favoritesController = createGameFavoritesController({
     button: favoriteButton,
     icon: favoriteIcon,
@@ -115,6 +121,7 @@ export function initGame(): void {
 
   function toggleFavorite(): void {
     if (!current) return;
+    engageOpeningQuestion();
 
     const removedQuestionId = current.id;
     const result = favoritesController.toggle(current);
@@ -145,7 +152,7 @@ export function initGame(): void {
 
   if (current) {
     engine.primeWith(current);
-    engine.markSeen(current.id);
+    if (initialSetReady) engine.markSeen(current.id);
   }
   if (shareButton && current) shareButton.hidden = false;
   favoritesController.update(current);
@@ -230,6 +237,7 @@ export function initGame(): void {
 
   function choose(choice: 'A' | 'B'): void {
     if (!current) return;
+    engageOpeningQuestion();
     resultsController.choose(current, choice);
   }
 
@@ -243,6 +251,7 @@ export function initGame(): void {
 
   async function nextQuestion(animate = true): Promise<void> {
     if (busy || config.mode === 'single') return;
+    engageOpeningQuestion();
     if (
       config.mode === 'favorites' &&
       engine.unseenCount === 0 &&
@@ -267,6 +276,7 @@ export function initGame(): void {
     if (nextLabel) nextLabel.textContent = 'Loading…';
     announce('Loading next question.');
     try {
+      if (openingLoad) await openingLoad;
       if (retrying) {
         manifest = await loadManifest(config.manifest, { cache: 'reload' });
         if (!manifest) {
@@ -488,6 +498,7 @@ export function initGame(): void {
   }
   async function choosePack(slug: string, name: string, gated: boolean): Promise<void> {
     if (busy) return;
+    engageOpeningQuestion();
     if (gated && local?.getItem(config.keys.adult) !== '1') {
       pendingGatedPack = { slug, name };
       if (packPicker) packPicker.hidden = true;
@@ -502,6 +513,7 @@ export function initGame(): void {
     packGrid?.setAttribute('aria-busy', 'true');
     announce(`Loading ${name} questions.`);
     try {
+      if (openingLoad) await openingLoad;
       const requestId = await activateSet(slug, name);
       if (requestId === null) return;
       closeDialog();
@@ -520,6 +532,7 @@ export function initGame(): void {
   }
   async function share(): Promise<void> {
     if (!current) return;
+    engageOpeningQuestion();
     const url = `${location.origin}${config.sharePrefix}${current.s}/`;
     const title = `Would you rather ${current.a} or ${current.b}?`;
     try {
@@ -702,7 +715,21 @@ export function initGame(): void {
   if (config.mode === 'favorites') void activateFavoritesGame();
 
   if (config.mode !== 'single' && config.mode !== 'favorites') {
-    gameStage.dataset.entryReady = '1';
+    gameStage.dataset.entryReady = '0';
+    openingLoad = (async () => {
+      try {
+        const requestId = await activateSet(activeSet, activeLabel);
+        if (requestId === null) return;
+        initialSetReady = engine.totalInSet > 0;
+        if (openingEngaged || engine.supplyLoadFailed) return;
+        const question = await engine.next(null);
+        if (question && !openingEngaged) renderQuestion(question);
+      } catch {
+        // Keep the prerendered question usable; Next retains its retry flow.
+      } finally {
+        gameStage.dataset.entryReady = '1';
+      }
+    })();
   }
 
   if (config.mode === 'mixed') {

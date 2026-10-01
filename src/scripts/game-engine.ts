@@ -167,6 +167,7 @@ export const defaultFetcher: PackFetcher = async (url, signal) => {
 export class GameEngine {
   private pool: GameQuestion[] = [];
   private loadedPacks = new Set<string>();
+  private packLoadOrder: string[] = [];
   private entry: PackSetManifestEntry | null = null;
   private loading: Promise<void> | null = null;
   private loadFailed = false;
@@ -198,6 +199,9 @@ export class GameEngine {
     this.loading = null;
     this.loadFailed = false;
     this.entry = entry;
+    const packs = entry?.packs ?? [];
+    const start = packs.length > 1 ? Math.floor(this.rng() * packs.length) : 0;
+    this.packLoadOrder = [...packs.slice(start), ...packs.slice(0, start)];
     this.pool = [];
     this.loadedPacks.clear();
     if (entry) await this.ensureSupply();
@@ -211,6 +215,7 @@ export class GameEngine {
     this.loading = null;
     this.loadFailed = false;
     this.entry = null;
+    this.packLoadOrder = [];
     this.pool = [...questions];
     this.loadedPacks.clear();
   }
@@ -229,7 +234,7 @@ export class GameEngine {
   }
 
   private get remainingPacks(): string[] {
-    return (this.entry?.packs ?? []).filter((u) => !this.loadedPacks.has(u));
+    return this.packLoadOrder.filter((u) => !this.loadedPacks.has(u));
   }
 
   /** Load more packs until we have enough unseen questions or run out of packs. */

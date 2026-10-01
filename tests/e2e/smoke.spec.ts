@@ -9,6 +9,67 @@ interface CatalogQuestion {
   g: boolean;
 }
 
+test('random openings use one selected pack without downloading the collection', async ({
+  browser,
+  baseURL,
+  request,
+}) => {
+  const response = await request.get('/game-data/manifest.json');
+  const manifest = await response.json();
+  const packs: string[] = manifest.sets.mixed.packs;
+  expect(packs.length).toBeGreaterThan(1);
+  const openings: string[] = [];
+  for (const random of [0.001, 0.999]) {
+    const context = await browser.newContext();
+    await context.addInitScript((value) => {
+      Math.random = () => value;
+    }, random);
+    const page = await context.newPage();
+    const downloads: string[] = [];
+    page.on('request', (request) => {
+      const path = new URL(request.url()).pathname;
+      if (path.includes('/game-data/') && path.includes('/pack-')) downloads.push(path);
+    });
+    await page.goto(`${baseURL}/would-you-rather-questions-game/`);
+    await expect(page.locator('#game-stage')).toHaveAttribute('data-entry-ready', '1');
+    const expectedPack = packs[Math.floor(random * packs.length)]!;
+    expect(downloads).toEqual([expectedPack]);
+    const pack = await (await request.get(expectedPack)).json();
+    const id = await page.locator('#game-stage').getAttribute('data-question-id');
+    expect(pack.q.some((q: { id: string }) => q.id === id)).toBe(true);
+    openings.push(id!);
+    await context.close();
+  }
+  expect(openings[0]).not.toBe(openings[1]);
+});
+
+test('answering the visible fallback prevents a late opening replacement', async ({ page }) => {
+  let release!: () => void;
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  let downloads = 0;
+  await page.route('**/game-data/**/pack-*.json', async (route) => {
+    downloads++;
+    await gate;
+    await route.continue();
+  });
+  try {
+    await page.goto('/would-you-rather-questions-game/');
+    await expect.poll(() => downloads).toBe(1);
+    const stage = page.locator('#game-stage');
+    const fallbackId = await stage.getAttribute('data-question-id');
+    await page.locator('#choice-a').click();
+    await expect(stage).toHaveClass(/answered/);
+    release();
+    await expect(stage).toHaveAttribute('data-entry-ready', '1');
+    await expect(stage).toHaveAttribute('data-question-id', fallbackId!);
+    await expect(stage).toHaveClass(/answered/);
+  } finally {
+    release();
+  }
+});
+
 test('legacy game URL redirects permanently to the canonical game', async ({ request, page }) => {
   for (const path of ['/play', '/play/']) {
     const response = await request.get(path, { maxRedirects: 0 });
@@ -100,18 +161,18 @@ test('home game shows stable local display results and advances', async ({ page 
 
   await page.goto('/');
 
-  const serverRenderedQuestionId = await page
-    .locator('#game-stage')
-    .getAttribute('data-question-id');
+  await expect(page.locator('#game-stage')).toHaveAttribute('data-entry-ready', '1');
+  const openingQuestionId = await page.locator('#game-stage').getAttribute('data-question-id');
 
-  expect(serverRenderedQuestionId).toBeTruthy();
+  expect(openingQuestionId).toBeTruthy();
 
   await page.waitForTimeout(500);
 
-  expect(initialGameDataRequests).toEqual([]);
+  expect(initialGameDataRequests.filter((url) => url.endsWith('/manifest.json'))).toHaveLength(1);
+  expect(initialGameDataRequests.filter((url) => url.includes('/pack-'))).toHaveLength(1);
   await expect(page.locator('#game-stage')).toHaveAttribute(
     'data-question-id',
-    serverRenderedQuestionId ?? '',
+    openingQuestionId ?? '',
   );
   await expect(page.locator('#choice-a')).toBeEnabled();
   await expect(page.locator('#choice-b')).toBeEnabled();
@@ -398,7 +459,7 @@ test('support pages and 404 render without blank states', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Page not found');
 });
 
-test('home question remains stable after reload and browser history restoration', async ({
+test('home opening varies on reload and remains usable after browser history restoration', async ({
   page,
 }) => {
   await page.goto('/');
@@ -411,20 +472,20 @@ test('home question remains stable after reload and browser history restoration'
 
   await page.reload();
   await expect(stage).toHaveAttribute('data-entry-ready', '1');
-  await expect(stage).toHaveAttribute('data-question-id', firstQuestionId ?? '');
+  await expect(stage).not.toHaveAttribute('data-question-id', firstQuestionId ?? '');
 
   const reloadedQuestionId = await stage.getAttribute('data-question-id');
-  expect(reloadedQuestionId).toBe(firstQuestionId);
+  expect(reloadedQuestionId).not.toBe(firstQuestionId);
 
   await page.goto('/categories/');
   await page.goBack();
 
   await expect(page).toHaveURL(/\/$/);
   await expect(stage).toHaveAttribute('data-entry-ready', '1');
-  await expect(stage).toHaveAttribute('data-question-id', reloadedQuestionId ?? '');
 
   const restoredQuestionId = await stage.getAttribute('data-question-id');
-  expect(restoredQuestionId).toBe(reloadedQuestionId);
+  expect(restoredQuestionId).toBeTruthy();
+  await expect(page.locator('#choice-a')).toBeEnabled();
 });
 
 test('game question can be saved and removed using ID-only storage', async ({ page }) => {

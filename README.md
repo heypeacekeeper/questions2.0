@@ -88,3 +88,5 @@ Favorites save up to 100 questions locally; an extra save is refused rather than
 ## Game URL
 
 The public game lives at `/would-you-rather-questions-game/`. The legacy `/play` and `/play/` addresses redirect permanently to it. Internal links, canonical metadata and sitemap entries use the new address.
+
+Mixed and category games choose a random starting pack, then a random unseen opening question. The first pack downloads on entry instead of waiting for Next. The prerendered question remains visible and usable during loading; answering, saving or sharing it prevents a late replacement. Further packs load as the available unseen questions run low, proceeding through the remaining packs without duplicate downloads. A fresh session loads one pack initially; returning sessions may need more if that pack has already been played. Single-question share pages keep their linked question.
