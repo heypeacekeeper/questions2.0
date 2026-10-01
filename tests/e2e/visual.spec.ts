@@ -46,5 +46,6 @@ test('game result visual', async ({ page }) => {
   await waitForLocalFonts(page);
   await page.locator('#choice-a').click();
   await expect(page.locator('#game-stage')).toHaveClass(/answered/);
+  await expect(page.locator('#game-stage')).toHaveAttribute('data-result-ready', '1');
   await expect(page.locator('#game-shell')).toHaveScreenshot('game-result.png');
 });
