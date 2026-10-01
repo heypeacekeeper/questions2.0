@@ -1,0 +1,827 @@
+[
+  {
+    "id": "43c05404-5849-4ffc-801c-185f14f55a23",
+    "optionA": "take one big field trip somewhere far away",
+    "optionB": "take three smaller field trips close to school",
+    "status": "published",
+    "shareCode": "bz35n27",
+    "sortOrder": 10,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "274b31db-5471-402f-aa58-9cc74ccd43e0",
+    "optionA": "grow fruit you can eat in the school garden",
+    "optionB": "grow flowers that attract butterflies to the school garden",
+    "status": "published",
+    "shareCode": "gs27am9",
+    "sortOrder": 20,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "37d6b972-3413-4ba4-94d8-df8c9ec10f09",
+    "optionA": "make a paper airplane that flies the farthest",
+    "optionB": "make a paper airplane that does the best loops",
+    "status": "published",
+    "shareCode": "h87m8xg",
+    "sortOrder": 30,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "ea44aee9-3481-4f64-8158-9ae8af8e5dd5",
+    "optionA": "have five short homework problems you know how to solve",
+    "optionB": "have one tricky homework puzzle that might take longer",
+    "status": "published",
+    "shareCode": "8a5u45n",
+    "sortOrder": 40,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "694a48e7-7100-4f41-8f00-4542afeefd74",
+    "optionA": "start school earlier and finish earlier",
+    "optionB": "start school later and finish later",
+    "status": "published",
+    "shareCode": "jdvnyng",
+    "sortOrder": 50,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "804bad31-0101-42c0-90af-17d03eab2024",
+    "optionA": "explore a museum with a guide who answers your questions",
+    "optionB": "explore a museum by choosing your own route",
+    "status": "published",
+    "shareCode": "88qggna",
+    "sortOrder": 60,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "2d5f4e09-50b1-4fb2-a631-4608d0de9b12",
+    "optionA": "practice one sport for a whole season",
+    "optionB": "try a different sport each week",
+    "status": "published",
+    "shareCode": "bxukqrf",
+    "sortOrder": 70,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "3edf98a6-35f6-4b4e-b520-ec509811f28c",
+    "optionA": "choose one long graphic novel at the book fair",
+    "optionB": "choose three short comic books at the book fair",
+    "status": "published",
+    "shareCode": "7x4nrpf",
+    "sortOrder": 80,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "62de317b-ab54-48ca-94e2-4df2d4f5af9c",
+    "optionA": "have a classroom decorated like an underwater world",
+    "optionB": "have a classroom decorated like a space station",
+    "status": "published",
+    "shareCode": "zhgm9pm",
+    "sortOrder": 90,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "94f4315e-cc2d-400f-b452-e54f1e862318",
+    "optionA": "draw one detailed picture of your favorite adventure",
+    "optionB": "draw a comic strip showing the whole adventure",
+    "status": "published",
+    "shareCode": "326ptft",
+    "sortOrder": 100,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "b1f31be7-e9d6-4d3e-8388-5a1a0a2976f1",
+    "optionA": "make a ten-second animation with lots of tiny details",
+    "optionB": "make a one-minute animation with simpler drawings",
+    "status": "published",
+    "shareCode": "vzqm8kr",
+    "sortOrder": 110,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "a16378aa-8578-4d7d-bc6c-44da3b8a8e38",
+    "optionA": "try a science experiment when you know what should happen",
+    "optionB": "try a science experiment when the result is a mystery",
+    "status": "published",
+    "shareCode": "zsx7jyt",
+    "sortOrder": 120,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "067a3412-d3a8-4fc0-ae70-03111477c3da",
+    "optionA": "build something from a box of loose LEGO bricks",
+    "optionB": "build a LEGO set by following the picture instructions",
+    "status": "published",
+    "shareCode": "k9f7e5w",
+    "sortOrder": 130,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "ca3c8449-2a51-419b-a4cc-ae3e7e0dec18",
+    "optionA": "play several short board games on game night",
+    "optionB": "play one long adventure board game on game night",
+    "status": "published",
+    "shareCode": "heymsv8",
+    "sortOrder": 140,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "346a8e6d-b438-4f1b-b5f2-6c5d526bda0f",
+    "optionA": "walk a short route to school with one friend",
+    "optionB": "ride a longer bus route with several friends",
+    "status": "published",
+    "shareCode": "dqm4gsd",
+    "sortOrder": 150,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "92933a61-bf55-454b-8826-8146aa6ca209",
+    "optionA": "win a trophy in a drawing contest",
+    "optionB": "win new art supplies in a drawing contest",
+    "status": "published",
+    "shareCode": "bfvze42",
+    "sortOrder": 160,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "afc93e52-a9c4-4fcf-b5e6-4c4fb0f57862",
+    "optionA": "join your friend's club and try an unfamiliar activity",
+    "optionB": "join a club for your favorite activity and meet new people",
+    "status": "published",
+    "shareCode": "gd8aef9",
+    "sortOrder": 170,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "00612f38-c5b7-4205-9699-0b8e95849ead",
+    "optionA": "choose how your team's robot looks",
+    "optionB": "choose what your team's robot can do",
+    "status": "published",
+    "shareCode": "u39y5en",
+    "sortOrder": 180,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "1c00ac8c-f1e6-47c6-beed-158f70533be2",
+    "optionA": "read a book quietly at your own speed",
+    "optionB": "listen to someone read it aloud using funny character voices",
+    "status": "published",
+    "shareCode": "na6ed6p",
+    "sortOrder": 190,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "77d9c7d1-3919-4ad1-9e67-0f17eba2a576",
+    "optionA": "write a story with an ending you choose",
+    "optionB": "write a story and let your classmates vote on the ending",
+    "status": "published",
+    "shareCode": "f27bmzr",
+    "sortOrder": 200,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "c89ba83f-a52d-4e29-8fa3-46478577e092",
+    "optionA": "bake cookies and invent your own flavor",
+    "optionB": "decorate cupcakes and invent your own designs",
+    "status": "published",
+    "shareCode": "q49jmns",
+    "sortOrder": 210,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "d6f1fdd9-6251-4d43-9058-70164e80ca80",
+    "optionA": "play a quiz where you must answer quickly",
+    "optionB": "solve riddles with as much thinking time as you need",
+    "status": "published",
+    "shareCode": "pnv4guw",
+    "sortOrder": 220,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "03210cba-070f-4db1-b02f-8ba0fb04698f",
+    "optionA": "look at the moon through a telescope",
+    "optionB": "look at a drop of pond water through a microscope",
+    "status": "published",
+    "shareCode": "xczupfp",
+    "sortOrder": 230,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "040b59d9-f9c1-4194-8edb-6cdcb3cdd393",
+    "optionA": "build a marble run that gets the marble down fast",
+    "optionB": "build a marble run with lots of twists and turns",
+    "status": "published",
+    "shareCode": "8wukmaj",
+    "sortOrder": 240,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "6eb807b4-9d0c-4e33-8319-efe40fe2ec96",
+    "optionA": "save your allowance for one bigger purchase each month",
+    "optionB": "spend your allowance on smaller things each week",
+    "status": "published",
+    "shareCode": "cyx5c4x",
+    "sortOrder": 250,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "379faaec-b714-467b-9aaa-8d7c94f5969e",
+    "optionA": "ride the school bus with your friends",
+    "optionB": "ride to school in a car with your family",
+    "status": "published",
+    "shareCode": "rapzxfz",
+    "sortOrder": 260,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "75c010e7-a4da-43e3-892c-947ef30f37d4",
+    "optionA": "walk to school with a friend",
+    "optionB": "ride your bike to school with a friend",
+    "status": "published",
+    "shareCode": "9bjvxaz",
+    "sortOrder": 270,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "9e33e93e-9983-4acb-93a9-d96ce5f34d9b",
+    "optionA": "sit at the front of the school bus",
+    "optionB": "sit at the back of the school bus",
+    "status": "published",
+    "shareCode": "gdubm8w",
+    "sortOrder": 280,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "f9c844ed-721b-4be8-9b7c-8cb49dc7bfd4",
+    "optionA": "sit near the front of the classroom",
+    "optionB": "sit near the back of the classroom",
+    "status": "published",
+    "shareCode": "yaumd7e",
+    "sortOrder": 290,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "f6e986c5-f26e-4a4d-82db-d2afb9f70f01",
+    "optionA": "write with a pen that makes smooth lines",
+    "optionB": "write with a pencil so you can erase mistakes",
+    "status": "published",
+    "shareCode": "rnejrbz",
+    "sortOrder": 300,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "1dfe45bc-ecfc-4dca-9e5c-f56966693e77",
+    "optionA": "write your stories in a notebook",
+    "optionB": "type your stories on a computer",
+    "status": "published",
+    "shareCode": "u5km5px",
+    "sortOrder": 310,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "3c8ffa2a-4ded-48c5-9352-05705a53cfab",
+    "optionA": "carry your books in a backpack",
+    "optionB": "carry your books in a bag with wheels",
+    "status": "published",
+    "shareCode": "8ppr4yh",
+    "sortOrder": 320,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "cc8c1a6d-3bc9-4a4c-a256-18863e2fbb7a",
+    "optionA": "use a fresh notebook for every school subject",
+    "optionB": "keep all your subjects in one notebook with dividers",
+    "status": "published",
+    "shareCode": "beszycd",
+    "sortOrder": 330,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "b6e0402b-b63c-485e-aac1-0dc32db071e2",
+    "optionA": "wear sneakers with laces",
+    "optionB": "wear sneakers you can slip on",
+    "status": "published",
+    "shareCode": "tmxmxpx",
+    "sortOrder": 340,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "fc0df635-12a3-46b8-8a4d-67f21c26fe1d",
+    "optionA": "bring your lunch from home",
+    "optionB": "choose your lunch in the school cafeteria",
+    "status": "published",
+    "shareCode": "qqu5reu",
+    "sortOrder": 350,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "c9be2005-4207-4143-8173-fc33ca65ae5f",
+    "optionA": "have 15 extra minutes of recess every day",
+    "optionB": "have one homework-free night each week",
+    "status": "published",
+    "shareCode": "ezeusbv",
+    "sortOrder": 360,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "9808390a-6566-403a-ac1c-4e4b8ac9a4d3",
+    "optionA": "choose your project topic but present alone",
+    "optionB": "have your teacher choose the topic but present with a friend",
+    "status": "published",
+    "shareCode": "7swwakf",
+    "sortOrder": 370,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "aefc9a8d-eb24-4875-9eda-2c5535e5918f",
+    "optionA": "sit next to your best friend in class",
+    "optionB": "have a window seat on the other side of the classroom",
+    "status": "published",
+    "shareCode": "39c3cq2",
+    "sortOrder": 380,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "a9e9dd01-1d6f-43ec-8038-475e186fdf6d",
+    "optionA": "choose the movie for a class movie afternoon",
+    "optionB": "choose the games for an extra recess",
+    "status": "published",
+    "shareCode": "64athuq",
+    "sortOrder": 390,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "97b8f53f-6875-4530-b03d-8e447a099c10",
+    "optionA": "build a working model volcano for a school project",
+    "optionB": "create a simple video game for a school project",
+    "status": "published",
+    "shareCode": "g8j3ave",
+    "sortOrder": 400,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "bef4c0e7-9bdd-434b-9bdf-c65d2c1410e4",
+    "optionA": "perform onstage in the school play",
+    "optionB": "control the lights and sound effects backstage",
+    "status": "published",
+    "shareCode": "6cu2rxj",
+    "sortOrder": 410,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "ceb4f74a-776d-4a17-9e8f-dc5d14dd4018",
+    "optionA": "run your own race on field day",
+    "optionB": "run a relay race with your friends on field day",
+    "status": "published",
+    "shareCode": "87vtj2v",
+    "sortOrder": 420,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "6f554203-bcb5-4f0e-81aa-e8c45bc42969",
+    "optionA": "borrow the next book in your favorite series",
+    "optionB": "borrow a mystery book wrapped so you cannot see its title",
+    "status": "published",
+    "shareCode": "5x64x6e",
+    "sortOrder": 430,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "016efc85-9c5e-4226-8ed7-fb55e59caa35",
+    "optionA": "eat lunch outside with your friends",
+    "optionB": "eat lunch inside while watching a short cartoon",
+    "status": "published",
+    "shareCode": "823cwd9",
+    "sortOrder": 440,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "592671ab-263c-4b3c-afba-3658de943d71",
+    "optionA": "take a field trip to an aquarium with an underwater tunnel",
+    "optionB": "take a field trip to a science museum with experiments to try",
+    "status": "published",
+    "shareCode": "e8kqs8u",
+    "sortOrder": 450,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "5468185d-9bcc-4ce8-a2fc-a24e599bcdfd",
+    "optionA": "choose what to draw but use only pencils",
+    "optionB": "have your teacher choose the subject but use any art supplies",
+    "status": "published",
+    "shareCode": "m5rcssh",
+    "sortOrder": 460,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "3c70280f-2fed-4b82-bb5d-6e80903184fc",
+    "optionA": "try a new recess game everyone is learning",
+    "optionB": "play a familiar recess game you are already good at",
+    "status": "published",
+    "shareCode": "5msncgx",
+    "sortOrder": 470,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "8354c9c3-f399-4cd9-be20-d75754743f56",
+    "optionA": "build a small LEGO creation you can take home",
+    "optionB": "help build a huge LEGO creation that stays at school",
+    "status": "published",
+    "shareCode": "mvr52wn",
+    "sortOrder": 480,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "57cd9941-2da3-42c6-8f34-8fb81546e829",
+    "optionA": "have your artwork displayed where the whole school can see it",
+    "optionB": "take your artwork home to decorate your room",
+    "status": "published",
+    "shareCode": "8y68czd",
+    "sortOrder": 490,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "ec964e8a-3230-4bf7-931f-a9d384e6badd",
+    "optionA": "join a cooking club and make snacks",
+    "optionB": "join a robotics club and build moving inventions",
+    "status": "published",
+    "shareCode": "umgwdcy",
+    "sortOrder": 500,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "06996dcf-243c-4b18-a6f1-f190d6a4d539",
+    "optionA": "have a longer lunch break to talk with friends",
+    "optionB": "finish lunch sooner and have more time on the playground",
+    "status": "published",
+    "shareCode": "t7gf77v",
+    "sortOrder": 510,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "5a17a47b-93e4-457f-9af1-51e1bb351572",
+    "optionA": "choose your partner for a difficult puzzle",
+    "optionB": "get an easier puzzle with a partner your teacher chooses",
+    "status": "published",
+    "shareCode": "qfhmjg6",
+    "sortOrder": 520,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "1b05b632-6b11-418e-8750-a20522e842a2",
+    "optionA": "keep a book you win in a school contest",
+    "optionB": "give the book to your class library so everyone can read it",
+    "status": "published",
+    "shareCode": "7t539ty",
+    "sortOrder": 530,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "d25ce7ba-8fdb-4b54-b104-459a91c82464",
+    "optionA": "make a funny comic your classmates can read",
+    "optionB": "record a funny skit your classmates can watch",
+    "status": "published",
+    "shareCode": "wunsqfp",
+    "sortOrder": 540,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  },
+  {
+    "id": "9628cdc6-cde6-4b19-99b8-10119dda1f2b",
+    "optionA": "spend your entire recess finishing a project you love",
+    "optionB": "stop halfway through to join your friends outside",
+    "status": "published",
+    "shareCode": "46x54x4",
+    "sortOrder": 550,
+    "categoryIds": [
+      "11111111-1111-4111-8111-000000000001"
+    ],
+    "isDemo": false,
+    "createdAt": "2026-09-30T21:37:40.218Z",
+    "updatedAt": "2026-09-30T21:37:40.218Z",
+    "publishedAt": "2026-09-30T21:37:40.218Z"
+  }
+]

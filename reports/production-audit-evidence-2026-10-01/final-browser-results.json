@@ -1,0 +1,53 @@
+[
+  {
+    "state": "answered-game",
+    "violations": []
+  },
+  {
+    "state": "200-character-options-mobile",
+    "width": 390,
+    "scrollWidth": 390,
+    "text": [
+      {
+        "length": 200,
+        "height": 195.375,
+        "cardHeight": 298.5,
+        "top": 408.5,
+        "bottom": 603.875,
+        "cardTop": 334.4375,
+        "cardBottom": 632.9375,
+        "overflow": true
+      },
+      {
+        "length": 200,
+        "height": 195.375,
+        "cardHeight": 298.5,
+        "top": 719,
+        "bottom": 914.375,
+        "cardTop": 644.9375,
+        "cardBottom": 943.4375,
+        "overflow": true
+      }
+    ]
+  },
+  {
+    "state": "home-text-resize-200-percent",
+    "width": 390,
+    "scrollWidth": 390
+  },
+  {
+    "state": "no-javascript",
+    "url": "/favorites/",
+    "text": "Home\n Favorites\nMy Favorite Questions\n\nQuestions you save appear here on this device. Favorites are stored only in your browser.\n\nLoading saved questions…"
+  },
+  {
+    "state": "no-javascript",
+    "url": "/favorites/play/",
+    "text": "♥ Favorites\n\nLoading your saved questions…\n\nReturn to the main game\n\nWould you rather… choose Option A or Option B, or skip this question.\n\nHome\n Favorites\n Play\nPlay My Favorite Questions\n\nPlay through the questions saved in this browser. Your favorites never leave this device."
+  },
+  {
+    "state": "no-javascript",
+    "url": "/play/",
+    "text": "● LET'S PLAY\nWould You Rather Questions\n\nTwo options. One choice. Pick a side, see the result, then keep playing.\n\nMixed\nride the school bus with your friends\nride to school in a car with your family\nSKIP\nEnable JavaScript to choose an option and see the next question. The question lists below work without it.\n\nWould you rather… choose Option A or Option B, or skip this question."
+  }
+]

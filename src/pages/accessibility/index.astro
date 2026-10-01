@@ -1,0 +1,24 @@
+---
+import ProseLayout from '@/layouts/ProseLayout.astro';
+import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+const meta = {
+  title: 'Accessibility Statement',
+  description: 'Our commitment to WCAG 2.2 AA accessibility and how to report barriers.',
+  path: ROUTES.accessibility,
+};
+---
+
+<ProseLayout meta={meta} heading="Accessibility Statement">
+  <p>
+    We aim to meet WCAG 2.2 Level AA. The site uses semantic landmarks, a skip link, visible focus
+    indicators, keyboard-operable game controls using standard Tab, Enter and Space interactions,
+    screen-reader announcements of results, and reduced-motion preferences.
+  </p>
+  <h2>Known limitations</h2>
+  <p>Decorative emoji icons are hidden from assistive technology.</p>
+  <h2>Feedback</h2>
+  <p>
+    If you encounter a barrier, email <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a> or visit
+    our <a href={ROUTES.contact}>contact page</a>.
+  </p>
+</ProseLayout>

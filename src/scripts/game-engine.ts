@@ -1,0 +1,329 @@
+/**
+ * Pure game engine: pack loading, session repeat prevention, question
+ * selection. No DOM. Fully unit-testable.
+ */
+import type { GameQuestion } from '@/domain/question';
+import type { GameDataManifest, PackSetManifestEntry } from '@/application/game-data-service';
+import { pickNextUnseen } from '@/application/question-service';
+import type { Rng } from '@/lib/random';
+import { CONTENT_LIMITS } from '@/config/site';
+import { SHARE_CODE_PATTERN } from '@/lib/crypto';
+
+export interface SeenStore {
+  get(): Set<string>;
+  add(id: string): void;
+  clear(): void;
+}
+
+export class SessionSeenStore implements SeenStore {
+  private cache: Set<string> | null = null;
+  constructor(
+    private readonly key: string,
+    private readonly storage: Storage | null,
+  ) {}
+  get(): Set<string> {
+    if (this.cache) return this.cache;
+    try {
+      const raw = this.storage?.getItem(this.key);
+      this.cache = new Set(raw ? (JSON.parse(raw) as string[]) : []);
+    } catch {
+      this.cache = new Set();
+    }
+    return this.cache;
+  }
+  add(id: string): void {
+    const s = this.get();
+    s.add(id);
+    try {
+      this.storage?.setItem(this.key, JSON.stringify([...s].slice(-2000)));
+    } catch {
+      /* storage full or blocked */
+    }
+  }
+  clear(): void {
+    this.cache = new Set();
+    try {
+      this.storage?.removeItem(this.key);
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
+export interface PackFetcher {
+  (url: string): Promise<GameQuestion[]>;
+}
+
+export interface PackFilePayload {
+  v: 2;
+  set: string;
+  i: number;
+  n: number;
+  q: GameQuestion[];
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+export function parsePackFilePayload(data: unknown): GameQuestion[] {
+  if (
+    !isRecord(data) ||
+    data.v !== 2 ||
+    !isNonEmptyString(data.set) ||
+    typeof data.i !== 'number' ||
+    !Number.isInteger(data.i) ||
+    data.i < 0 ||
+    typeof data.n !== 'number' ||
+    !Number.isInteger(data.n) ||
+    data.n <= 0 ||
+    data.i >= data.n ||
+    !Array.isArray(data.q)
+  ) {
+    throw new Error('Invalid game-data pack metadata');
+  }
+
+  const seenIds = new Set<string>();
+  const questions: GameQuestion[] = [];
+
+  for (const item of data.q) {
+    if (
+      !isRecord(item) ||
+      !isNonEmptyString(item.id) ||
+      !isNonEmptyString(item.a) ||
+      item.a.length > CONTENT_LIMITS.optionMax ||
+      !isNonEmptyString(item.b) ||
+      item.b.length > CONTENT_LIMITS.optionMax ||
+      !isNonEmptyString(item.s) ||
+      !SHARE_CODE_PATTERN.test(item.s) ||
+      seenIds.has(item.id)
+    ) {
+      throw new Error('Invalid question in game-data pack');
+    }
+
+    seenIds.add(item.id);
+    questions.push({
+      id: item.id,
+      a: item.a,
+      b: item.b,
+      s: item.s,
+    });
+  }
+
+  return questions;
+}
+
+export function parseGameDataManifest(data: unknown): GameDataManifest | null {
+  if (
+    !isRecord(data) ||
+    data.version !== 1 ||
+    !isNonEmptyString(data.generatedAt) ||
+    Number.isNaN(Date.parse(data.generatedAt)) ||
+    !isRecord(data.sets)
+  ) {
+    return null;
+  }
+
+  for (const [slug, value] of Object.entries(data.sets)) {
+    if (
+      !isRecord(value) ||
+      value.slug !== slug ||
+      !isNonEmptyString(value.name) ||
+      typeof value.icon !== 'string' ||
+      typeof value.requiresAgeGate !== 'boolean' ||
+      typeof value.total !== 'number' ||
+      !Number.isInteger(value.total) ||
+      value.total < 0 ||
+      !Array.isArray(value.packs) ||
+      !value.packs.every(
+        (pack) =>
+          typeof pack === 'string' &&
+          /^\/game-data\/[a-z0-9-]+\/pack-\d+\.[a-f0-9]+\.json$/.test(pack),
+      ) ||
+      new Set(value.packs).size !== value.packs.length
+    ) {
+      return null;
+    }
+  }
+
+  return data as unknown as GameDataManifest;
+}
+
+export const defaultFetcher: PackFetcher = async (url) => {
+  const res = await fetch(url, { credentials: 'omit' });
+  if (!res.ok) throw new Error(`pack ${res.status}`);
+  return parsePackFilePayload(await res.json());
+};
+
+export class GameEngine {
+  private pool: GameQuestion[] = [];
+  private loadedPacks = new Set<string>();
+  private entry: PackSetManifestEntry | null = null;
+  private loading: Promise<void> | null = null;
+  private loadFailed = false;
+  private generation = 0;
+
+  constructor(
+    private seen: SeenStore,
+    private readonly fetcher: PackFetcher = defaultFetcher,
+    private readonly refillThreshold = 8,
+    private readonly rng: Rng = Math.random,
+  ) {}
+
+  /** Seed the pool with the server-rendered question so it's never re-shown this session. */
+  primeWith(question: GameQuestion | null): void {
+    if (!question) return;
+    if (!this.pool.some((q) => q.id === question.id)) this.pool.unshift(question);
+  }
+
+  /** Swap the session memory (one memory per pack set). */
+  setSeenStore(store: SeenStore): void {
+    this.seen = store;
+  }
+
+  async useSet(entry: PackSetManifestEntry | null): Promise<void> {
+    this.generation += 1;
+    this.loading = null;
+    this.loadFailed = false;
+    this.entry = entry;
+    this.pool = [];
+    this.loadedPacks.clear();
+    if (entry) await this.ensureSupply();
+  }
+
+  /** Use an in-memory question set without downloading game-data packs. */
+  useQuestions(questions: readonly GameQuestion[]): void {
+    this.generation += 1;
+    this.loading = null;
+    this.loadFailed = false;
+    this.entry = null;
+    this.pool = [...questions];
+    this.loadedPacks.clear();
+  }
+
+  get unseenCount(): number {
+    const seen = this.seen.get();
+    return this.pool.filter((q) => !seen.has(q.id)).length;
+  }
+
+  get supplyLoadFailed(): boolean {
+    return this.loadFailed;
+  }
+
+  get totalInSet(): number {
+    return this.entry?.total ?? this.pool.length;
+  }
+
+  private get remainingPacks(): string[] {
+    return (this.entry?.packs ?? []).filter((u) => !this.loadedPacks.has(u));
+  }
+
+  /** Load more packs until we have enough unseen questions or run out of packs. */
+  async ensureSupply(): Promise<void> {
+    if (this.loading) return this.loading;
+    const generation = this.generation;
+    this.loadFailed = false;
+    this.loading = (async () => {
+      while (
+        generation === this.generation &&
+        this.unseenCount < this.refillThreshold &&
+        this.remainingPacks.length > 0
+      ) {
+        const url = this.remainingPacks[0];
+        if (!url) break;
+        try {
+          const qs = await this.fetcher(url);
+          if (generation !== this.generation) return;
+          this.loadedPacks.add(url);
+          const ids = new Set(this.pool.map((q) => q.id));
+          for (const q of qs) if (!ids.has(q.id)) this.pool.push(q);
+        } catch {
+          this.loadFailed = true;
+          // Leave the pack unloaded so the next call can retry it.
+          break;
+        }
+      }
+    })().finally(() => {
+      if (generation === this.generation) this.loading = null;
+    });
+    return this.loading;
+  }
+
+  /**
+   * Next unseen question. When every question in the set has been seen, the
+   * session memory for this set is cleared and selection restarts (still
+   * never repeating the current question back-to-back).
+   */
+  async next(currentId: string | null): Promise<GameQuestion | null> {
+    // Do not wait for background prefetching while usable questions remain.
+    if (this.unseenCount === 0) await this.ensureSupply();
+    let seen = this.seen.get();
+    let candidate = pickNextUnseen(
+      this.pool.filter((q) => q.id !== currentId),
+      seen,
+      this.rng,
+    );
+    if (!candidate && this.remainingPacks.length === 0 && this.pool.length > 0) {
+      // Only one question exists: nothing else can be shown.
+      if (this.pool.length === 1) return null;
+
+      this.seen.clear();
+      seen = this.seen.get();
+      candidate = pickNextUnseen(
+        this.pool.filter((q) => q.id !== currentId),
+        seen,
+        this.rng,
+      );
+    }
+    if (candidate) {
+      this.seen.add(candidate.id);
+      // Refill while the player reads the current question.
+      void this.ensureSupply();
+    }
+    return candidate;
+  }
+
+  markSeen(id: string): void {
+    this.seen.add(id);
+  }
+}
+
+export async function loadManifest(url: string): Promise<GameDataManifest | null> {
+  try {
+    const res = await fetch(url, { credentials: 'omit' });
+    if (!res.ok) return null;
+    return parseGameDataManifest(await res.json());
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Return the deterministic, display-only result for a question. Percentages
+ * use integer tenths internally so they always complement to exactly 100.0.
+ */
+export function generatedDisplayResult(questionId: string): {
+  readonly percentA: number;
+  readonly percentB: number;
+} {
+  let hash = 2166136261;
+  for (const character of questionId) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  const percentATenths = 250 + ((hash >>> 0) % 501);
+  return {
+    percentA: percentATenths / 10,
+    percentB: (1000 - percentATenths) / 10,
+  };
+}
+
+/** Format a generated percentage for the result UI. */
+export function formatGeneratedPercent(percent: number): string {
+  return `${percent.toFixed(1)}%`;
+}

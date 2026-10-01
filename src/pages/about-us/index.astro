@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { homeBreadcrumb } from '@/lib/seo';
+import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+const meta = {
+  title: 'About Us',
+  description:
+    'Who makes Would You Rather Questions, how the questions are chosen, and how to get in touch.',
+  path: ROUTES.about,
+};
+const breadcrumbs = [homeBreadcrumb(), { name: 'About Us', path: ROUTES.about }];
+---
+
+<BaseLayout meta={meta} breadcrumbs={breadcrumbs} bodyClass="reference-info-page">
+  <div class="wrap reference-info-grid">
+    <header class="reference-info-intro">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="reference-chip">● ABOUT US</span>
+      <h1>
+        Questions that start <em>conversations.</em>
+      </h1>
+      <p>Our favorite games are the ones where everyone has a story to tell.</p>
+      <a class="reference-button reference-button-hot" href={ROUTES.play}>
+        Play the game →
+      </a>
+    </header>
+    <div class="reference-info-content prose">
+      <h2>About Would You Rather Questions</h2>
+      <p>
+        Would You Rather Questions is a free website for playing and browsing either-or questions
+        with friends, family, classmates and colleagues. Every question is written or reviewed by
+        the site's editors, sorted into clearly labelled categories, and published only when it fits
+        the audience of that category.
+      </p>
+      <h2>What we publish</h2>
+      <p>
+        Categories for kids, teens, adults, couples, friends and family, plus good, funny, hard,
+        deep and spicy collections. Mature categories stay flirty rather than explicit and never mix
+        with children's collections. Read our <a href={ROUTES.editorialPolicy}>Editorial Policy</a>{' '}
+        for the details.
+      </p>
+      <h2>Contribute</h2>
+      <p>
+        Have a great question? <a href={ROUTES.submit}>Email it to us</a> and we may add it after
+        review. For questions or corrections, write to{' '}
+        <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { homeBreadcrumb } from '@/lib/seo';
+import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+const contactEmailHref = `mailto:${PUBLIC_EMAIL}?subject=${encodeURIComponent('Would You Rather Questions enquiry')}`;
+const meta = {
+  title: 'Contact Us',
+  description:
+    'Contact Would You Rather Questions about corrections, feedback, partnerships or privacy requests.',
+  path: ROUTES.contact,
+};
+const breadcrumbs = [homeBreadcrumb(), { name: 'Contact Us', path: ROUTES.contact }];
+---
+
+<BaseLayout meta={meta} breadcrumbs={breadcrumbs} bodyClass="reference-info-page">
+  <div class="wrap reference-info-grid">
+    <header class="reference-info-intro">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="reference-chip">● GET IN TOUCH</span>
+      <h1>
+        Let's <em>talk.</em>
+      </h1>
+      <p>Have a question, correction, or idea? We'd love to hear from you.</p>
+      <div class="reference-email-card">
+        <span class="reference-mono">EMAIL US DIRECTLY</span>
+        <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>
+      </div>
+    </header>
+    <div class="reference-info-content">
+      <h2>Email us</h2>
+      <p>
+        Send questions, corrections, partnership enquiries or privacy requests to{' '}
+        <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>. Please allow a few days for a reply.
+      </p>
+      <p>
+        The button opens your email app. Your message is sent only after you choose to send it
+        there. See our <a href={ROUTES.privacy}>Privacy Policy</a> for how we handle emails.
+      </p>
+      <a
+        class="reference-button reference-button-hot"
+        id="contact-email-link"
+        href={contactEmailHref}
+      >
+        Open your email app →
+      </a>
+    </div>
+  </div>
+</BaseLayout>

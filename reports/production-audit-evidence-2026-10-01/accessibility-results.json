@@ -1,0 +1,1369 @@
+[
+  {
+    "url": "/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<span class=\"reference-action-short\">Play game →</span>",
+            "target": ["a[aria-label=\"Play the game\"] > .reference-action-short"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 10.2pt (13.65px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-mono\">JUMP TO A CATEGORY</span>",
+            "target": [".reference-category-strip > .reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"reference-question-count\"> 55 questions to explore across the site\n</p>",
+            "target": [".reference-question-count"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#best-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-2 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-3 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-4 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-5 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-6 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-7 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-8 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-9 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-10 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" href=\"/play/\">\nPlay the game →\n</a>",
+            "target": [".wrap > .reference-button-hot.reference-button[href$=\"play/\"]"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/play/",
+    "width": 390,
+    "violations": [],
+    "passes": 18,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/would-you-rather-questions-for-kids/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<span class=\"reference-mono\">55 QUESTIONS</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-2 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-3 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-4 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-5 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-6 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-7 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-8 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-9 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-10 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-11 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-12 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-13 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-14 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-15 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-16 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-17 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-18 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-19 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-20 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-21 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-22 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-23 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-24 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-25 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-26 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-27 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-28 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-29 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-30 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-31 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-32 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-33 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-34 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-35 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-36 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-37 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-38 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-39 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-40 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-41 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-42 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-43 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-44 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-45 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-46 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-47 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-48 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-49 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-50 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"pagination-summary\">\nShowing questions 1–50 of 55 </p>",
+            "target": [".pagination-summary"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-prohibited-attr", "color-contrast"]
+  },
+  {
+    "url": "/would-you-rather-questions-for-kids/page/2/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<span class=\"reference-mono\">55 QUESTIONS</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-51 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-52 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-53 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-54 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-55 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"pagination-summary\">\nShowing questions 51–55 of 55 </p>",
+            "target": [".pagination-summary"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-prohibited-attr", "color-contrast"]
+  },
+  {
+    "url": "/categories/",
+    "width": 390,
+    "violations": [],
+    "passes": 20,
+    "incomplete": []
+  },
+  {
+    "url": "/favorites/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<p id=\"favorites-count\">0 saved questions</p>",
+            "target": ["#favorites-count"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": []
+  },
+  {
+    "url": "/favorites/play/",
+    "width": 390,
+    "violations": [],
+    "passes": 20,
+    "incomplete": []
+  },
+  {
+    "url": "/blog/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<time datetime=\"2026-09-22T00:00:00.000Z\" data-astro-cid-vqljwchw=\"\"> September 22, 2026 </time>",
+            "target": ["time"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #7f776c, background color: #fffdf9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span data-astro-cid-vqljwchw=\"\">8 min read</span>",
+            "target": ["span[data-astro-cid-vqljwchw=\"\"]:nth-child(3)"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #7f776c, background color: #fffdf9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["color-contrast"]
+  },
+  {
+    "url": "/blog/how-to-play-would-you-rather/",
+    "width": 390,
+    "violations": [],
+    "passes": 21,
+    "incomplete": ["color-contrast"]
+  },
+  {
+    "url": "/about-us/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" href=\"/play/\">\nPlay the game →\n</a>",
+            "target": [".reference-button"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": []
+  },
+  {
+    "url": "/contact-us/",
+    "width": 390,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<span class=\"reference-mono\">EMAIL US DIRECTLY</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #7f776c, background color: #ffe8e1, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" id=\"contact-email-link\" href=\"mailto:hello@wouldyouratherquestions.org?subject=Would%20You%20Rather%20Questions%20enquiry\">\nOpen your email app →\n</a>",
+            "target": ["#contact-email-link"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": []
+  },
+  {
+    "url": "/submit-a-question/",
+    "width": 390,
+    "violations": [],
+    "passes": 21,
+    "incomplete": []
+  },
+  {
+    "url": "/privacy-policy/",
+    "width": 390,
+    "violations": [],
+    "passes": 22,
+    "incomplete": []
+  },
+  {
+    "url": "/terms-and-conditions/",
+    "width": 390,
+    "violations": [],
+    "passes": 22,
+    "incomplete": []
+  },
+  {
+    "url": "/dmca/",
+    "width": 390,
+    "violations": [],
+    "passes": 22,
+    "incomplete": []
+  },
+  {
+    "url": "/accessibility/",
+    "width": 390,
+    "violations": [],
+    "passes": 21,
+    "incomplete": []
+  },
+  {
+    "url": "/cookie-policy/",
+    "width": 390,
+    "violations": [],
+    "passes": 22,
+    "incomplete": []
+  },
+  {
+    "url": "/editorial-policy/",
+    "width": 390,
+    "violations": [],
+    "passes": 21,
+    "incomplete": []
+  },
+  {
+    "url": "/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-action-long\">Play the game →</span>",
+            "target": ["a[aria-label=\"Play the game\"] > .reference-action-long"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-mono\">JUMP TO A CATEGORY</span>",
+            "target": [".reference-category-strip > .reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"reference-question-count\"> 55 questions to explore across the site\n</p>",
+            "target": [".reference-question-count"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#best-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-2 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-3 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-4 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-5 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-6 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-7 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-8 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-9 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#for-kids-questions-question-10 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" href=\"/play/\">\nPlay the game →\n</a>",
+            "target": [".wrap > .reference-button-hot.reference-button[href$=\"play/\"]"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/play/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 18,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/would-you-rather-questions-for-kids/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-mono\">55 QUESTIONS</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-1 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-2 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-3 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-4 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-5 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-6 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-7 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-8 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-9 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-10 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-11 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-12 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-13 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-14 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-15 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-16 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-17 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-18 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-19 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-20 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-21 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-22 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-23 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-24 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-25 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-26 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-27 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-28 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-29 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-30 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-31 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-32 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-33 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-34 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-35 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-36 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-37 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-38 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-39 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-40 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-41 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-42 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-43 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-44 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-45 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-46 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-47 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-48 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-49 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-50 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"pagination-summary\">\nShowing questions 1–50 of 55 </p>",
+            "target": [".pagination-summary"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-prohibited-attr", "aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/would-you-rather-questions-for-kids/page/2/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-mono\">55 QUESTIONS</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-51 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-52 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-53 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-54 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"question-prefix\">Would you rather </span>",
+            "target": ["#category-questions-question-55 > .question-prefix"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p class=\"pagination-summary\">\nShowing questions 51–55 of 55 </p>",
+            "target": [".pagination-summary"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-prohibited-attr", "aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/categories/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/favorites/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<p id=\"favorites-count\">0 saved questions</p>",
+            "target": ["#favorites-count"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/favorites/play/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/blog/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<time datetime=\"2026-09-22T00:00:00.000Z\" data-astro-cid-vqljwchw=\"\"> September 22, 2026 </time>",
+            "target": ["time"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #7f776c, background color: #fffdf9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span data-astro-cid-vqljwchw=\"\">8 min read</span>",
+            "target": ["span[data-astro-cid-vqljwchw=\"\"]:nth-child(3)"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #7f776c, background color: #fffdf9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 20,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/blog/how-to-play-would-you-rather/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value", "color-contrast"]
+  },
+  {
+    "url": "/about-us/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" href=\"/play/\">\nPlay the game →\n</a>",
+            "target": [".reference-button"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/contact-us/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"reference-mono\">EMAIL US DIRECTLY</span>",
+            "target": [".reference-mono"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #7f776c, background color: #ffe8e1, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a class=\"reference-button reference-button-hot\" id=\"contact-email-link\" href=\"mailto:hello@wouldyouratherquestions.org?subject=Would%20You%20Rather%20Questions%20enquiry\">\nOpen your email app →\n</a>",
+            "target": ["#contact-email-link"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/submit-a-question/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/privacy-policy/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/terms-and-conditions/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/dmca/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/accessibility/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/cookie-policy/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 22,
+    "incomplete": ["aria-valid-attr-value"]
+  },
+  {
+    "url": "/editorial-policy/",
+    "width": 1440,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "html": "<a data-astro-prefetch=\"\" class=\"reference-nav-play\" href=\"/play/\">\nPlay Game →\n</a>",
+            "target": [".reference-nav-play"],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "passes": 21,
+    "incomplete": ["aria-valid-attr-value"]
+  }
+]

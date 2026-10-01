@@ -1,0 +1,15 @@
+{
+  "duplicateCategoryId": [],
+  "emptyQuestionId": [],
+  "invalidDates": [],
+  "emptyCorpus": [],
+  "favoriteLimit": {
+    "count": 100,
+    "oldestStillPresent": false,
+    "lastResult": {
+      "ok": true,
+      "saved": true
+    }
+  },
+  "checksumDetectsAgeFlag": false
+}

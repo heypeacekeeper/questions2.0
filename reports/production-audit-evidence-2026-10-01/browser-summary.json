@@ -1,0 +1,508 @@
+{
+  "routes": 74,
+  "brokenLinks": [],
+  "runtimeErrors": [
+    {
+      "url": "/does-not-exist/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Page not found",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 37
+        }
+      ]
+    }
+  ],
+  "breakpoints": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 258,
+          "right": 302,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 298,
+          "right": 342,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 328,
+          "right": 372,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 221,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 692,
+          "right": 736,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "scrollWidth": 800,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 221,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 724,
+          "right": 768,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 230,
+          "top": 23,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 252,
+          "right": 818,
+          "top": 5,
+          "bottom": 71
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 660,
+          "right": 818,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "scrollWidth": 900,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 230,
+          "top": 23,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 255,
+          "right": 868,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 711,
+          "right": 868,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 235,
+          "top": 22,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 379,
+          "right": 992,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 835,
+          "right": 992,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 40,
+          "right": 291,
+          "top": 18,
+          "bottom": 57
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 627,
+          "right": 1240,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 1083,
+          "right": 1240,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 80,
+          "right": 334,
+          "top": 18,
+          "bottom": 57
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 747,
+          "right": 1360,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 1203,
+          "right": 1360,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    }
+  ],
+  "resultDisclosure": {
+    "visibleText": "● LET'S PLAY\nWould You Rather Questions\n\nTwo options. One choice. Pick a side, see the result, then keep playing.\n\nMixed\n♡\nride the school bus with your friends\n63.3%\nride to school in a car with your family\n36.7%\nNext question\n\nWould you rather… choose Option A or Option B, or skip this question.\n\nOption A 63.3%. Option B 36.7%. For-fun result.",
+    "screenreader": "Option A 63.3%. Option B 36.7%. For-fun result."
+  },
+  "removalFocus": {
+    "tag": "BODY",
+    "text": "    \nSkip to content\n    \nWould You Rather Questions        "
+  },
+  "slowNetwork": {
+    "busy": "true",
+    "disabled": true,
+    "label": "Loading…"
+  },
+  "placeholders": [
+    {
+      "url": "/cookie-policy/",
+      "status": 200,
+      "csp": true,
+      "title": "Cookie Policy – Would You Rather Questions",
+      "titleLength": 42,
+      "h1": 1,
+      "descriptionLength": 84,
+      "canonical": "https://wouldyouratherquestions.org/cookie-policy/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": ["Would You Rather Questions"]
+    },
+    {
+      "url": "/dmca/",
+      "status": 200,
+      "csp": true,
+      "title": "DMCA & Copyright – Would You Rather Questions",
+      "titleLength": 45,
+      "h1": 1,
+      "descriptionLength": 77,
+      "canonical": "https://wouldyouratherquestions.org/dmca/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": ["Would You Rather Questions", "[NAME / ADDRESS]"]
+    },
+    {
+      "url": "/privacy-policy/",
+      "status": 200,
+      "csp": true,
+      "title": "Privacy Policy – Would You Rather Questions",
+      "titleLength": 43,
+      "h1": 1,
+      "descriptionLength": 99,
+      "canonical": "https://wouldyouratherquestions.org/privacy-policy/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": [
+        "Would You Rather Questions",
+        "[DATE]",
+        "Would You Rather Questions — legal entity and address to be added"
+      ]
+    },
+    {
+      "url": "/terms-and-conditions/",
+      "status": 200,
+      "csp": true,
+      "title": "Terms and Conditions – Would You Rather Questions",
+      "titleLength": 49,
+      "h1": 1,
+      "descriptionLength": 86,
+      "canonical": "https://wouldyouratherquestions.org/terms-and-conditions/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": [
+        "Would You Rather Questions",
+        "Would You Rather Questions — legal entity to be added",
+        "[JURISDICTION]"
+      ]
+    }
+  ],
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" xmlns:image=\"http://www.google.com/schemas/sitemap-image/1.1\" xmlns:video=\"http://www.google.com/schemas/sitemap-video/1.1\"><url><loc>https://wouldyouratherquestions.org/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/about-us/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/accessibility/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/blog/how-to-play-would-you-rather/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/categories/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/contact-us/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/cookie-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/dmca/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/editorial-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/favorites/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/favorites/play/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/play/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/privacy-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/submit-a-question/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/terms-and-conditions/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/page/2/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>"
+}

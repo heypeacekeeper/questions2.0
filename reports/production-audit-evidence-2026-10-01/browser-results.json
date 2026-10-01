@@ -1,0 +1,2531 @@
+{
+  "routes": [
+    {
+      "url": "/404.html",
+      "status": 200,
+      "csp": true,
+      "title": "Page not found – Would You Rather Questions",
+      "titleLength": 43,
+      "h1": 1,
+      "descriptionLength": 66,
+      "canonical": "https://wouldyouratherquestions.org/404/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/about-us/",
+      "status": 200,
+      "csp": true,
+      "title": "About Us – Would You Rather Questions",
+      "titleLength": 37,
+      "h1": 1,
+      "descriptionLength": 92,
+      "canonical": "https://wouldyouratherquestions.org/about-us/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/accessibility/",
+      "status": 200,
+      "csp": true,
+      "title": "Accessibility Statement – Would You Rather Questions",
+      "titleLength": 52,
+      "h1": 1,
+      "descriptionLength": 71,
+      "canonical": "https://wouldyouratherquestions.org/accessibility/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/blog/how-to-play-would-you-rather/",
+      "status": 200,
+      "csp": true,
+      "title": "How to Play Would You Rather – Would You Rather Questions",
+      "titleLength": 57,
+      "h1": 1,
+      "descriptionLength": 127,
+      "canonical": "https://wouldyouratherquestions.org/blog/how-to-play-would-you-rather/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/blog/",
+      "status": 200,
+      "csp": true,
+      "title": "Blog – Would You Rather Questions",
+      "titleLength": 33,
+      "h1": 1,
+      "descriptionLength": 144,
+      "canonical": "https://wouldyouratherquestions.org/blog/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/categories/",
+      "status": 200,
+      "csp": true,
+      "title": "All Would You Rather Question Categories – Would You Rather Questions",
+      "titleLength": 69,
+      "h1": 1,
+      "descriptionLength": 138,
+      "canonical": "https://wouldyouratherquestions.org/categories/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/contact-us/",
+      "status": 200,
+      "csp": true,
+      "title": "Contact Us – Would You Rather Questions",
+      "titleLength": 39,
+      "h1": 1,
+      "descriptionLength": 97,
+      "canonical": "https://wouldyouratherquestions.org/contact-us/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/cookie-policy/",
+      "status": 200,
+      "csp": true,
+      "title": "Cookie Policy – Would You Rather Questions",
+      "titleLength": 42,
+      "h1": 1,
+      "descriptionLength": 84,
+      "canonical": "https://wouldyouratherquestions.org/cookie-policy/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": ["Would You Rather Questions"]
+    },
+    {
+      "url": "/dmca/",
+      "status": 200,
+      "csp": true,
+      "title": "DMCA & Copyright – Would You Rather Questions",
+      "titleLength": 45,
+      "h1": 1,
+      "descriptionLength": 77,
+      "canonical": "https://wouldyouratherquestions.org/dmca/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": ["Would You Rather Questions", "[NAME / ADDRESS]"]
+    },
+    {
+      "url": "/editorial-policy/",
+      "status": 200,
+      "csp": true,
+      "title": "Editorial Policy – Would You Rather Questions",
+      "titleLength": 45,
+      "h1": 1,
+      "descriptionLength": 83,
+      "canonical": "https://wouldyouratherquestions.org/editorial-policy/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/favorites/",
+      "status": 200,
+      "csp": true,
+      "title": "My Favorite Questions – Would You Rather Questions",
+      "titleLength": 50,
+      "h1": 1,
+      "descriptionLength": 69,
+      "canonical": "https://wouldyouratherquestions.org/favorites/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/favorites/play/",
+      "status": 200,
+      "csp": true,
+      "title": "Play My Favorite Questions – Would You Rather Questions",
+      "titleLength": 55,
+      "h1": 1,
+      "descriptionLength": 58,
+      "canonical": "https://wouldyouratherquestions.org/favorites/play/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/",
+      "status": 200,
+      "csp": true,
+      "title": "Would You Rather Questions – Play Free Online",
+      "titleLength": 45,
+      "h1": 1,
+      "descriptionLength": 155,
+      "canonical": "https://wouldyouratherquestions.org/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/play/",
+      "status": 200,
+      "csp": true,
+      "title": "Play Would You Rather Questions",
+      "titleLength": 31,
+      "h1": 1,
+      "descriptionLength": 109,
+      "canonical": "https://wouldyouratherquestions.org/play/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/privacy-policy/",
+      "status": 200,
+      "csp": true,
+      "title": "Privacy Policy – Would You Rather Questions",
+      "titleLength": 43,
+      "h1": 1,
+      "descriptionLength": 99,
+      "canonical": "https://wouldyouratherquestions.org/privacy-policy/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": [
+        "Would You Rather Questions",
+        "[DATE]",
+        "Would You Rather Questions — legal entity and address to be added"
+      ]
+    },
+    {
+      "url": "/s/326ptft/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather draw one detailed picture of your favorite adventure or draw a comic strip showing the whole adventure? – Would You Rather Questions",
+      "titleLength": 149,
+      "h1": 1,
+      "descriptionLength": 183,
+      "canonical": "https://wouldyouratherquestions.org/s/326ptft/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/39c3cq2/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather sit next to your best friend in class or have a window seat on the other side of the classroom? – Would You Rather Questions",
+      "titleLength": 141,
+      "h1": 1,
+      "descriptionLength": 175,
+      "canonical": "https://wouldyouratherquestions.org/s/39c3cq2/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/46x54x4/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather spend your entire recess finishing a project you love or stop halfway through to join your friends outside? – Would You Rather Questions",
+      "titleLength": 153,
+      "h1": 1,
+      "descriptionLength": 187,
+      "canonical": "https://wouldyouratherquestions.org/s/46x54x4/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/5msncgx/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather try a new recess game everyone is learning or play a familiar recess game you are already good at? – Would You Rather Questions",
+      "titleLength": 144,
+      "h1": 1,
+      "descriptionLength": 178,
+      "canonical": "https://wouldyouratherquestions.org/s/5msncgx/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/5x64x6e/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather borrow the next book in your favorite series or borrow a mystery book wrapped so you cannot see its title? – Would You Rather Questions",
+      "titleLength": 152,
+      "h1": 1,
+      "descriptionLength": 186,
+      "canonical": "https://wouldyouratherquestions.org/s/5x64x6e/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/64athuq/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose the movie for a class movie afternoon or choose the games for an extra recess? – Would You Rather Questions",
+      "titleLength": 131,
+      "h1": 1,
+      "descriptionLength": 165,
+      "canonical": "https://wouldyouratherquestions.org/s/64athuq/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/6cu2rxj/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather perform onstage in the school play or control the lights and sound effects backstage? – Would You Rather Questions",
+      "titleLength": 131,
+      "h1": 1,
+      "descriptionLength": 165,
+      "canonical": "https://wouldyouratherquestions.org/s/6cu2rxj/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/7swwakf/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose your project topic but present alone or have your teacher choose the topic but present with a friend? – Would You Rather Questions",
+      "titleLength": 154,
+      "h1": 1,
+      "descriptionLength": 188,
+      "canonical": "https://wouldyouratherquestions.org/s/7swwakf/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/7t539ty/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather keep a book you win in a school contest or give the book to your class library so everyone can read it? – Would You Rather Questions",
+      "titleLength": 149,
+      "h1": 1,
+      "descriptionLength": 183,
+      "canonical": "https://wouldyouratherquestions.org/s/7t539ty/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/7x4nrpf/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose one long graphic novel at the book fair or choose three short comic books at the book fair? – Would You Rather Questions",
+      "titleLength": 144,
+      "h1": 1,
+      "descriptionLength": 178,
+      "canonical": "https://wouldyouratherquestions.org/s/7x4nrpf/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/823cwd9/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather eat lunch outside with your friends or eat lunch inside while watching a short cartoon? – Would You Rather Questions",
+      "titleLength": 133,
+      "h1": 1,
+      "descriptionLength": 167,
+      "canonical": "https://wouldyouratherquestions.org/s/823cwd9/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/87vtj2v/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather run your own race on field day or run a relay race with your friends on field day? – Would You Rather Questions",
+      "titleLength": 128,
+      "h1": 1,
+      "descriptionLength": 162,
+      "canonical": "https://wouldyouratherquestions.org/s/87vtj2v/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/88qggna/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather explore a museum with a guide who answers your questions or explore a museum by choosing your own route? – Would You Rather Questions",
+      "titleLength": 150,
+      "h1": 1,
+      "descriptionLength": 184,
+      "canonical": "https://wouldyouratherquestions.org/s/88qggna/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/8a5u45n/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather have five short homework problems you know how to solve or have one tricky homework puzzle that might take longer? – Would You Rather Questions",
+      "titleLength": 160,
+      "h1": 1,
+      "descriptionLength": 194,
+      "canonical": "https://wouldyouratherquestions.org/s/8a5u45n/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/8ppr4yh/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather carry your books in a backpack or carry your books in a bag with wheels? – Would You Rather Questions",
+      "titleLength": 118,
+      "h1": 1,
+      "descriptionLength": 152,
+      "canonical": "https://wouldyouratherquestions.org/s/8ppr4yh/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/8wukmaj/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather build a marble run that gets the marble down fast or build a marble run with lots of twists and turns? – Would You Rather Questions",
+      "titleLength": 148,
+      "h1": 1,
+      "descriptionLength": 182,
+      "canonical": "https://wouldyouratherquestions.org/s/8wukmaj/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/8y68czd/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather have your artwork displayed where the whole school can see it or take your artwork home to decorate your room? – Would You Rather Questions",
+      "titleLength": 156,
+      "h1": 1,
+      "descriptionLength": 190,
+      "canonical": "https://wouldyouratherquestions.org/s/8y68czd/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/9bjvxaz/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather walk to school with a friend or ride your bike to school with a friend? – Would You Rather Questions",
+      "titleLength": 117,
+      "h1": 1,
+      "descriptionLength": 151,
+      "canonical": "https://wouldyouratherquestions.org/s/9bjvxaz/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/beszycd/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather use a fresh notebook for every school subject or keep all your subjects in one notebook with dividers? – Would You Rather Questions",
+      "titleLength": 148,
+      "h1": 1,
+      "descriptionLength": 182,
+      "canonical": "https://wouldyouratherquestions.org/s/beszycd/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/bfvze42/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather win a trophy in a drawing contest or win new art supplies in a drawing contest? – Would You Rather Questions",
+      "titleLength": 125,
+      "h1": 1,
+      "descriptionLength": 159,
+      "canonical": "https://wouldyouratherquestions.org/s/bfvze42/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/bxukqrf/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather practice one sport for a whole season or try a different sport each week? – Would You Rather Questions",
+      "titleLength": 119,
+      "h1": 1,
+      "descriptionLength": 153,
+      "canonical": "https://wouldyouratherquestions.org/s/bxukqrf/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/bz35n27/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather take one big field trip somewhere far away or take three smaller field trips close to school? – Would You Rather Questions",
+      "titleLength": 139,
+      "h1": 1,
+      "descriptionLength": 173,
+      "canonical": "https://wouldyouratherquestions.org/s/bz35n27/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/cyx5c4x/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather save your allowance for one bigger purchase each month or spend your allowance on smaller things each week? – Would You Rather Questions",
+      "titleLength": 153,
+      "h1": 1,
+      "descriptionLength": 187,
+      "canonical": "https://wouldyouratherquestions.org/s/cyx5c4x/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/dqm4gsd/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather walk a short route to school with one friend or ride a longer bus route with several friends? – Would You Rather Questions",
+      "titleLength": 139,
+      "h1": 1,
+      "descriptionLength": 173,
+      "canonical": "https://wouldyouratherquestions.org/s/dqm4gsd/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/e8kqs8u/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather take a field trip to an aquarium with an underwater tunnel or take a field trip to a science museum with experiments to try? – Would You Rather Questions",
+      "titleLength": 170,
+      "h1": 1,
+      "descriptionLength": 204,
+      "canonical": "https://wouldyouratherquestions.org/s/e8kqs8u/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/ezeusbv/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather have 15 extra minutes of recess every day or have one homework-free night each week? – Would You Rather Questions",
+      "titleLength": 130,
+      "h1": 1,
+      "descriptionLength": 164,
+      "canonical": "https://wouldyouratherquestions.org/s/ezeusbv/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/f27bmzr/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather write a story with an ending you choose or write a story and let your classmates vote on the ending? – Would You Rather Questions",
+      "titleLength": 146,
+      "h1": 1,
+      "descriptionLength": 180,
+      "canonical": "https://wouldyouratherquestions.org/s/f27bmzr/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/g8j3ave/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather build a working model volcano for a school project or create a simple video game for a school project? – Would You Rather Questions",
+      "titleLength": 148,
+      "h1": 1,
+      "descriptionLength": 182,
+      "canonical": "https://wouldyouratherquestions.org/s/g8j3ave/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/gd8aef9/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather join your friend's club and try an unfamiliar activity or join a club for your favorite activity and meet new people? – Would You Rather Questions",
+      "titleLength": 163,
+      "h1": 1,
+      "descriptionLength": 197,
+      "canonical": "https://wouldyouratherquestions.org/s/gd8aef9/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/gdubm8w/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather sit at the front of the school bus or sit at the back of the school bus? – Would You Rather Questions",
+      "titleLength": 118,
+      "h1": 1,
+      "descriptionLength": 152,
+      "canonical": "https://wouldyouratherquestions.org/s/gdubm8w/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/gs27am9/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather grow fruit you can eat in the school garden or grow flowers that attract butterflies to the school garden? – Would You Rather Questions",
+      "titleLength": 152,
+      "h1": 1,
+      "descriptionLength": 186,
+      "canonical": "https://wouldyouratherquestions.org/s/gs27am9/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/h87m8xg/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather make a paper airplane that flies the farthest or make a paper airplane that does the best loops? – Would You Rather Questions",
+      "titleLength": 142,
+      "h1": 1,
+      "descriptionLength": 176,
+      "canonical": "https://wouldyouratherquestions.org/s/h87m8xg/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/heymsv8/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather play several short board games on game night or play one long adventure board game on game night? – Would You Rather Questions",
+      "titleLength": 143,
+      "h1": 1,
+      "descriptionLength": 177,
+      "canonical": "https://wouldyouratherquestions.org/s/heymsv8/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/jdvnyng/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather start school earlier and finish earlier or start school later and finish later? – Would You Rather Questions",
+      "titleLength": 125,
+      "h1": 1,
+      "descriptionLength": 159,
+      "canonical": "https://wouldyouratherquestions.org/s/jdvnyng/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/k9f7e5w/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather build something from a box of loose LEGO bricks or build a LEGO set by following the picture instructions? – Would You Rather Questions",
+      "titleLength": 152,
+      "h1": 1,
+      "descriptionLength": 186,
+      "canonical": "https://wouldyouratherquestions.org/s/k9f7e5w/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/m5rcssh/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose what to draw but use only pencils or have your teacher choose the subject but use any art supplies? – Would You Rather Questions",
+      "titleLength": 152,
+      "h1": 1,
+      "descriptionLength": 186,
+      "canonical": "https://wouldyouratherquestions.org/s/m5rcssh/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/mvr52wn/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather build a small LEGO creation you can take home or help build a huge LEGO creation that stays at school? – Would You Rather Questions",
+      "titleLength": 148,
+      "h1": 1,
+      "descriptionLength": 182,
+      "canonical": "https://wouldyouratherquestions.org/s/mvr52wn/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/na6ed6p/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather read a book quietly at your own speed or listen to someone read it aloud using funny character voices? – Would You Rather Questions",
+      "titleLength": 148,
+      "h1": 1,
+      "descriptionLength": 182,
+      "canonical": "https://wouldyouratherquestions.org/s/na6ed6p/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/pnv4guw/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather play a quiz where you must answer quickly or solve riddles with as much thinking time as you need? – Would You Rather Questions",
+      "titleLength": 144,
+      "h1": 1,
+      "descriptionLength": 178,
+      "canonical": "https://wouldyouratherquestions.org/s/pnv4guw/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/q49jmns/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather bake cookies and invent your own flavor or decorate cupcakes and invent your own designs? – Would You Rather Questions",
+      "titleLength": 135,
+      "h1": 1,
+      "descriptionLength": 169,
+      "canonical": "https://wouldyouratherquestions.org/s/q49jmns/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/qfhmjg6/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose your partner for a difficult puzzle or get an easier puzzle with a partner your teacher chooses? – Would You Rather Questions",
+      "titleLength": 149,
+      "h1": 1,
+      "descriptionLength": 183,
+      "canonical": "https://wouldyouratherquestions.org/s/qfhmjg6/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/qqu5reu/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather bring your lunch from home or choose your lunch in the school cafeteria? – Would You Rather Questions",
+      "titleLength": 118,
+      "h1": 1,
+      "descriptionLength": 152,
+      "canonical": "https://wouldyouratherquestions.org/s/qqu5reu/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/rapzxfz/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather ride the school bus with your friends or ride to school in a car with your family? – Would You Rather Questions",
+      "titleLength": 128,
+      "h1": 1,
+      "descriptionLength": 162,
+      "canonical": "https://wouldyouratherquestions.org/s/rapzxfz/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/rnejrbz/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather write with a pen that makes smooth lines or write with a pencil so you can erase mistakes? – Would You Rather Questions",
+      "titleLength": 136,
+      "h1": 1,
+      "descriptionLength": 170,
+      "canonical": "https://wouldyouratherquestions.org/s/rnejrbz/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/t7gf77v/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather have a longer lunch break to talk with friends or finish lunch sooner and have more time on the playground? – Would You Rather Questions",
+      "titleLength": 153,
+      "h1": 1,
+      "descriptionLength": 187,
+      "canonical": "https://wouldyouratherquestions.org/s/t7gf77v/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/tmxmxpx/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather wear sneakers with laces or wear sneakers you can slip on? – Would You Rather Questions",
+      "titleLength": 104,
+      "h1": 1,
+      "descriptionLength": 138,
+      "canonical": "https://wouldyouratherquestions.org/s/tmxmxpx/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/u39y5en/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather choose how your team's robot looks or choose what your team's robot can do? – Would You Rather Questions",
+      "titleLength": 121,
+      "h1": 1,
+      "descriptionLength": 155,
+      "canonical": "https://wouldyouratherquestions.org/s/u39y5en/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/u5km5px/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather write your stories in a notebook or type your stories on a computer? – Would You Rather Questions",
+      "titleLength": 114,
+      "h1": 1,
+      "descriptionLength": 148,
+      "canonical": "https://wouldyouratherquestions.org/s/u5km5px/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/umgwdcy/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather join a cooking club and make snacks or join a robotics club and build moving inventions? – Would You Rather Questions",
+      "titleLength": 134,
+      "h1": 1,
+      "descriptionLength": 168,
+      "canonical": "https://wouldyouratherquestions.org/s/umgwdcy/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/vzqm8kr/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather make a ten-second animation with lots of tiny details or make a one-minute animation with simpler drawings? – Would You Rather Questions",
+      "titleLength": 153,
+      "h1": 1,
+      "descriptionLength": 187,
+      "canonical": "https://wouldyouratherquestions.org/s/vzqm8kr/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/wunsqfp/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather make a funny comic your classmates can read or record a funny skit your classmates can watch? – Would You Rather Questions",
+      "titleLength": 139,
+      "h1": 1,
+      "descriptionLength": 173,
+      "canonical": "https://wouldyouratherquestions.org/s/wunsqfp/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/xczupfp/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather look at the moon through a telescope or look at a drop of pond water through a microscope? – Would You Rather Questions",
+      "titleLength": 136,
+      "h1": 1,
+      "descriptionLength": 170,
+      "canonical": "https://wouldyouratherquestions.org/s/xczupfp/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/yaumd7e/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather sit near the front of the classroom or sit near the back of the classroom? – Would You Rather Questions",
+      "titleLength": 120,
+      "h1": 1,
+      "descriptionLength": 154,
+      "canonical": "https://wouldyouratherquestions.org/s/yaumd7e/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/zhgm9pm/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather have a classroom decorated like an underwater world or have a classroom decorated like a space station? – Would You Rather Questions",
+      "titleLength": 149,
+      "h1": 1,
+      "descriptionLength": 183,
+      "canonical": "https://wouldyouratherquestions.org/s/zhgm9pm/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/s/zsx7jyt/",
+      "status": 200,
+      "csp": true,
+      "title": "Would you rather try a science experiment when you know what should happen or try a science experiment when the result is a mystery? – Would You Rather Questions",
+      "titleLength": 161,
+      "h1": 1,
+      "descriptionLength": 195,
+      "canonical": "https://wouldyouratherquestions.org/s/zsx7jyt/",
+      "robots": "noindex,follow",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/submit-a-question/",
+      "status": 200,
+      "csp": true,
+      "title": "Submit a Would You Rather Question – Would You Rather Questions",
+      "titleLength": 63,
+      "h1": 1,
+      "descriptionLength": 88,
+      "canonical": "https://wouldyouratherquestions.org/submit-a-question/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/terms-and-conditions/",
+      "status": 200,
+      "csp": true,
+      "title": "Terms and Conditions – Would You Rather Questions",
+      "titleLength": 49,
+      "h1": 1,
+      "descriptionLength": 86,
+      "canonical": "https://wouldyouratherquestions.org/terms-and-conditions/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": [
+        "Would You Rather Questions",
+        "Would You Rather Questions — legal entity to be added",
+        "[JURISDICTION]"
+      ]
+    },
+    {
+      "url": "/would-you-rather-questions-for-kids/",
+      "status": 200,
+      "csp": true,
+      "title": "Would You Rather Questions for Kids – Fun & Clean",
+      "titleLength": 49,
+      "h1": 1,
+      "descriptionLength": 123,
+      "canonical": "https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    },
+    {
+      "url": "/would-you-rather-questions-for-kids/page/2/",
+      "status": 200,
+      "csp": true,
+      "title": "Would You Rather Questions for Kids – Fun & Clean – Page 2",
+      "titleLength": 58,
+      "h1": 1,
+      "descriptionLength": 191,
+      "canonical": "https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/page/2/",
+      "robots": "index,follow,max-image-preview:large",
+      "duplicateIds": [],
+      "fragments": [],
+      "placeholders": []
+    }
+  ],
+  "brokenLinks": [],
+  "runtime": [
+    {
+      "url": "/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would You Rather Questions",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 22
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.astro_astro_type_script_index_0_lang.jSCq7owD.js",
+          "bytes": 795,
+          "ms": 22
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/QuestionList.astro_astro_type_script_index_0_lang.BvynAbz7.js",
+          "bytes": 945,
+          "ms": 22
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 22
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 45
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 46
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 9
+        }
+      ]
+    },
+    {
+      "url": "/play/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would You Rather Questions",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 15
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 15
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 16
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 27
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 30
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 8
+        }
+      ]
+    },
+    {
+      "url": "/would-you-rather-questions-for-kids/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would You Rather Questions for Kids",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 16
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/QuestionList.astro_astro_type_script_index_0_lang.BvynAbz7.js",
+          "bytes": 945,
+          "ms": 15
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 16
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 16
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 72
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 70
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 7
+        }
+      ]
+    },
+    {
+      "url": "/would-you-rather-questions-for-kids/page/2/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would You Rather Questions for Kids  – page 2",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 18
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 18
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/QuestionList.astro_astro_type_script_index_0_lang.BvynAbz7.js",
+          "bytes": 945,
+          "ms": 18
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 18
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 4
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 6
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 62
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 59
+        }
+      ]
+    },
+    {
+      "url": "/categories/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would You Rather Categories",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 4
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 6
+        }
+      ]
+    },
+    {
+      "url": "/favorites/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "My Favorite Questions",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.astro_astro_type_script_index_0_lang.CC7eVQee.js",
+          "bytes": 1506,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 29
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 6
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/game-data/favorites.json",
+          "bytes": 4346,
+          "ms": 5
+        },
+        {
+          "url": "http://127.0.0.1:4321/game-data/favorites.json",
+          "bytes": 0,
+          "ms": 3
+        }
+      ]
+    },
+    {
+      "url": "/favorites/play/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Play My Favorite Questions",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 31
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/game-data/favorites.json",
+          "bytes": 4346,
+          "ms": 5
+        }
+      ]
+    },
+    {
+      "url": "/blog/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "The Would You Rather Blog",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/BlogCard.O-9IpNVR.css",
+          "bytes": 1286,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.B08LJFvG.css",
+          "bytes": 1475,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 15
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 15
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "url": "/blog/how-to-play-would-you-rather/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "How to Play Would You Rather",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/BlogCard.O-9IpNVR.css",
+          "bytes": 1286,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/_slug_._OAtFiFw.css",
+          "bytes": 2034,
+          "ms": 17
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 17
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 16
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 17
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 4
+        }
+      ]
+    },
+    {
+      "url": "/about-us/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Questions that start conversations.",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 6
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 7
+        }
+      ]
+    },
+    {
+      "url": "/contact-us/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Let's talk.",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 34
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+          "bytes": 15120,
+          "ms": 34
+        }
+      ]
+    },
+    {
+      "url": "/submit-a-question/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Submit a Question",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 32
+        }
+      ]
+    },
+    {
+      "url": "/privacy-policy/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Privacy Policy",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 33
+        }
+      ]
+    },
+    {
+      "url": "/terms-and-conditions/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Terms and Conditions",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 34
+        }
+      ]
+    },
+    {
+      "url": "/dmca/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "DMCA &amp; Copyright",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 32
+        }
+      ]
+    },
+    {
+      "url": "/accessibility/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Accessibility Statement",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 10
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 30
+        }
+      ]
+    },
+    {
+      "url": "/cookie-policy/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Cookie Policy",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 33
+        }
+      ]
+    },
+    {
+      "url": "/editorial-policy/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Editorial Policy",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 9
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 32
+        }
+      ]
+    },
+    {
+      "url": "/does-not-exist/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Page not found",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 7
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 11
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 12
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 37
+        }
+      ]
+    },
+    {
+      "url": "/s/326ptft/",
+      "errors": [],
+      "failed": [],
+      "consoleErrors": [],
+      "font": "\"Bricolage Grotesque\", \"Arial Narrow\", Arial, sans-serif",
+      "fontPreview": null,
+      "h1": "Would you rather draw one detailed picture of your favorite adventure or draw a comic strip showing the whole adventure?",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+          "bytes": 11777,
+          "ms": 8
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+          "bytes": 1441,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+          "bytes": 976,
+          "ms": 13
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+          "bytes": 728,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+          "bytes": 7534,
+          "ms": 14
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+          "bytes": 890,
+          "ms": 4
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+          "bytes": 1416,
+          "ms": 6
+        },
+        {
+          "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+          "bytes": 131848,
+          "ms": 37
+        }
+      ]
+    }
+  ],
+  "breakpoints": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 258,
+          "right": 302,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 298,
+          "right": 342,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 18,
+          "right": 207,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 328,
+          "right": 372,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 221,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 692,
+          "right": 736,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "scrollWidth": 800,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 221,
+          "top": 17,
+          "bottom": 46
+        },
+        {
+          "element": "menu-button",
+          "display": "block",
+          "left": 724,
+          "right": 768,
+          "top": 10,
+          "bottom": 54
+        },
+        {
+          "element": "nav-links",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        }
+      ]
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 230,
+          "top": 23,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 252,
+          "right": 818,
+          "top": 5,
+          "bottom": 71
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 660,
+          "right": 818,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "scrollWidth": 900,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 230,
+          "top": 23,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 255,
+          "right": 868,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 711,
+          "right": 868,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 32,
+          "right": 235,
+          "top": 22,
+          "bottom": 53
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 379,
+          "right": 992,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 835,
+          "right": 992,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 40,
+          "right": 291,
+          "top": 18,
+          "bottom": 57
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 627,
+          "right": 1240,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 1083,
+          "right": 1240,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "header": [
+        {
+          "element": "brand",
+          "display": "flex",
+          "left": 80,
+          "right": 334,
+          "top": 18,
+          "bottom": 57
+        },
+        {
+          "element": "menu-button",
+          "display": "none",
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        {
+          "element": "nav-links",
+          "display": "flex",
+          "left": 747,
+          "right": 1360,
+          "top": 14,
+          "bottom": 62
+        },
+        {
+          "element": "reference-nav-play",
+          "display": "flex",
+          "left": 1203,
+          "right": 1360,
+          "top": 14,
+          "bottom": 62
+        }
+      ]
+    }
+  ],
+  "resultDisclosure": {
+    "visibleText": "● LET'S PLAY\nWould You Rather Questions\n\nTwo options. One choice. Pick a side, see the result, then keep playing.\n\nMixed\n♡\nride the school bus with your friends\n63.3%\nride to school in a car with your family\n36.7%\nNext question\n\nWould you rather… choose Option A or Option B, or skip this question.\n\nOption A 63.3%. Option B 36.7%. For-fun result.",
+    "screenreader": "Option A 63.3%. Option B 36.7%. For-fun result."
+  },
+  "removalFocus": {
+    "tag": "BODY",
+    "text": "    \nSkip to content\n    \nWould You Rather Questions        "
+  },
+  "slowNetwork": {
+    "busy": "true",
+    "disabled": true,
+    "label": "Loading…"
+  },
+  "headers": {
+    "/": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"2f24ae77af672c96b03960e9d6843f8d\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/api/health/": {
+      "status": 200,
+      "headers": {
+        "cache-control": "no-store",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    "/game-data/manifest.json": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=300, must-revalidate",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "application/json",
+        "etag": "\"dda587a44f1b04f8f53b94c5d45432ec\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/game-data/favorites.json": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=300, must-revalidate",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "application/json",
+        "etag": "\"ac990144f664e4638f47787572a9a4e9\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/deployment-manifest.json": {
+      "status": 200,
+      "headers": {
+        "cache-control": "no-store",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "application/json",
+        "etag": "\"03df04b36788280e8aaf277a4ce4e716\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/fonts/bricolage-grotesque-latin.woff2": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=2592000",
+        "cf-cache-status": "HIT",
+        "content-length": "131548",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "font/woff2",
+        "etag": "\"ee581de0e445aff5fb76204829771543\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/game-data/mixed/pack-01.b5e7ebce35.json": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "application/json",
+        "etag": "\"6f89db746eac1cd89f347876aa1cfa57\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    "/game-data/mixed/pack-02.93eade7901.json": {
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "cf-cache-status": "HIT",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://cloudflareinsights.com; frame-src https://googleads.g.doubleclick.net; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests",
+        "content-type": "application/json",
+        "etag": "\"fc9566da6fa44be4f2d6ded23b23dbf9\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff"
+      }
+    }
+  },
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" xmlns:image=\"http://www.google.com/schemas/sitemap-image/1.1\" xmlns:video=\"http://www.google.com/schemas/sitemap-video/1.1\"><url><loc>https://wouldyouratherquestions.org/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/about-us/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/accessibility/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/blog/how-to-play-would-you-rather/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/categories/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/contact-us/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/cookie-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/dmca/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/editorial-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/favorites/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/favorites/play/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/play/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/privacy-policy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/submit-a-question/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/terms-and-conditions/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://wouldyouratherquestions.org/would-you-rather-questions-for-kids/page/2/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>"
+}

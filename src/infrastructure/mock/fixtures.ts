@@ -1,0 +1,643 @@
+/**
+ * DEMO FIXTURES — clearly labelled, deliberately tiny, easy to delete.
+ *
+ * These exist only so the layout, game, sharing, static lists and
+ * static layout can be exercised. They are NOT production content.
+ * Every demo question has `isDemo: true` and a share code prefixed `demq`.
+ *
+ * Historical test fixtures. The canonical website catalogue now lives in
+ * src/content/data/*.json.
+ */
+import type { Category } from '@/domain/category';
+import type { Question } from '@/domain/question';
+
+const NOW = '2026-01-01T00:00:00.000Z';
+
+type CategorySeed = Omit<Category, 'createdAt' | 'updatedAt' | 'id'> & { id: string };
+
+function cat(seed: CategorySeed): Category {
+  return { ...seed, createdAt: NOW, updatedAt: NOW };
+}
+
+// Deterministic UUIDs (v4-shaped) for historical fixtures.
+export const CATEGORY_IDS = {
+  kids: '11111111-1111-4111-8111-000000000001',
+  teens: '11111111-1111-4111-8111-000000000002',
+  adults: '11111111-1111-4111-8111-000000000003',
+  couples: '11111111-1111-4111-8111-000000000004',
+  friends: '11111111-1111-4111-8111-000000000005',
+  family: '11111111-1111-4111-8111-000000000006',
+  funny: '11111111-1111-4111-8111-000000000007',
+  hard: '11111111-1111-4111-8111-000000000008',
+  deep: '11111111-1111-4111-8111-000000000009',
+  work: '11111111-1111-4111-8111-000000000010',
+  icebreaker: '11111111-1111-4111-8111-000000000011',
+  // Future (draft) categories
+  extreme: '11111111-1111-4111-8111-000000000107',
+  crazy: '11111111-1111-4111-8111-000000000108',
+  weird: '11111111-1111-4111-8111-000000000109',
+  gross: '11111111-1111-4111-8111-000000000110',
+  scary: '11111111-1111-4111-8111-000000000111',
+  spicy: '11111111-1111-4111-8111-000000000112',
+  dirty: '11111111-1111-4111-8111-000000000113',
+  food: '11111111-1111-4111-8111-000000000115',
+  animals: '11111111-1111-4111-8111-000000000124',
+  halloween: '11111111-1111-4111-8111-000000000116',
+  christmas: '11111111-1111-4111-8111-000000000117',
+  valentines: '11111111-1111-4111-8111-000000000119',
+  spring: '11111111-1111-4111-8111-000000000125',
+  summer: '11111111-1111-4111-8111-000000000120',
+  winter: '11111111-1111-4111-8111-000000000121',
+  fall: '11111111-1111-4111-8111-000000000122',
+} as const;
+
+const base = {
+  status: 'published' as const,
+  navFeatured: false,
+  includeInMixedGame: true,
+  requiresAgeGate: false,
+  isChildSafe: false,
+  isMature: false,
+  seasonalStart: null,
+  seasonalEnd: null,
+};
+
+export const LAUNCH_CATEGORIES: readonly Category[] = [
+  cat({
+    ...base,
+    id: CATEGORY_IDS.kids,
+    name: 'For Kids',
+    slug: 'for-kids',
+    canonicalPath: '/would-you-rather-questions-for-kids/',
+    h1: 'Would You Rather Questions for Kids',
+    seoTitle: 'Would You Rather Questions for Kids – Fun & Clean',
+    metaDescription:
+      'Clean, silly Would You Rather questions for kids. Great for classrooms, birthday parties, car rides and family game nights.',
+    introduction:
+      'Kids love a good either-or debate, and these questions keep things silly, safe and easy to understand. Every option here is suitable for younger children, so you can hand the screen to a seven-year-old without worrying about what comes up next.\n\nUse them to fill the last ten minutes of class, keep a car ride cheerful, or get a birthday party talking. Ask everyone to explain their pick — that is where the real fun (and the giggles) start.',
+    shortDescription: 'Clean and family friendly',
+    icon: '🦄',
+    navFeatured: true,
+    isChildSafe: true,
+    sortOrder: 10,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.teens,
+    name: 'For Teens',
+    slug: 'for-teens',
+    canonicalPath: '/would-you-rather-questions-for-teens/',
+    h1: 'Would You Rather Questions for Teens',
+    seoTitle: 'Would You Rather Questions for Teens',
+    metaDescription:
+      'Would You Rather questions for teens: school, friends, phones, music and awkward moments. Clean enough for youth groups and sleepovers.',
+    introduction:
+      'Teenagers want questions that feel relevant — phones, friends, music, school and the occasional embarrassing scenario — without being babyish or crossing into adult territory. This set aims for exactly that middle ground.\n\nThey work well at sleepovers, on the bus to a game, or as a quick warm-up in a youth group. Expect strong opinions and plenty of "wait, no, let me change my answer."',
+    shortDescription: 'School, friends and awkward moments',
+    icon: '🎧',
+    isChildSafe: true,
+    sortOrder: 20,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.adults,
+    name: 'For Adults',
+    slug: 'for-adults',
+    canonicalPath: '/would-you-rather-questions-for-adults/',
+    h1: 'Would You Rather Questions for Adults',
+    seoTitle: 'Would You Rather Questions for Adults – Parties & Game Nights',
+    metaDescription:
+      'Would You Rather questions for adults: awkward, honest and slightly spicy dilemmas for parties, date nights and groups of friends.',
+    introduction:
+      'These questions are written for grown-ups: money, careers, relationships, embarrassing confessions and the kind of trade-offs you only understand after paying your own bills. They are suggestive at most, never graphic, so they still work at a mixed dinner party.\n\nTry them as a warm-up before a game night, on a long drive with friends, or whenever a conversation needs a jolt. The best answers usually come with a story attached.',
+    shortDescription: 'Awkward and grown-up dilemmas',
+    icon: '🌶️',
+    navFeatured: true,
+    includeInMixedGame: false,
+    isMature: true,
+    sortOrder: 30,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.couples,
+    name: 'For Couples',
+    slug: 'for-couples',
+    canonicalPath: '/would-you-rather-questions-for-couples/',
+    h1: 'Would You Rather Questions for Couples',
+    seoTitle: 'Would You Rather Questions for Couples – Date Night Fun',
+    metaDescription:
+      'Would You Rather questions for couples. Playful, romantic and revealing dilemmas for date nights, road trips and getting to know each other.',
+    introduction:
+      'Whether you have been together for three weeks or thirty years, a good either-or question can reveal something new. This set mixes playful, romantic and slightly cheeky dilemmas that give you both something to laugh and argue about.\n\nPlay it over dinner, on a road trip, or as a low-key date night at home. Keep score if you like — or just enjoy finding out how differently you think.',
+    shortDescription: 'Playful and romantic',
+    icon: '💞',
+    includeInMixedGame: false,
+    sortOrder: 40,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.friends,
+    name: 'For Friends',
+    slug: 'for-friends',
+    canonicalPath: '/would-you-rather-questions-for-friends/',
+    h1: 'Would You Rather Questions for Friends',
+    seoTitle: 'Would You Rather Questions for Friends – Group Fun',
+    metaDescription:
+      'Would You Rather questions to play with friends: funny, competitive and revealing dilemmas for hangouts, parties and group chats.',
+    introduction:
+      'Friend groups already have running jokes, old grudges and strong opinions — these questions just give them somewhere to go. Expect debates about loyalty, embarrassment, superpowers and who would survive longest in a zombie movie.\n\nThey are perfect for hangouts, parties, and group chats when the conversation has gone quiet. Everyone answers, everyone explains, nobody gets to say "neither."',
+    shortDescription: 'Loyalty, laughs and rivalries',
+    icon: '🎉',
+    sortOrder: 50,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.family,
+    name: 'For Family',
+    slug: 'for-family',
+    canonicalPath: '/would-you-rather-questions-for-family/',
+    h1: 'Would You Rather Questions for Family',
+    seoTitle: 'Would You Rather Questions for Family Game Night',
+    metaDescription:
+      'Family-friendly Would You Rather questions everyone from grandparents to little kids can enjoy. Great for dinner tables, holidays and road trips.',
+    introduction:
+      'Family time works best when everyone can join in, so these questions are clean, easy to understand and fun for a mix of ages. Grandparents and five-year-olds can debate the same dilemma and disagree just as loudly.\n\nBring them to the dinner table, a holiday gathering, or the back seat of a long drive. They are also a gentle way to get quieter family members talking.',
+    shortDescription: 'Fun for every age at the table',
+    icon: '🏠',
+    isChildSafe: true,
+    sortOrder: 60,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.funny,
+    name: 'Funny',
+    slug: 'funny',
+    canonicalPath: '/funny-would-you-rather-questions/',
+    h1: 'Funny Would You Rather Questions',
+    seoTitle: 'Funny Would You Rather Questions – Silly & Ridiculous',
+    metaDescription:
+      'Funny Would You Rather questions that are weird, silly and ridiculous. Perfect icebreakers for parties, classrooms and anyone who needs a laugh.',
+    introduction:
+      'Some dilemmas are not meant to be deep — they are meant to make the whole room laugh. This collection leans into the absurd: strange bodies, ridiculous superpowers, embarrassing habits and choices nobody should ever have to make.\n\nUse them to break the ice at a party, wake up a sleepy classroom, or settle a bored group chat. Bonus points for defending your answer with a completely straight face.',
+    shortDescription: 'Silly and ridiculous',
+    icon: '😂',
+    navFeatured: true,
+    isChildSafe: true,
+    sortOrder: 90,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.hard,
+    name: 'Hard Choices',
+    slug: 'hard',
+    canonicalPath: '/hard-would-you-rather-questions/',
+    h1: 'Hard Would You Rather Questions',
+    seoTitle: 'Hard Would You Rather Questions – Impossible Choices',
+    metaDescription:
+      'Hard Would You Rather questions with no easy answer. Tough trade-offs about money, time, love and life that will split any group.',
+    introduction:
+      'These are the questions people groan at before answering. Both options cost you something, and the fun is watching everyone squirm while they work out which loss they can live with.\n\nGreat for long conversations, late nights and anyone who thinks they are decisive. Give people a minute to think — the first answer is rarely the final one.',
+    shortDescription: 'No easy answers',
+    icon: '😬',
+    navFeatured: true,
+    sortOrder: 100,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.deep,
+    name: 'Deep',
+    slug: 'deep',
+    canonicalPath: '/deep-would-you-rather-questions/',
+    h1: 'Deep Would You Rather Questions',
+    seoTitle: 'Deep Would You Rather Questions – Thought-Provoking',
+    metaDescription:
+      'Deep Would You Rather questions about memory, meaning, relationships and the future. Thought-provoking dilemmas for real conversations.',
+    introduction:
+      'Not every round has to be silly. These questions dig into what people value — memory, honesty, ambition, comfort, connection — and tend to start conversations that last long after the game ends.\n\nThey suit quiet evenings, road trips and getting to know someone properly. There are no right answers, but there are usually very revealing ones.',
+    shortDescription: 'Questions that make you think',
+    icon: '🧠',
+    navFeatured: true,
+    sortOrder: 110,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.work,
+    name: 'For Work',
+    slug: 'for-work',
+    canonicalPath: '/would-you-rather-questions-for-work/',
+    h1: 'Would You Rather Questions for Work',
+    seoTitle: 'Would You Rather Questions for Work & Team Meetings',
+    metaDescription:
+      'Office-safe Would You Rather questions for team meetings, remote stand-ups and workplace icebreakers. Light, inclusive and quick to run.',
+    introduction:
+      'Workplace icebreakers need to be quick, inclusive and safe for a mixed audience. These questions stick to office life, commutes, coffee, meetings and harmless hypotheticals so nobody has to share more than they want to.\n\nDrop one into a remote stand-up, a training session or the first five minutes of a team meeting. They are a low-effort way to get people talking before the real agenda begins.',
+    shortDescription: 'Office-safe team icebreakers',
+    icon: '💼',
+    isChildSafe: true,
+    sortOrder: 70,
+  }),
+  cat({
+    ...base,
+    id: CATEGORY_IDS.icebreaker,
+    name: 'Icebreakers',
+    slug: 'icebreakers',
+    canonicalPath: '/would-you-rather-icebreaker-questions/',
+    h1: 'Would You Rather Icebreaker Questions',
+    seoTitle: 'Would You Rather Icebreaker Questions for Any Group',
+    metaDescription:
+      'Easy Would You Rather icebreaker questions for new groups, first meetings, classrooms and events. Quick to answer and simple to explain.',
+    introduction:
+      'When a group does not know each other yet, the best icebreakers are quick to answer and easy to explain. These questions are light, universal and free of anything awkward, so they work for students, colleagues and strangers alike.\n\nUse them at the start of a workshop, a first meeting or an orientation day. One round is usually enough to get the room comfortable.',
+    shortDescription: 'Easy questions for new groups',
+    icon: '🧊',
+    navFeatured: true,
+    isChildSafe: true,
+    sortOrder: 80,
+  }),
+];
+
+/** Future categories: seeded as drafts so architecture is ready, never published by default. */
+const draft = { ...base, status: 'draft' as const, includeInMixedGame: false };
+
+export const FUTURE_CATEGORIES: readonly Category[] = [
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.extreme,
+    name: 'Extreme',
+    slug: 'extreme',
+    canonicalPath: '/extreme-would-you-rather-questions/',
+    h1: 'Extreme Would You Rather Questions',
+    seoTitle: 'Extreme Would You Rather Questions',
+    metaDescription: 'Extreme Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Pushed to the limit',
+    icon: '🔥',
+    sortOrder: 140,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.crazy,
+    name: 'Crazy',
+    slug: 'crazy',
+    canonicalPath: '/crazy-would-you-rather-questions/',
+    h1: 'Crazy Would You Rather Questions',
+    seoTitle: 'Crazy Would You Rather Questions',
+    metaDescription: 'Crazy Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Wild scenarios',
+    icon: '🤪',
+    sortOrder: 130,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.weird,
+    name: 'Weird',
+    slug: 'weird',
+    canonicalPath: '/weird-would-you-rather-questions/',
+    h1: 'Weird Would You Rather Questions',
+    seoTitle: 'Weird Would You Rather Questions',
+    metaDescription: 'Weird Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Strange and surreal',
+    icon: '👽',
+    sortOrder: 120,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.gross,
+    name: 'Gross',
+    slug: 'gross',
+    canonicalPath: '/gross-would-you-rather-questions/',
+    h1: 'Gross Would You Rather Questions',
+    seoTitle: 'Gross Would You Rather Questions',
+    metaDescription: 'Gross Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Not for the squeamish',
+    icon: '🤢',
+    sortOrder: 150,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.scary,
+    name: 'Scary',
+    slug: 'scary',
+    canonicalPath: '/scary-would-you-rather-questions/',
+    h1: 'Scary Would You Rather Questions',
+    seoTitle: 'Scary Would You Rather Questions – Creepy Choices',
+    metaDescription:
+      'Scary Would You Rather questions featuring creepy places, mysterious sounds, monsters and supernatural choices.',
+    introduction: '',
+    shortDescription: 'Creepy and supernatural choices',
+    icon: '👻',
+    sortOrder: 160,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.spicy,
+    name: 'Spicy',
+    slug: 'spicy',
+    canonicalPath: '/spicy-would-you-rather-questions/',
+    h1: 'Spicy Would You Rather Questions',
+    seoTitle: 'Spicy Would You Rather Questions',
+    metaDescription: 'Spicy Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Flirty and bold',
+    icon: '🌶️',
+    isMature: true,
+    requiresAgeGate: true,
+    sortOrder: 170,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.dirty,
+    name: 'Dirty',
+    slug: 'dirty',
+    canonicalPath: '/dirty-would-you-rather-questions/',
+    h1: 'Dirty Would You Rather Questions',
+    seoTitle: 'Dirty Would You Rather Questions (18+)',
+    metaDescription: 'Dirty Would You Rather questions for adults.',
+    introduction: '',
+    shortDescription: '18+ suggestive questions',
+    icon: '🔞',
+    isMature: true,
+    requiresAgeGate: true,
+    sortOrder: 180,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.food,
+    name: 'Food',
+    slug: 'food',
+    canonicalPath: '/food-would-you-rather-questions/',
+    h1: 'Food Would You Rather Questions',
+    seoTitle: 'Food Would You Rather Questions',
+    metaDescription: 'Food Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Delicious dilemmas',
+    icon: '🍕',
+    isChildSafe: true,
+    sortOrder: 190,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.animals,
+    name: 'Animals',
+    slug: 'animals',
+    canonicalPath: '/animal-would-you-rather-questions/',
+    h1: 'Animal Would You Rather Questions',
+    seoTitle: 'Animal Would You Rather Questions – Wild & Funny',
+    metaDescription:
+      'Animal Would You Rather questions about pets, wildlife, unusual creatures and funny animal adventures for groups of all ages.',
+    introduction: '',
+    shortDescription: 'Pets, wildlife and wild choices',
+    icon: '🐾',
+    isChildSafe: true,
+    sortOrder: 200,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.halloween,
+    name: 'Halloween',
+    slug: 'halloween',
+    canonicalPath: '/halloween-would-you-rather-questions/',
+    h1: 'Halloween Would You Rather Questions',
+    seoTitle: 'Halloween Would You Rather Questions',
+    metaDescription: 'Halloween Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Spooky-season picks',
+    icon: '🎃',
+    isChildSafe: true,
+    seasonalStart: '2026-09-01',
+    seasonalEnd: '2026-10-31',
+    sortOrder: 250,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.christmas,
+    name: 'Christmas',
+    slug: 'christmas',
+    canonicalPath: '/christmas-would-you-rather-questions/',
+    h1: 'Christmas Would You Rather Questions',
+    seoTitle: 'Christmas Would You Rather Questions',
+    metaDescription: 'Christmas Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Festive dilemmas',
+    icon: '🎄',
+    isChildSafe: true,
+    seasonalStart: '2026-11-01',
+    seasonalEnd: '2026-12-31',
+    sortOrder: 260,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.valentines,
+    name: "Valentine's Day",
+    slug: 'valentines',
+    canonicalPath: '/valentines-would-you-rather-questions/',
+    h1: "Valentine's Day Would You Rather Questions",
+    seoTitle: "Valentine's Would You Rather Questions",
+    metaDescription: "Valentine's Day Would You Rather questions.",
+    introduction: '',
+    shortDescription: 'Sweet and romantic',
+    icon: '💘',
+    seasonalStart: '2026-01-01',
+    seasonalEnd: '2026-02-28',
+    sortOrder: 270,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.spring,
+    name: 'Spring',
+    slug: 'spring',
+    canonicalPath: '/spring-would-you-rather-questions/',
+    h1: 'Spring Would You Rather Questions',
+    seoTitle: 'Spring Would You Rather Questions',
+    metaDescription:
+      'Spring Would You Rather questions about flowers, rainy days, outdoor adventures, animals and the return of warmer weather.',
+    introduction: '',
+    shortDescription: 'Fresh and cheerful spring choices',
+    icon: '🌷',
+    isChildSafe: true,
+    seasonalStart: '2026-03-01',
+    seasonalEnd: '2026-05-31',
+    sortOrder: 210,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.summer,
+    name: 'Summer',
+    slug: 'summer',
+    canonicalPath: '/summer-would-you-rather-questions/',
+    h1: 'Summer Would You Rather Questions',
+    seoTitle: 'Summer Would You Rather Questions',
+    metaDescription: 'Summer Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Sunshine and vacations',
+    icon: '☀️',
+    isChildSafe: true,
+    seasonalStart: '2026-06-01',
+    seasonalEnd: '2026-08-31',
+    sortOrder: 220,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.winter,
+    name: 'Winter',
+    slug: 'winter',
+    canonicalPath: '/winter-would-you-rather-questions/',
+    h1: 'Winter Would You Rather Questions',
+    seoTitle: 'Winter Would You Rather Questions',
+    metaDescription: 'Winter Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Snow-day dilemmas',
+    icon: '❄️',
+    isChildSafe: true,
+    seasonalStart: '2026-12-01',
+    seasonalEnd: '2026-02-28',
+    sortOrder: 240,
+  }),
+  cat({
+    ...draft,
+    id: CATEGORY_IDS.fall,
+    name: 'Fall',
+    slug: 'fall',
+    canonicalPath: '/fall-would-you-rather-questions/',
+    h1: 'Fall Would You Rather Questions',
+    seoTitle: 'Fall Would You Rather Questions',
+    metaDescription: 'Fall Would You Rather questions.',
+    introduction: '',
+    shortDescription: 'Cozy autumn picks',
+    icon: '🍂',
+    isChildSafe: true,
+    seasonalStart: '2026-09-01',
+    seasonalEnd: '2026-11-30',
+    sortOrder: 230,
+  }),
+  // Third-party trademark: never imply affiliation. Unpublished by default.
+];
+
+export const ALL_CATEGORIES: readonly Category[] = [...LAUNCH_CATEGORIES, ...FUTURE_CATEGORIES];
+
+// ---------------------------------------------------------------------------
+// DEMO QUESTIONS (3). Delete freely. Share codes are prefixed "demq".
+// ---------------------------------------------------------------------------
+
+export const DEMO_QUESTION_IDS = {
+  one: '22222222-2222-4222-8222-000000000001',
+  two: '22222222-2222-4222-8222-000000000002',
+  three: '22222222-2222-4222-8222-000000000003',
+} as const;
+
+export const DEMO_QUESTIONS: readonly Question[] = [
+  {
+    id: DEMO_QUESTION_IDS.one,
+    optionA: '[DEMO] have a pet dragon',
+    optionB: '[DEMO] have a pet unicorn',
+    status: 'published',
+    shareCode: 'demq22a',
+    sortOrder: 10,
+    categoryIds: [CATEGORY_IDS.kids, CATEGORY_IDS.family, CATEGORY_IDS.funny],
+    isDemo: true,
+    createdAt: NOW,
+    updatedAt: NOW,
+    publishedAt: NOW,
+  },
+  {
+    id: DEMO_QUESTION_IDS.two,
+    optionA: '[DEMO] always know when someone is lying',
+    optionB: '[DEMO] always get away with lying',
+    status: 'published',
+    shareCode: 'demq22b',
+    sortOrder: 20,
+    categoryIds: [CATEGORY_IDS.adults, CATEGORY_IDS.deep, CATEGORY_IDS.hard],
+    isDemo: true,
+    createdAt: NOW,
+    updatedAt: NOW,
+    publishedAt: NOW,
+  },
+  {
+    id: DEMO_QUESTION_IDS.three,
+    optionA: '[DEMO] sweat maple syrup',
+    optionB: '[DEMO] sneeze glitter',
+    status: 'published',
+    shareCode: 'demq22c',
+    sortOrder: 30,
+    categoryIds: [
+      CATEGORY_IDS.funny,
+      CATEGORY_IDS.kids,
+      CATEGORY_IDS.friends,
+      CATEGORY_IDS.icebreaker,
+      CATEGORY_IDS.work,
+      CATEGORY_IDS.teens,
+    ],
+    isDemo: true,
+    createdAt: NOW,
+    updatedAt: NOW,
+    publishedAt: NOW,
+  },
+];
+
+/**
+ * Extra mock-only questions used so pagination, chunking and the game can be
+ * exercised locally with realistic volume. Generated procedurally, flagged demo,
+ * and never part of the production content catalogue.
+ */
+const SHARE_ALPHABET = '23456789abcdefghjkmnpqrstuvwxyz';
+/** Encode an index into the share-code alphabet (fixed 4 chars). */
+function encodeShareSuffix(index: number): string {
+  let n = index;
+  let out = '';
+  for (let i = 0; i < 4; i++) {
+    out = SHARE_ALPHABET[n % SHARE_ALPHABET.length] + out;
+    n = Math.floor(n / SHARE_ALPHABET.length);
+  }
+  return out;
+}
+
+export function generateMockFillerQuestions(count: number): Question[] {
+  const subjects = [
+    'a talking cat',
+    'a robot butler',
+    'a tiny house on wheels',
+    'a jetpack',
+    'a never-ending pizza',
+    'a time machine that only goes back one hour',
+    'a map to every lost sock',
+    'an umbrella that predicts rain',
+  ];
+  const verbs = [
+    'own',
+    'borrow for a week',
+    'trade your phone for',
+    'explain to your grandparents',
+    'bring to school',
+    'hide from your friends',
+  ];
+  const out: Question[] = [];
+  // Never mix mature categories into filler so the child/mature validation rule holds.
+  const launchIds = LAUNCH_CATEGORIES.filter((c) => !c.isMature).map((c) => c.id);
+  for (let i = 0; i < count; i++) {
+    const s1 = subjects[i % subjects.length] ?? '';
+    const s2 = subjects[(i * 3 + 1) % subjects.length] ?? '';
+    const v = verbs[i % verbs.length] ?? '';
+    const n = String(i + 1).padStart(4, '0');
+    const cats = new Set<string>([
+      launchIds[i % launchIds.length] ?? '',
+      launchIds[(i * 7 + 2) % launchIds.length] ?? '',
+    ]);
+    out.push({
+      id: `33333333-3333-4333-8333-${n.padStart(12, '0')}`,
+      optionA: `[DEMO ${n}] ${v} ${s1}`,
+      optionB: `[DEMO ${n}] ${v} ${s2}`,
+      status: 'published',
+      shareCode: `demq${encodeShareSuffix(i)}`,
+      sortOrder: 1000 + i,
+      categoryIds: [...cats].filter(Boolean),
+      isDemo: true,
+      createdAt: NOW,
+      updatedAt: NOW,
+      publishedAt: NOW,
+    });
+  }
+  return out;
+}

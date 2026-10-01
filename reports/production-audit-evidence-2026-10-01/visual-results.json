@@ -1,0 +1,568 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      ".audit/visual-config.ts",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\.audit\\visual-config.ts",
+    "rootDir": "C:/Users/91842/Downloads/questions-main/questions-main/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/91842/Downloads/questions-main/questions-main/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/91842/Downloads/questions-main/questions-main/tests/e2e",
+        "testIgnore": [],
+        "testMatch": ["/visual\\.spec\\.ts/"],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/91842/Downloads/questions-main/questions-main/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/91842/Downloads/questions-main/questions-main/tests/e2e",
+        "testIgnore": [],
+        "testMatch": ["/visual\\.spec\\.ts/"],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [["json"]],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npx wrangler dev --config dist/server/wrangler.json --ip 127.0.0.1 --port 4321",
+      "url": "http://127.0.0.1:4321",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "visual.spec.ts",
+      "file": "visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "home page visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5965,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:32:22",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 22,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   await page.locator('main').waitFor();\n  31 |   await waitForLocalFonts(page);\n> 32 |   await expect(page).toHaveScreenshot('home.png', { fullPage: true });\n     |                      ^\n  33 | });\n  34 |\n  35 | test('category page visual', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 22,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 17550px, received 1440px by 3654px. 3919462 pixels (ratio 0.16 of all image pixels) are different.\u001b[22m\n\n\n  30 |   await page.locator('main').waitFor();\n  31 |   await waitForLocalFonts(page);\n> 32 |   await expect(page).toHaveScreenshot('home.png', { fullPage: true });\n     |                      ^\n  33 | });\n  34 |\n  35 | test('category page visual', async ({ page }) => {\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:32:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:30.673Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "home-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\desktop\\home.png"
+                    },
+                    {
+                      "name": "home-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-desktop\\home-actual.png"
+                    },
+                    {
+                      "name": "home-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-desktop\\home-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 22,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-7cf71766714916f472f7",
+          "file": "visual.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "category page visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1753,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:40:22",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 22,
+                      "line": 40
+                    },
+                    "snippet": "  38 |   await page.locator('main h1').waitFor();\n  39 |   await waitForLocalFonts(page);\n> 40 |   await expect(page).toHaveScreenshot('category-funny.png', { fullPage: true });\n     |                      ^\n  41 | });\n  42 |\n  43 | test('game result visual', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 22,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 1440px by 4300px, received 1440px by 1000px. 453881 pixels (ratio 0.08 of all image pixels) are different.\u001b[22m\n\n\n  38 |   await page.locator('main h1').waitFor();\n  39 |   await waitForLocalFonts(page);\n> 40 |   await expect(page).toHaveScreenshot('category-funny.png', { fullPage: true });\n     |                      ^\n  41 | });\n  42 |\n  43 | test('game result visual', async ({ page }) => {\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:40:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:37.358Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "category-funny-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\desktop\\category-funny.png"
+                    },
+                    {
+                      "name": "category-funny-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-desktop\\category-funny-actual.png"
+                    },
+                    {
+                      "name": "category-funny-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-desktop\\category-funny-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 22,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-135c99f7269249a2c9bd",
+          "file": "visual.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "game result visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 805,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  38414 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  38414 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:49:45",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 45,
+                      "line": 49
+                    },
+                    "snippet": "  47 |   await page.locator('#choice-a').click();\n  48 |   await expect(page.locator('#game-stage')).toHaveClass(/answered/);\n> 49 |   await expect(page.locator('#game-shell')).toHaveScreenshot('game-result.png');\n     |                                             ^\n  50 | });\n  51 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 45,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  38414 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 38414 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\n\n  47 |   await page.locator('#choice-a').click();\n  48 |   await expect(page.locator('#game-stage')).toHaveClass(/answered/);\n> 49 |   await expect(page.locator('#game-shell')).toHaveScreenshot('game-result.png');\n     |                                             ^\n  50 | });\n  51 |\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:49:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:39.764Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "game-result-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\desktop\\game-result.png"
+                    },
+                    {
+                      "name": "game-result-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-desktop\\game-result-actual.png"
+                    },
+                    {
+                      "name": "game-result-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-desktop\\game-result-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 45,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-c1ca84ccc51e627152c1",
+          "file": "visual.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "home page visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2794,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:32:22",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 22,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   await page.locator('main').waitFor();\n  31 |   await waitForLocalFonts(page);\n> 32 |   await expect(page).toHaveScreenshot('home.png', { fullPage: true });\n     |                      ^\n  33 | });\n  34 |\n  35 | test('category page visual', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 22,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\n\n  Snapshot: home.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(home.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 22333px, received 412px by 4640px. 1594615 pixels (ratio 0.18 of all image pixels) are different.\u001b[22m\n\n\n  30 |   await page.locator('main').waitFor();\n  31 |   await waitForLocalFonts(page);\n> 32 |   await expect(page).toHaveScreenshot('home.png', { fullPage: true });\n     |                      ^\n  33 | });\n  34 |\n  35 | test('category page visual', async ({ page }) => {\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:32:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:41.214Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "home-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\mobile\\home.png"
+                    },
+                    {
+                      "name": "home-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-mobile\\home-actual.png"
+                    },
+                    {
+                      "name": "home-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-mobile\\home-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-home-page-visual-mobile\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 22,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-8128e35808a0ac1fc136",
+          "file": "visual.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "category page visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1057,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:40:22",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 22,
+                      "line": 40
+                    },
+                    "snippet": "  38 |   await page.locator('main h1').waitFor();\n  39 |   await waitForLocalFonts(page);\n> 40 |   await expect(page).toHaveScreenshot('category-funny.png', { fullPage: true });\n     |                      ^\n  41 | });\n  42 |\n  43 | test('game result visual', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 22,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\n\n  Snapshot: category-funny.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(category-funny.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - Expected an image 412px by 6998px, received 412px by 839px. 302183 pixels (ratio 0.11 of all image pixels) are different.\u001b[22m\n\n\n  38 |   await page.locator('main h1').waitFor();\n  39 |   await waitForLocalFonts(page);\n> 40 |   await expect(page).toHaveScreenshot('category-funny.png', { fullPage: true });\n     |                      ^\n  41 | });\n  42 |\n  43 | test('game result visual', async ({ page }) => {\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:40:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:44.639Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "category-funny-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\mobile\\category-funny.png"
+                    },
+                    {
+                      "name": "category-funny-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-mobile\\category-funny-actual.png"
+                    },
+                    {
+                      "name": "category-funny-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-mobile\\category-funny-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-category-page-visual-mobile\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 22,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-3b785cd5e8c66c56439d",
+          "file": "visual.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "game result visual",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 639,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  6291 pixels (ratio 0.03 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  6291 pixels (ratio 0.03 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:49:45",
+                    "location": {
+                      "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                      "column": 45,
+                      "line": 49
+                    },
+                    "snippet": "  47 |   await page.locator('#choice-a').click();\n  48 |   await expect(page.locator('#game-stage')).toHaveClass(/answered/);\n> 49 |   await expect(page.locator('#game-shell')).toHaveScreenshot('game-result.png');\n     |                                             ^\n  50 | });\n  51 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                        "column": 45,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#game-shell')\n  6291 pixels (ratio 0.03 of all image pixels) are different.\n\n  Snapshot: game-result.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(game-result.png)\" locator('#game-shell') with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('#game-shell')\u001b[22m\n\u001b[2m    - locator resolved to <div data-ready=\"1\" id=\"game-shell\" class=\"game-shell\" data-game-config=\"{\"mode\":\"mixed\",\"set\":\"mixed\",\"manifest\":\"/game-data/manifest.json\",\"refill\":8,\"sharePrefix\":\"/s/\",\"keys\":{\"pack\":\"wyr_pack\",\"adult\":\"wyr_adult\",\"seen\":\"wyr_seen\",\"favorites\":\"wyr_favorites\",\"gestureHint\":\"wyr_gesture_hint_seen\",\"completedQuestions\":\"wyr_completed_questions\"},\"initial\":{\"id\":\"379faaec-b714-467b-9aaa-8d7c94f5969e\",\"a\":\"ride the school bus with your friends\",\"b\":\"ride to school in a car with your family\",\"s\":\"ra…>…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 6291 pixels (ratio 0.03 of all image pixels) are different.\u001b[22m\n\n\n  47 |   await page.locator('#choice-a').click();\n  48 |   await expect(page.locator('#game-stage')).toHaveClass(/answered/);\n> 49 |   await expect(page.locator('#game-shell')).toHaveScreenshot('game-result.png');\n     |                                             ^\n  50 | });\n  51 |\n    at C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts:49:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:06:46.362Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "game-result-expected.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\__screenshots__\\visual.spec.ts\\mobile\\game-result.png"
+                    },
+                    {
+                      "name": "game-result-actual.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-mobile\\game-result-actual.png"
+                    },
+                    {
+                      "name": "game-result-diff.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-mobile\\game-result-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\test-results\\visual-game-result-visual-mobile\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\91842\\Downloads\\questions-main\\questions-main\\tests\\e2e\\visual.spec.ts",
+                    "column": 45,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8324bb52c49185e48ff4-10f4a2c67c3fd9faaa91",
+          "file": "visual.spec.ts",
+          "line": 43,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T22:06:30.104Z",
+    "duration": 17037.298,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

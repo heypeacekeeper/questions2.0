@@ -1,0 +1,63 @@
+{
+  "name": "would-you-rather-questions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Would You Rather Questions – static Astro site with file-backed JSON content.",
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "npm run build:demo && tsx tools/mock-worker.ts",
+    "prebuild": "node tools/clean-dist.mjs",
+    "build": "cross-env ALLOW_DEMO_CONTENT=false npm run validate:content && cross-env ALLOW_DEMO_CONTENT=false astro build && npm run budget",
+    "prebuild:demo": "node tools/clean-dist.mjs",
+    "build:demo": "cross-env ALLOW_DEMO_CONTENT=true CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV=false npm run validate:content && cross-env ALLOW_DEMO_CONTENT=true CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV=false astro build --mode demo && npm run budget",
+    "build:mock": "npm run build:demo",
+    "build:no-budget": "npm run validate:content && astro build",
+    "preview": "wrangler dev",
+    "check": "astro check && tsc --noEmit -p tsconfig.node.json",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:runtime:demo": "npm run build:demo && tsx tools/mock-runtime-smoke.ts",
+    "test:runtime:mock": "npm run test:runtime:demo",
+    "verify:deployment": "tsx tools/verify-deployment.ts",
+    "test:visual": "playwright test --config playwright.visual.config.ts",
+    "validate:content": "tsx tools/validate-content.ts",
+    "budget": "tsx tools/performance-budget.ts",
+    "import:csv": "tsx tools/import-csv.ts",
+    "export:json": "tsx tools/export-questions.ts --format json",
+    "export:csv": "tsx tools/export-questions.ts --format csv",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "audit": "npm audit --omit=dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check . --end-of-line auto",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.0",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^1.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.0",
+    "wrangler": "^4.129.0"
+  }
+}

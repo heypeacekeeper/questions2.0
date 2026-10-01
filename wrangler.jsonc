@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers + static assets (NOT the deprecated Pages integration).
+  "name": "would-you-rather-questions",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  // `main` and `assets.directory` are injected by @astrojs/cloudflare at build time.
+  "assets": {
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.05,
+  },
+  // Non-secret runtime variables. Questions are built from local JSON files.
+  "vars": {
+    "PUBLIC_SITE_URL": "https://wouldyouratherquestions.org",
+  },
+  // Custom domain routing. Enable after the zone is on Cloudflare (see README).
+  // "routes": [
+  //   { "pattern": "wouldyouratherquestions.org", "custom_domain": true },
+  //   { "pattern": "www.wouldyouratherquestions.org", "custom_domain": true }
+  // ],
+  "placement": { "mode": "smart" },
+}

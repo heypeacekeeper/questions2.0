@@ -1,0 +1,27 @@
+---
+import ProseLayout from '@/layouts/ProseLayout.astro';
+import { PUBLIC_EMAIL, ROUTES } from '@/config/site';
+const submissionEmailHref = `mailto:${PUBLIC_EMAIL}?subject=${encodeURIComponent('Would You Rather question suggestion')}&body=${encodeURIComponent('Option A: \nOption B: \nSuggested category: \n')}`;
+const meta = {
+  title: 'Submit a Would You Rather Question',
+  description:
+    'Send us your best Would You Rather question. Reviewed by our editors before publication.',
+  path: ROUTES.submit,
+};
+---
+
+<ProseLayout meta={meta} heading="Submit a Question">
+  <p>
+    Got a dilemma everyone argues about? Email it to us. We review suggestions before publication
+    and may edit wording for clarity. See the <a href={ROUTES.editorialPolicy}>Editorial Policy</a>.
+  </p>
+  <h2>What to include</h2>
+  <p>
+    Write both choices and a suggested category. Your email app will open with a short template; the
+    message is sent only when you choose to send it there. You can also write directly to{' '}
+    <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>.
+  </p>
+  <a class="primary-link" id="submission-email-link" href={submissionEmailHref}>
+    Email your question →
+  </a>
+</ProseLayout>

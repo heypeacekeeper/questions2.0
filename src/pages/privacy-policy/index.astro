@@ -1,0 +1,70 @@
+---
+import ProseLayout from '@/layouts/ProseLayout.astro';
+import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+const meta = {
+  title: 'Privacy Policy',
+  description:
+    'How Would You Rather Questions handles browser storage, analytics and emails you choose to send us.',
+  path: ROUTES.privacy,
+};
+---
+
+<ProseLayout meta={meta} heading="Privacy Policy" legal>
+  <p>
+    Last updated: <span class="placeholder">[DATE]</span>. Publisher:{' '}
+    <span class="placeholder">
+      Would You Rather Questions — legal entity and address to be added
+    </span>
+    . Contact: <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>.
+  </p>
+  <h2>What we collect</h2>
+  <ul>
+    <li>
+      <strong>Game selections.</strong> Selecting an option reveals locally generated display
+      results. We do not record individual selections or store an interaction cookie.
+    </li>
+    <li>
+      <strong>Hosting.</strong> Our hosting provider may process technical request data, such as an
+      IP address and browser information, to deliver and protect the site.
+    </li>
+    <li>
+      <strong>Emails you send us.</strong> If you use the contact or question suggestion links, your
+      email app sends your address and whatever you write to our mailbox. We use that information to
+      reply, review suggestions or handle your request. We do not use it for marketing.
+    </li>
+    <li>
+      <strong>Browser storage</strong> remembers your chosen pack, favorites and age confirmation on
+      your device. Session storage helps avoid repeating questions during a game session.
+    </li>
+  </ul>
+  <h2>How long we keep data</h2>
+  <p>
+    We keep emails as long as needed to respond, review a suggestion or handle a request. You can
+    ask us to delete an email, subject to any applicable legal obligations.
+  </p>
+  <h2>Analytics and advertising</h2>
+  <p>
+    Google Analytics 4 and advertising (Google AdSense) load only with your consent via the cookie
+    banner, where enabled. Cloudflare Web Analytics, if enabled, is cookieless. You can change your
+    choices any time via "Cookie preferences" in the footer. See the{' '}
+    <a href={ROUTES.cookies}>Cookie Policy</a>.
+  </p>
+  <h2>Service providers</h2>
+  <p>
+    Hosting: Cloudflare. Messages sent by email are handled by your email provider and ours.
+    Analytics/ads: Google (only when enabled and consented). Data may be processed in the United
+    States and other countries.
+  </p>
+  <h2>Your rights</h2>
+  <p>
+    Depending on where you live (including the EEA, UK, Switzerland, Canada and Quebec, and US
+    states with privacy laws) you may request access, correction or deletion of your data. Email{' '}
+    <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>.
+  </p>
+  <h2>Children</h2>
+  <p>
+    The site is suitable for general audiences; we do not knowingly collect personal information
+    from children. Mature categories require an adult confirmation that is stored locally and is not
+    identity or age verification.
+  </p>
+</ProseLayout>

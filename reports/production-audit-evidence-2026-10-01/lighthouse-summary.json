@@ -1,0 +1,3668 @@
+[
+  {
+    "url": "/",
+    "scores": {
+      "performance": 96,
+      "accessibility": 95,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCP": 2276.3010000000004,
+    "FCP": 2201.3010000000004,
+    "TBT": 0,
+    "CLS": 0.02171140548109825,
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "value": "2.2 s",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "value": "2.3 s",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "value": "2.2 s",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "value": "2.3 s",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.13/color-contrast).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,SECTION,0,DIV,0,DIV,2,DIV,0,A,1,SPAN",
+                "selector": "div.reference-hero-copy > div.reference-hero-actions > a.reference-button > span.reference-action-short",
+                "boundingRect": {
+                  "top": 405,
+                  "bottom": 422,
+                  "left": 64,
+                  "right": 155,
+                  "width": 91,
+                  "height": 17
+                },
+                "snippet": "<span class=\"reference-action-short\">",
+                "nodeLabel": "Play game →",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 10.8pt (14.42px), font weight: bold). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-A",
+                      "path": "1,HTML,1,BODY,6,MAIN,0,SECTION,0,DIV,0,DIV,2,DIV,0,A",
+                      "selector": "div.wrap > div.reference-hero-copy > div.reference-hero-actions > a.reference-button",
+                      "boundingRect": {
+                        "top": 389,
+                        "bottom": 439,
+                        "left": 18,
+                        "right": 201,
+                        "width": 183,
+                        "height": 50
+                      },
+                      "snippet": "<a class=\"reference-button reference-button-hot\" href=\"/play/\" aria-label=\"Play the game\">",
+                      "nodeLabel": "Play game →"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-2-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,SECTION,1,DIV,0,NAV,0,SPAN",
+                "selector": "section.reference-hero > div.wrap > nav.reference-category-strip > span.reference-mono",
+                "boundingRect": {
+                  "top": 480,
+                  "bottom": 498,
+                  "left": 18,
+                  "right": 394,
+                  "width": 376,
+                  "height": 18
+                },
+                "snippet": "<span class=\"reference-mono\">",
+                "nodeLabel": "JUMP TO A CATEGORY",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-4-P",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,0,SECTION,0,DIV,3,P",
+                "selector": "div.wrap > section#best > div.reference-section-copy > p.reference-question-count",
+                "boundingRect": {
+                  "top": 767,
+                  "bottom": 785,
+                  "left": 44,
+                  "right": 368,
+                  "width": 324,
+                  "height": 19
+                },
+                "snippet": "<p class=\"reference-question-count\">",
+                "nodeLabel": "55 QUESTIONS TO EXPLORE ACROSS THE SITE",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-5-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,0,SECTION,1,DIV,0,OL,0,LI,1,P,0,SPAN",
+                "selector": "ol#best-questions > li.question-row > p#best-questions-question-1 > span.question-prefix",
+                "boundingRect": {
+                  "top": 808,
+                  "bottom": 830,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-6-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,0,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-1 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1239,
+                  "bottom": 1261,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-7-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,1,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-2 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1363,
+                  "bottom": 1385,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-8-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,2,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-3 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1487,
+                  "bottom": 1509,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-9-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,3,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-4 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1612,
+                  "bottom": 1634,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-10-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,4,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-5 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1761,
+                  "bottom": 1783,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-11-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,5,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-6 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1860,
+                  "bottom": 1882,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-12-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,6,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-7 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2009,
+                  "bottom": 2031,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-13-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,7,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-8 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2109,
+                  "bottom": 2131,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-14-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,8,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-9 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2233,
+                  "bottom": 2255,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-15-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,2,DIV,1,SECTION,1,DIV,0,OL,9,LI,1,P,0,SPAN",
+                "selector": "ol#for-kids-questions > li.question-row > p#for-kids-questions-question-10 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2382,
+                  "bottom": 2404,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-3-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 4628,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 4628
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-16-A",
+                "path": "1,HTML,1,BODY,6,MAIN,3,SECTION,0,DIV,3,A",
+                "selector": "main#main-content > section.reference-how > div.wrap > a.reference-button",
+                "boundingRect": {
+                  "top": 3239,
+                  "bottom": 3289,
+                  "left": 117,
+                  "right": 295,
+                  "width": 179,
+                  "height": 50
+                },
+                "snippet": "<a class=\"reference-button reference-button-hot\" href=\"/play/\">",
+                "nodeLabel": "Play the game →",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #ffffff, background color: #e33e26, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ]
+          }
+        }
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.13/label-content-name-mismatch).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-1-A",
+                "path": "1,HTML,1,BODY,6,MAIN,0,SECTION,0,DIV,0,DIV,2,DIV,0,A",
+                "selector": "div.wrap > div.reference-hero-copy > div.reference-hero-actions > a.reference-button",
+                "boundingRect": {
+                  "top": 389,
+                  "bottom": 439,
+                  "left": 18,
+                  "right": 201,
+                  "width": 183,
+                  "height": 50
+                },
+                "snippet": "<a class=\"reference-button reference-button-hot\" href=\"/play/\" aria-label=\"Play the game\">",
+                "nodeLabel": "Play game →",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "RGAAv4",
+              "RGAA-6.1.5",
+              "experimental"
+            ]
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "7DB9EE14A25EFB37811576343865FC49": {
+                    "url": "http://127.0.0.1:4321/",
+                    "navStartToEndTime": 18,
+                    "transferSize": 6339,
+                    "isLongest": true,
+                    "children": {
+                      "14052.7": {
+                        "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+                        "navStartToEndTime": 76,
+                        "transferSize": 8227,
+                        "isLongest": true,
+                        "children": {
+                          "14052.21": {
+                            "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+                            "navStartToEndTime": 95,
+                            "transferSize": 2101,
+                            "isLongest": true,
+                            "children": {}
+                          },
+                          "14052.20": {
+                            "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+                            "navStartToEndTime": 91,
+                            "transferSize": 1575,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "14052.2": {
+                        "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+                        "navStartToEndTime": 30,
+                        "transferSize": 12471,
+                        "children": {
+                          "14052.18": {
+                            "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+                            "navStartToEndTime": 95,
+                            "transferSize": 15721,
+                            "children": {}
+                          },
+                          "14052.17": {
+                            "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+                            "navStartToEndTime": 94,
+                            "transferSize": 132450,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "14052.8": {
+                        "url": "http://127.0.0.1:4321/_astro/index.astro_astro_type_script_index_0_lang.jSCq7owD.js",
+                        "navStartToEndTime": 77,
+                        "transferSize": 1474,
+                        "children": {}
+                      },
+                      "14052.16": {
+                        "url": "http://127.0.0.1:4321/site.webmanifest",
+                        "navStartToEndTime": 76,
+                        "transferSize": 1209,
+                        "children": {}
+                      },
+                      "14052.5": {
+                        "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+                        "navStartToEndTime": 75,
+                        "transferSize": 1661,
+                        "children": {}
+                      },
+                      "14052.6": {
+                        "url": "http://127.0.0.1:4321/_astro/QuestionList.astro_astro_type_script_index_0_lang.BvynAbz7.js",
+                        "navStartToEndTime": 75,
+                        "transferSize": 1630,
+                        "children": {}
+                      },
+                      "14052.4": {
+                        "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+                        "navStartToEndTime": 75,
+                        "transferSize": 1413,
+                        "children": {}
+                      },
+                      "14052.3": {
+                        "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+                        "navStartToEndTime": 74,
+                        "transferSize": 2120,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 95
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "value": "Est savings of 1,060 ms",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+              "totalBytes": 12471,
+              "wastedMs": 459
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/play/",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCP": 2120.39385,
+    "FCP": 2120.39385,
+    "TBT": 0,
+    "CLS": 0.002591056804209401,
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "value": "2.1 s",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "value": "2.1 s",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "value": "2.1 s",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "value": "2.1 s",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "C522F6A055F7B1ED659AA44221C3B1D6": {
+                    "url": "http://127.0.0.1:4321/play/",
+                    "navStartToEndTime": 14,
+                    "transferSize": 4687,
+                    "isLongest": true,
+                    "children": {
+                      "21812.2": {
+                        "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+                        "navStartToEndTime": 21,
+                        "transferSize": 12471,
+                        "isLongest": true,
+                        "children": {
+                          "21812.14": {
+                            "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+                            "navStartToEndTime": 64,
+                            "transferSize": 15721,
+                            "isLongest": true,
+                            "children": {}
+                          },
+                          "21812.13": {
+                            "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+                            "navStartToEndTime": 63,
+                            "transferSize": 132450,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "21812.6": {
+                        "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+                        "navStartToEndTime": 47,
+                        "transferSize": 8227,
+                        "children": {
+                          "21812.16": {
+                            "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+                            "navStartToEndTime": 59,
+                            "transferSize": 2101,
+                            "children": {}
+                          },
+                          "21812.15": {
+                            "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+                            "navStartToEndTime": 57,
+                            "transferSize": 1569,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "21812.5": {
+                        "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+                        "navStartToEndTime": 47,
+                        "transferSize": 1661,
+                        "children": {}
+                      },
+                      "21812.4": {
+                        "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+                        "navStartToEndTime": 47,
+                        "transferSize": 1407,
+                        "children": {}
+                      },
+                      "21812.12": {
+                        "url": "http://127.0.0.1:4321/site.webmanifest",
+                        "navStartToEndTime": 47,
+                        "transferSize": 1209,
+                        "children": {}
+                      },
+                      "21812.3": {
+                        "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+                        "navStartToEndTime": 46,
+                        "transferSize": 2120,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 64
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "value": "Est savings of 1,060 ms",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+              "totalBytes": 12471,
+              "wastedMs": 457
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/would-you-rather-questions-for-kids/",
+    "scores": {
+      "performance": 96,
+      "accessibility": 95,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCP": 2272.1643,
+    "FCP": 2197.1643,
+    "TBT": 0,
+    "CLS": 0.03335937998437523,
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "value": "2.2 s",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "value": "2.3 s",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "value": "2.2 s",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "value": "2.3 s",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.13/color-contrast).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,0,HEADER,1,SPAN",
+                "selector": "div.content-column > section.question-section > header.section-header > span.reference-mono",
+                "boundingRect": {
+                  "top": 1239,
+                  "bottom": 1255,
+                  "left": 18,
+                  "right": 116,
+                  "width": 98,
+                  "height": 16
+                },
+                "snippet": "<span class=\"reference-mono\">",
+                "nodeLabel": "55 QUESTIONS",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-2-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,0,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-1 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1278,
+                  "bottom": 1300,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-3-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,1,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-2 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1403,
+                  "bottom": 1425,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-4-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,2,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-3 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1527,
+                  "bottom": 1549,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-5-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,3,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-4 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1651,
+                  "bottom": 1673,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-6-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,4,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-5 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1800,
+                  "bottom": 1822,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-7-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,5,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-6 > span.question-prefix",
+                "boundingRect": {
+                  "top": 1900,
+                  "bottom": 1922,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-8-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,6,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-7 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2049,
+                  "bottom": 2071,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-9-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,7,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-8 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2149,
+                  "bottom": 2171,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-10-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,8,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-9 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2273,
+                  "bottom": 2295,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-11-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,9,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-10 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2422,
+                  "bottom": 2444,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-12-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,10,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-11 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2546,
+                  "bottom": 2568,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-13-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,11,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-12 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2695,
+                  "bottom": 2717,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-14-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,12,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-13 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2845,
+                  "bottom": 2867,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-15-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,13,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-14 > span.question-prefix",
+                "boundingRect": {
+                  "top": 2994,
+                  "bottom": 3016,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-16-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,14,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-15 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3118,
+                  "bottom": 3140,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-17-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,15,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-16 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3242,
+                  "bottom": 3264,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-18-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,16,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-17 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3342,
+                  "bottom": 3364,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-19-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,17,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-18 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3491,
+                  "bottom": 3513,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-20-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,18,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-19 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3615,
+                  "bottom": 3637,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-21-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,19,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-20 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3740,
+                  "bottom": 3762,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-22-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,20,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-21 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3864,
+                  "bottom": 3886,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-23-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,21,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-22 > span.question-prefix",
+                "boundingRect": {
+                  "top": 3988,
+                  "bottom": 4010,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-24-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,22,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-23 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4113,
+                  "bottom": 4135,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-25-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,23,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-24 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4237,
+                  "bottom": 4259,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-26-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,24,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-25 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4361,
+                  "bottom": 4383,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-27-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,25,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-26 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4510,
+                  "bottom": 4532,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-28-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,26,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-27 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4610,
+                  "bottom": 4632,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-29-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,27,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-28 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4709,
+                  "bottom": 4731,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-30-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,28,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-29 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4809,
+                  "bottom": 4831,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-31-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,29,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-30 > span.question-prefix",
+                "boundingRect": {
+                  "top": 4908,
+                  "bottom": 4930,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-32-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,30,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-31 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5033,
+                  "bottom": 5055,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-33-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,31,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-32 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5132,
+                  "bottom": 5154,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-34-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,32,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-33 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5231,
+                  "bottom": 5253,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-35-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,33,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-34 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5356,
+                  "bottom": 5378,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-36-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,34,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-35 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5455,
+                  "bottom": 5477,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-37-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,35,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-36 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5555,
+                  "bottom": 5577,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-38-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,36,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-37 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5679,
+                  "bottom": 5701,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-39-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,37,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-38 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5803,
+                  "bottom": 5825,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-40-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,38,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-39 > span.question-prefix",
+                "boundingRect": {
+                  "top": 5928,
+                  "bottom": 5950,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-41-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,39,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-40 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6052,
+                  "bottom": 6074,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-42-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,40,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-41 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6176,
+                  "bottom": 6198,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-43-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,41,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-42 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6301,
+                  "bottom": 6323,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-44-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,42,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-43 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6425,
+                  "bottom": 6447,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-45-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,43,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-44 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6574,
+                  "bottom": 6596,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-46-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,44,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-45 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6698,
+                  "bottom": 6720,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-47-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,45,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-46 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6848,
+                  "bottom": 6870,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-48-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,46,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-47 > span.question-prefix",
+                "boundingRect": {
+                  "top": 6972,
+                  "bottom": 6994,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-49-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,47,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-48 > span.question-prefix",
+                "boundingRect": {
+                  "top": 7096,
+                  "bottom": 7118,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-50-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,48,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-49 > span.question-prefix",
+                "boundingRect": {
+                  "top": 7220,
+                  "bottom": 7242,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-51-SPAN",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,1,OL,49,LI,1,P,0,SPAN",
+                "selector": "ol#category-questions > li.question-row > p#category-questions-question-50 > span.question-prefix",
+                "boundingRect": {
+                  "top": 7370,
+                  "bottom": 7392,
+                  "left": 54,
+                  "right": 206,
+                  "width": 152,
+                  "height": 22
+                },
+                "snippet": "<span class=\"question-prefix\">",
+                "nodeLabel": "Would you rather ",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-52-P",
+                "path": "1,HTML,1,BODY,6,MAIN,0,DIV,0,DIV,3,SECTION,3,NAV,0,P",
+                "selector": "div.content-column > section.question-section > nav.pagination-nav > p.pagination-summary",
+                "boundingRect": {
+                  "top": 7481,
+                  "bottom": 7502,
+                  "left": 18,
+                  "right": 394,
+                  "width": 376,
+                  "height": 21
+                },
+                "snippet": "<p class=\"pagination-summary\">",
+                "nodeLabel": "Showing questions 1–50 of 55",
+                "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.95 (foreground color: #7f776c, background color: #f6f2eb, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "relatedNode": {
+                      "type": "node",
+                      "lhId": "1-1-BODY",
+                      "path": "1,HTML,1,BODY",
+                      "selector": "body",
+                      "boundingRect": {
+                        "top": 0,
+                        "bottom": 8488,
+                        "left": 0,
+                        "right": 412,
+                        "width": 412,
+                        "height": 8488
+                      },
+                      "snippet": "<body>",
+                      "nodeLabel": "body"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ]
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "D2F77344E19FBFB41186A53B07163C84": {
+                    "url": "http://127.0.0.1:4321/would-you-rather-questions-for-kids/",
+                    "navStartToEndTime": 16,
+                    "transferSize": 7662,
+                    "isLongest": true,
+                    "children": {
+                      "30344.2": {
+                        "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+                        "navStartToEndTime": 21,
+                        "transferSize": 12471,
+                        "isLongest": true,
+                        "children": {
+                          "30344.16": {
+                            "url": "http://127.0.0.1:4321/fonts/dm-mono-400-latin.woff2",
+                            "navStartToEndTime": 110,
+                            "transferSize": 15721,
+                            "isLongest": true,
+                            "children": {}
+                          },
+                          "30344.15": {
+                            "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+                            "navStartToEndTime": 110,
+                            "transferSize": 132450,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "30344.6": {
+                        "url": "http://127.0.0.1:4321/_astro/Game.astro_astro_type_script_index_0_lang.8dP89pfK.js",
+                        "navStartToEndTime": 95,
+                        "transferSize": 8227,
+                        "children": {
+                          "30344.19": {
+                            "url": "http://127.0.0.1:4321/_astro/favorites.DhxXK-y3.js",
+                            "navStartToEndTime": 107,
+                            "transferSize": 2101,
+                            "children": {}
+                          },
+                          "30344.18": {
+                            "url": "http://127.0.0.1:4321/_astro/site.D1taJClz.js",
+                            "navStartToEndTime": 105,
+                            "transferSize": 1575,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "30344.7": {
+                        "url": "http://127.0.0.1:4321/_astro/QuestionList.astro_astro_type_script_index_0_lang.BvynAbz7.js",
+                        "navStartToEndTime": 95,
+                        "transferSize": 1624,
+                        "children": {}
+                      },
+                      "30344.5": {
+                        "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+                        "navStartToEndTime": 95,
+                        "transferSize": 1655,
+                        "children": {}
+                      },
+                      "30344.14": {
+                        "url": "http://127.0.0.1:4321/site.webmanifest",
+                        "navStartToEndTime": 94,
+                        "transferSize": 1203,
+                        "children": {}
+                      },
+                      "30344.4": {
+                        "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+                        "navStartToEndTime": 94,
+                        "transferSize": 1413,
+                        "children": {}
+                      },
+                      "30344.3": {
+                        "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+                        "navStartToEndTime": 94,
+                        "transferSize": 2120,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 110
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "value": "Est savings of 1,060 ms",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+              "totalBytes": 12471,
+              "wastedMs": 457
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "url": "/blog/how-to-play-would-you-rather/",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCP": 2125.29075,
+    "FCP": 2125.29075,
+    "TBT": 0,
+    "CLS": 0.0330057449445342,
+    "failed": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "value": "2.1 s",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "value": "2.1 s",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "value": "2.1 s",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "value": "2.1 s",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "F5F56C97CDE0271B0F28DAD0AF95D406": {
+                    "url": "http://127.0.0.1:4321/blog/how-to-play-would-you-rather/",
+                    "navStartToEndTime": 14,
+                    "transferSize": 7939,
+                    "isLongest": true,
+                    "children": {
+                      "19352.2": {
+                        "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+                        "navStartToEndTime": 23,
+                        "transferSize": 12471,
+                        "isLongest": true,
+                        "children": {
+                          "19352.15": {
+                            "url": "http://127.0.0.1:4321/fonts/bricolage-grotesque-latin.woff2",
+                            "navStartToEndTime": 75,
+                            "transferSize": 132450,
+                            "isLongest": true,
+                            "children": {}
+                          }
+                        }
+                      },
+                      "19352.7": {
+                        "url": "http://127.0.0.1:4321/_astro/Header.astro_astro_type_script_index_0_lang.CWBRAlqG.js",
+                        "navStartToEndTime": 63,
+                        "transferSize": 1655,
+                        "children": {}
+                      },
+                      "19352.14": {
+                        "url": "http://127.0.0.1:4321/site.webmanifest",
+                        "navStartToEndTime": 63,
+                        "transferSize": 1209,
+                        "children": {}
+                      },
+                      "19352.5": {
+                        "url": "http://127.0.0.1:4321/_astro/page.Bz3E_LTc.js",
+                        "navStartToEndTime": 63,
+                        "transferSize": 2126,
+                        "children": {}
+                      },
+                      "19352.6": {
+                        "url": "http://127.0.0.1:4321/_astro/PageLoadingIndicator.astro_astro_type_script_index_0_lang.hSUQ0mGr.js",
+                        "navStartToEndTime": 62,
+                        "transferSize": 1413,
+                        "children": {}
+                      },
+                      "19352.4": {
+                        "url": "http://127.0.0.1:4321/_astro/_slug_._OAtFiFw.css",
+                        "navStartToEndTime": 26,
+                        "transferSize": 2706,
+                        "children": {}
+                      },
+                      "19352.3": {
+                        "url": "http://127.0.0.1:4321/_astro/BlogCard.O-9IpNVR.css",
+                        "navStartToEndTime": 24,
+                        "transferSize": 1958,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 75
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "value": "Est savings of 1,210 ms",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:4321/_astro/_slug_._OAtFiFw.css",
+              "totalBytes": 2706,
+              "wastedMs": 308
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/BlogCard.O-9IpNVR.css",
+              "totalBytes": 1958,
+              "wastedMs": 308
+            },
+            {
+              "url": "http://127.0.0.1:4321/_astro/BaseLayout.oDnSdS2k.css",
+              "totalBytes": 12471,
+              "wastedMs": 458
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

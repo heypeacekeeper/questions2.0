@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Game from '@/components/Game.astro';
+import AdSlot from '@/components/AdSlot.astro';
+import { getContentContext } from '@/repositories/factory';
+import { initialGameQuestion } from '@/lib/page-data';
+import { ROUTES } from '@/config/site';
+
+const ctx = await getContentContext();
+const initial = await initialGameQuestion(null);
+const packs = (await ctx.categoryService.getGamePackCategories()).map((category) => ({
+  slug: category.slug,
+  name: category.name,
+  icon: category.icon,
+  description: category.shortDescription,
+  requiresAgeGate: category.requiresAgeGate,
+}));
+const meta = {
+  title: 'Play Would You Rather Questions',
+  description:
+    'Play Would You Rather online: choose between two options, see for-fun results, and keep the questions coming.',
+  path: ROUTES.play,
+};
+---
+
+<BaseLayout meta={meta} bodyClass="reference-play-page">
+  <div class="wrap reference-play-intro">
+    <span class="reference-chip">● LET'S PLAY</span>
+    <h1>
+      Would You Rather <em>Questions</em>
+    </h1>
+    <p>Two options. One choice. Pick a side, see the result, then keep playing.</p>
+  </div>
+  <Game mode="mixed" initial={initial} packs={packs} />
+  <AdSlot slot="belowGame" />
+</BaseLayout>
