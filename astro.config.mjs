@@ -30,6 +30,9 @@ export default defineConfig({
   site: canonicalSite,
   output: 'static',
   trailingSlash: 'always',
+  redirects: {
+    '/play': { destination: '/would-you-rather-questions-game/', status: 301 },
+  },
   prerenderConflictBehavior: 'error',
   build: {
     format: 'directory',

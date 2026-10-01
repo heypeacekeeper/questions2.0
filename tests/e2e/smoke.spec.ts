@@ -9,6 +9,23 @@ interface CatalogQuestion {
   g: boolean;
 }
 
+test('legacy game URL redirects permanently to the canonical game', async ({ request, page }) => {
+  for (const path of ['/play', '/play/']) {
+    const response = await request.get(path, { maxRedirects: 0 });
+    expect(response.status()).toBe(301);
+    expect(new URL(response.headers().location!, response.url()).pathname).toBe(
+      '/would-you-rather-questions-game/',
+    );
+  }
+  await page.goto('/play/');
+  await expect(page).toHaveURL(/\/would-you-rather-questions-game\/$/);
+  await expect(page.locator('#choice-a')).toBeVisible();
+  const sitemap = await request.get('/sitemap-0.xml');
+  const xml = await sitemap.text();
+  expect(xml).toContain('/would-you-rather-questions-game/</loc>');
+  expect(xml).not.toContain('/play/</loc>');
+});
+
 async function publicCatalog(request: import('@playwright/test').APIRequestContext) {
   const response = await request.get('/game-data/favorites.json');
   expect(response.ok()).toBe(true);
@@ -24,9 +41,12 @@ test('redesigned home links, copy control, and play page work', async ({ page, c
   ).toBeVisible();
   await expect(page.getByRole('link', { name: /play the game/i }).first()).toHaveAttribute(
     'href',
-    '/play/',
+    '/would-you-rather-questions-game/',
   );
-  await expect(page.locator('.reference-game-preview')).toHaveAttribute('href', '/play/');
+  await expect(page.locator('.reference-game-preview')).toHaveAttribute(
+    'href',
+    '/would-you-rather-questions-game/',
+  );
   await expect(page.locator('.reference-preview-choice')).toHaveCount(2);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
     true,
@@ -47,10 +67,10 @@ test('redesigned home links, copy control, and play page work', async ({ page, c
   expect(actionTops).toHaveLength(2);
   expect(Math.abs(actionTops[0]! - actionTops[1]!)).toBeLessThan(2);
 
-  await page.goto('/play/');
+  await page.goto('/would-you-rather-questions-game/');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     'href',
-    /wouldyouratherquestions\.org\/play\/$/,
+    /wouldyouratherquestions\.org\/would-you-rather-questions-game\/$/,
   );
   await page.locator('#choice-a').click();
   await expect(page.locator('#game-stage')).toHaveClass(/answered/);
@@ -207,7 +227,7 @@ test('game milestone counts unique answers and restores keyboard focus', async (
 });
 
 test('milestone tap and automatic dismissal reveal the next question', async ({ page }) => {
-  await page.goto('/play/');
+  await page.goto('/would-you-rather-questions-game/');
   const stage = page.locator('#game-stage');
   const milestone = page.locator('#game-milestone');
 
@@ -664,7 +684,7 @@ test('sitemap includes the published blog routes', async ({ request }) => {
 });
 
 test('production typography and generated results are explained', async ({ page }) => {
-  await page.goto('/play/');
+  await page.goto('/would-you-rather-questions-game/');
   await expect(page.locator('html')).not.toHaveAttribute('data-font-preview', 'system');
   await page.locator('#choice-a').click();
   await expect(page.locator('.generated-result-disclosure')).toBeVisible();
@@ -720,7 +740,7 @@ test('game retry refreshes the manifest after a missing pack', async ({ page }) 
   await page.route('**/game-data/**/pack-*.json', (route) =>
     route.fulfill({ status: 404, body: 'Old asset missing' }),
   );
-  await page.goto('/play/');
+  await page.goto('/would-you-rather-questions-game/');
   const initialId = await page.locator('#game-stage').getAttribute('data-question-id');
   await page.locator('#skip-button').click();
   await expect(page.locator('#next-button')).toContainText('Try again');
@@ -749,7 +769,7 @@ test('published page families pass accessibility checks', async ({ page }) => {
   test.setTimeout(90_000);
   const routes = [
     '/',
-    '/play/',
+    '/would-you-rather-questions-game/',
     '/would-you-rather-questions-for-kids/',
     '/would-you-rather-questions-for-kids/page/2/',
     '/categories/',
@@ -775,7 +795,7 @@ test('published page families pass accessibility checks', async ({ page }) => {
       .analyze();
     expect(results.violations, `Accessibility violations on ${route}`).toEqual([]);
   }
-  await page.goto('/play/');
+  await page.goto('/would-you-rather-questions-game/');
   await page.locator('#choice-a').click();
   await expect(page.locator('#game-stage')).toHaveAttribute('data-result-ready', '1');
   expect(

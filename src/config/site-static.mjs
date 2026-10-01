@@ -24,7 +24,7 @@ export const SITEMAP_EXCLUDED_PREFIXES = [
 ];
 
 /** Exact paths excluded from the sitemap. */
-export const SITEMAP_EXCLUDED_PATHS = ['/404/', '/404.html'];
+export const SITEMAP_EXCLUDED_PATHS = ['/404/', '/404.html', '/play', '/play/'];
 
 /**
  * Sitemap filter used by @astrojs/sitemap. Receives absolute page URLs.

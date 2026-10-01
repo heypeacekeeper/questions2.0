@@ -1,0 +1,2 @@
+# Avoid a trailing-slash normalization hop for the legacy game URL.
+/play /would-you-rather-questions-game/ 301

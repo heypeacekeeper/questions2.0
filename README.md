@@ -84,3 +84,7 @@ The content checksum includes all published category/question fields and all Mar
 The CSV importer formats JSON and stages the entire batch before replacing files. If replacement fails it rolls back completed replacements. Interrupted/incompletely recovered imports retain sibling `.backup` files for manual recovery. CSV exports neutralize spreadsheet formula prefixes; use JSON exports when exact raw text is required.
 
 Favorites save up to 100 questions locally; an extra save is refused rather than evicting an existing favorite. Mixed mode currently contains up to 400 questions per build. Keep that limit in mind when the corpus grows.
+
+## Game URL
+
+The public game lives at `/would-you-rather-questions-game/`. The legacy `/play` and `/play/` addresses redirect permanently to it. Internal links, canonical metadata and sitemap entries use the new address.

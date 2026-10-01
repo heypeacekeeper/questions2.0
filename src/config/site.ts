@@ -16,7 +16,7 @@ export const DEFAULT_SITE_URL = SITE_URL;
 
 export const ROUTES = {
   home: '/',
-  play: '/play/',
+  play: '/would-you-rather-questions-game/',
   categories: '/categories/',
   favorites: '/favorites/',
   favoritesPlay: '/favorites/play/',
