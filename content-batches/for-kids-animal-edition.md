@@ -1,6 +1,6 @@
 # For Kids — Animal Edition
 
-55 questions, including 13 user-supplied questions with minor wording edits. Saved separately from the school batch and assigned to the existing For Kids category.
+55 questions, including 13 user-supplied questions with minor wording edits. Included after the school batch in `src/content/data/questions/for-kids.json`, bringing the For Kids collection to 110 questions.
 
 1. Would you rather **fly above the mountains on a giant eagle** or **swim beneath the ice with a friendly whale**?
 
