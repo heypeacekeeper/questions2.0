@@ -268,7 +268,11 @@ export function initGame(): void {
     announce('Loading next question.');
     try {
       if (retrying) {
-        manifest = null;
+        manifest = await loadManifest(config.manifest, { cache: 'reload' });
+        if (!manifest) {
+          showQuestionLoadFailure();
+          return;
+        }
         const requestId = await activateSet(activeSet, activeLabel);
 
         if (requestId === null) {
@@ -342,6 +346,8 @@ export function initGame(): void {
   }
   async function activateFavoritesGame(): Promise<void> {
     gameStage.setAttribute('aria-busy', 'true');
+    if (favoritesGameEmptyText)
+      favoritesGameEmptyText.textContent = 'Loading your saved questions…';
 
     const catalog = await fetchFavoritesCatalog();
 
@@ -481,6 +487,7 @@ export function initGame(): void {
     packButton?.focus();
   }
   async function choosePack(slug: string, name: string, gated: boolean): Promise<void> {
+    if (busy) return;
     if (gated && local?.getItem(config.keys.adult) !== '1') {
       pendingGatedPack = { slug, name };
       if (packPicker) packPicker.hidden = true;
@@ -490,15 +497,26 @@ export function initGame(): void {
       return;
     }
     userSelectedPack = true;
-    const requestId = await activateSet(slug, name);
-    if (requestId === null) return;
-
-    closeDialog();
-    const question = await engine.next(current?.id ?? null);
-    if (requestId !== activationRequestId) return;
-
-    if (question) renderQuestion(question);
-    else setNotice('No questions are available in this pack yet.');
+    busy = true;
+    gameStage.setAttribute('aria-busy', 'true');
+    packGrid?.setAttribute('aria-busy', 'true');
+    announce(`Loading ${name} questions.`);
+    try {
+      const requestId = await activateSet(slug, name);
+      if (requestId === null) return;
+      closeDialog();
+      const question = await engine.next(current?.id ?? null);
+      if (requestId !== activationRequestId) return;
+      if (question) renderQuestion(question);
+      else showQuestionLoadFailure();
+    } catch {
+      closeDialog();
+      showQuestionLoadFailure();
+    } finally {
+      busy = false;
+      gameStage.setAttribute('aria-busy', 'false');
+      packGrid?.removeAttribute('aria-busy');
+    }
   }
   async function share(): Promise<void> {
     if (!current) return;

@@ -34,10 +34,10 @@ test('home page visual', async ({ page }) => {
 
 test('category page visual', async ({ page }) => {
   await prepare(page);
-  await page.goto('/funny-would-you-rather-questions/');
+  await page.goto('/would-you-rather-questions-for-kids/');
   await page.locator('main h1').waitFor();
   await waitForLocalFonts(page);
-  await expect(page).toHaveScreenshot('category-funny.png', { fullPage: true });
+  await expect(page).toHaveScreenshot('category-kids.png', { fullPage: true });
 });
 
 test('game result visual', async ({ page }) => {

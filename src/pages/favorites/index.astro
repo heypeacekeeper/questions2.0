@@ -18,10 +18,13 @@ const breadcrumbs = [homeBreadcrumb(), { name: 'Favorites', path: ROUTES.favorit
   <section class="content-intro">
     <div class="wrap">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>My Favorite Questions</h1>
+      <h1 id="favorites-heading" tabindex="-1">
+        My Favorite Questions
+      </h1>
       <div class="intro-copy">
         <p>
           Questions you save appear here on this device. Favorites are stored only in your browser.
+          You can save up to 100 questions.
         </p>
       </div>
     </div>
@@ -29,9 +32,12 @@ const breadcrumbs = [homeBreadcrumb(), { name: 'Favorites', path: ROUTES.favorit
 
   <div class="wrap favorites-wrap">
     <div class="favorites-summary">
-      <p id="favorites-count">Loading saved questions…</p>
+      <p id="favorites-count">Enable JavaScript to view favorites saved in this browser.</p>
 
       <div class="favorites-actions">
+        <button class="secondary-button" id="retry-favorites" type="button" hidden>
+          Try again
+        </button>
         <a class="primary-link" id="play-favorites" href={ROUTES.favoritesPlay} hidden>
           Play saved questions
         </a>
@@ -44,12 +50,17 @@ const breadcrumbs = [homeBreadcrumb(), { name: 'Favorites', path: ROUTES.favorit
     <div class="favorites-empty" id="favorites-empty" hidden>
       <h2>No favorites saved yet</h2>
       <p>Play the game and tap the heart to save questions here.</p>
-      <a class="primary-link" href={ROUTES.home}>
+      <a class="primary-link" href={ROUTES.play}>
         Start playing
       </a>
     </div>
 
     <ol class="favorite-list" id="favorite-list" hidden></ol>
+    <noscript>
+      <p>
+        <a href={ROUTES.categories}>Browse the question lists without JavaScript.</a>
+      </p>
+    </noscript>
 
     <p class="sr-only" id="favorites-live" aria-live="polite" aria-atomic="true"></p>
   </div>

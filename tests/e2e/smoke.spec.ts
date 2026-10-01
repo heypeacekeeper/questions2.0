@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 
 interface CatalogQuestion {
   id: string;
@@ -325,8 +326,10 @@ test('mobile hamburger opens, closes, and resets reliably', async ({ page }) => 
   await page.setViewportSize({ width: 390, height: 844 });
   await menuButton.click();
   await categoryButton.click();
-  await page.locator('#category-menu a[href="/funny-would-you-rather-questions/"]').click();
-  await expect(page).toHaveURL(/funny-would-you-rather-questions\/$/);
+  const categoryLink = page.locator('#category-menu a').first();
+  const categoryUrl = new URL((await categoryLink.getAttribute('href'))!, page.url()).href;
+  await categoryLink.click();
+  await expect(page).toHaveURL(categoryUrl);
   await expect(page.locator('#menu-button')).toHaveAttribute('aria-expanded', 'false');
 });
 
@@ -459,6 +462,7 @@ test('game question can be saved and removed using ID-only storage', async ({ pa
   await page.locator('.favorite-card-actions button').click();
   await expect(page.locator('#favorites-count')).toHaveText('0 saved questions');
   await expect(page.locator('#favorites-empty')).toBeVisible();
+  await expect(page.locator('#favorites-heading')).toBeFocused();
 
   const remaining = await page.evaluate(() => {
     const raw = localStorage.getItem('wyr_favorites');
@@ -656,4 +660,139 @@ test('sitemap includes the published blog routes', async ({ request }) => {
   expect(sitemap).toContain(
     '<loc>https://wouldyouratherquestions.org/blog/how-to-play-would-you-rather/</loc>',
   );
+  expect(sitemap).not.toContain('/favorites/');
+});
+
+test('production typography and generated results are explained', async ({ page }) => {
+  await page.goto('/play/');
+  await expect(page.locator('html')).not.toHaveAttribute('data-font-preview', 'system');
+  await page.locator('#choice-a').click();
+  await expect(page.locator('.generated-result-disclosure')).toBeVisible();
+  await expect(page.locator('.generated-result-disclosure')).toContainText('not live votes');
+});
+
+test('removing a favorite preserves focus and reuses the catalog', async ({ page, request }) => {
+  const questions = (await publicCatalog(request)).filter((question) => !question.g).slice(0, 3);
+  await page.addInitScript(
+    (ids) => localStorage.setItem('wyr_favorites', JSON.stringify({ v: 2, ids })),
+    questions.map((question) => question.id),
+  );
+  let requests = 0;
+  page.on('request', (request) => {
+    if (request.url().endsWith('/game-data/favorites.json')) requests++;
+  });
+  await page.goto('/favorites/');
+  await expect(page.locator('.favorite-card')).toHaveCount(3);
+  await page.locator('.favorite-card button').first().focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.favorite-card')).toHaveCount(2);
+  await expect(page.locator('.favorite-card button').first()).toBeFocused();
+  expect(requests).toBe(1);
+});
+
+test('favorites recover from a failed catalog without deleting saved IDs', async ({
+  page,
+  request,
+}) => {
+  const [question] = await publicCatalog(request);
+  await page.addInitScript(
+    (id) => localStorage.setItem('wyr_favorites', JSON.stringify({ v: 2, ids: [id] })),
+    question!.id,
+  );
+  await page.route('**/game-data/favorites.json', (route) =>
+    route.fulfill({ status: 503, body: 'Unavailable' }),
+  );
+  await page.goto('/favorites/');
+  await expect(page.locator('#retry-favorites')).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('wyr_favorites')!).ids)).toEqual(
+    [question!.id],
+  );
+  await page.unroute('**/game-data/favorites.json');
+  await page.locator('#retry-favorites').click();
+  await expect(page.locator('.favorite-card')).toHaveCount(1);
+});
+
+test('game retry refreshes the manifest after a missing pack', async ({ page }) => {
+  let manifestRequests = 0;
+  page.on('request', (request) => {
+    if (request.url().endsWith('/game-data/manifest.json')) manifestRequests++;
+  });
+  await page.route('**/game-data/**/pack-*.json', (route) =>
+    route.fulfill({ status: 404, body: 'Old asset missing' }),
+  );
+  await page.goto('/play/');
+  const initialId = await page.locator('#game-stage').getAttribute('data-question-id');
+  await page.locator('#skip-button').click();
+  await expect(page.locator('#next-button')).toContainText('Try again');
+  await page.unroute('**/game-data/**/pack-*.json');
+  await page.locator('#next-button').click();
+  await expect(page.locator('#game-stage')).not.toHaveAttribute('data-question-id', initialId!);
+  expect(manifestRequests).toBeGreaterThanOrEqual(2);
+});
+
+test('favorites provide a useful JavaScript-disabled state', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false, baseURL });
+  try {
+    const page = await context.newPage();
+    await page.goto('/favorites/');
+    await expect(page.locator('main')).toContainText('Enable JavaScript');
+    await expect(page.locator('main')).not.toContainText('Loading saved questions');
+    await page.goto('/favorites/play/');
+    await expect(page.locator('#favorites-game-empty-text')).toContainText('Enable JavaScript');
+    await expect(page.locator('noscript a[href="/categories/"]').last()).toBeVisible();
+  } finally {
+    await context.close();
+  }
+});
+
+test('published page families pass accessibility checks', async ({ page }) => {
+  test.setTimeout(90_000);
+  const routes = [
+    '/',
+    '/play/',
+    '/would-you-rather-questions-for-kids/',
+    '/would-you-rather-questions-for-kids/page/2/',
+    '/categories/',
+    '/favorites/',
+    '/favorites/play/',
+    '/blog/',
+    '/blog/how-to-play-would-you-rather/',
+    '/about-us/',
+    '/contact-us/',
+    '/submit-a-question/',
+    '/privacy-policy/',
+    '/terms-and-conditions/',
+    '/dmca/',
+    '/accessibility/',
+    '/cookie-policy/',
+    '/editorial-policy/',
+  ];
+  for (const route of routes) {
+    await page.goto(route);
+    await page.evaluate(() => document.fonts.ready);
+    const results = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+      .analyze();
+    expect(results.violations, `Accessibility violations on ${route}`).toEqual([]);
+  }
+  await page.goto('/play/');
+  await page.locator('#choice-a').click();
+  await expect(page.locator('#game-stage')).toHaveAttribute('data-result-ready', '1');
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+        .analyze()
+    ).violations,
+    'Answered game',
+  ).toEqual([]);
+  await page.locator('#pack-button').click();
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+        .analyze()
+    ).violations,
+    'Pack picker',
+  ).toEqual([]);
 });

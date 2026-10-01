@@ -19,7 +19,7 @@ function safeLocalStorage(): Storage | null {
 }
 
 function confirmRestrictedContent(storage: Storage | null): boolean {
-  if (storage?.getItem(STORAGE_KEYS.adultConfirmed) === '1') return true;
+  if (hasAdultConfirmation(storage)) return true;
 
   const confirmed = window.confirm(
     'Some saved questions contain mature content. Confirm that you are 18 or older to continue.',
@@ -36,6 +36,14 @@ function confirmRestrictedContent(storage: Storage | null): boolean {
   return confirmed;
 }
 
+function hasAdultConfirmation(storage: Storage | null): boolean {
+  try {
+    return storage?.getItem(STORAGE_KEYS.adultConfirmed) === '1';
+  } catch {
+    return false;
+  }
+}
+
 function createFavoriteCard(
   question: FavoriteCatalogQuestion,
   remove: (questionId: string) => void,
@@ -43,10 +51,14 @@ function createFavoriteCard(
 ): HTMLLIElement {
   const item = document.createElement('li');
   item.className = 'favorite-card';
+  item.dataset.questionId = question.id;
+  const restricted = question.g && !hasAdultConfirmation(storage);
 
   const text = document.createElement('p');
   text.className = 'favorite-question';
-  text.textContent = `Would you rather ${question.a} or ${question.b}?`;
+  text.textContent = restricted
+    ? 'Mature question — confirm you are 18 or older to open it.'
+    : `Would you rather ${question.a} or ${question.b}?`;
 
   const actions = document.createElement('div');
   actions.className = 'favorite-card-actions';
@@ -65,7 +77,12 @@ function createFavoriteCard(
   const removeButton = document.createElement('button');
   removeButton.type = 'button';
   removeButton.textContent = 'Remove';
-  removeButton.setAttribute('aria-label', `Remove “${question.a} or ${question.b}” from favorites`);
+  removeButton.setAttribute(
+    'aria-label',
+    restricted
+      ? 'Remove mature question from favorites'
+      : `Remove “${question.a} or ${question.b}” from favorites`,
+  );
   removeButton.addEventListener('click', () => remove(question.id));
 
   actions.append(open, removeButton);
@@ -81,6 +98,7 @@ export function initFavoritesPage(): void {
   const clearButton = $<HTMLButtonElement>('clear-favorites');
   const playLink = $<HTMLAnchorElement>('play-favorites');
   const live = $('favorites-live');
+  const retryButton = $<HTMLButtonElement>('retry-favorites');
 
   if (!list || list.dataset.ready === '1') return;
   list.dataset.ready = '1';
@@ -89,6 +107,7 @@ export function initFavoritesPage(): void {
   const store = new FavoriteStore(storage);
   let renderRequest = 0;
   let currentQuestions: readonly FavoriteCatalogQuestion[] = [];
+  let catalogRequest: Promise<readonly FavoriteCatalogQuestion[] | null> | null = null;
 
   const announce = (message: string) => {
     if (!live) return;
@@ -100,13 +119,14 @@ export function initFavoritesPage(): void {
 
   const showUnavailable = (message: string) => {
     if (count) count.textContent = message;
-    if (empty) empty.hidden = false;
+    if (empty) empty.hidden = true;
     if (clearButton) clearButton.hidden = true;
     if (playLink) playLink.hidden = true;
     list.hidden = true;
+    if (retryButton) retryButton.hidden = !storage;
   };
 
-  const render = async () => {
+  const render = async (focusId?: string | null) => {
     const request = ++renderRequest;
 
     if (!storage) {
@@ -115,8 +135,11 @@ export function initFavoritesPage(): void {
     }
 
     if (count) count.textContent = 'Loading saved questions…';
+    if (retryButton) retryButton.hidden = true;
 
-    const catalog = await fetchFavoritesCatalog();
+    const ids = store.getIds();
+    catalogRequest ??= ids.length ? fetchFavoritesCatalog() : null;
+    const catalog = ids.length ? await catalogRequest : [];
     if (request !== renderRequest) return;
 
     if (!catalog) {
@@ -124,7 +147,7 @@ export function initFavoritesPage(): void {
       return;
     }
 
-    const resolved = resolveFavoriteIds(store.getIds(), catalog);
+    const resolved = resolveFavoriteIds(ids, catalog);
     const reconciliation = store.reconcileIds(new Set(catalog.map((question) => question.id)));
 
     if (!reconciliation.ok) {
@@ -139,6 +162,8 @@ export function initFavoritesPage(): void {
         createFavoriteCard(
           question,
           (questionId) => {
+            const index = currentQuestions.findIndex((question) => question.id === questionId);
+            const focusQuestion = currentQuestions[index + 1] ?? currentQuestions[index - 1];
             const result = store.removeId(questionId);
 
             if (!result.ok) {
@@ -146,7 +171,7 @@ export function initFavoritesPage(): void {
               return;
             }
 
-            void render();
+            void render(focusQuestion?.id ?? null);
             announce('Question removed from favorites.');
           },
           storage,
@@ -166,6 +191,12 @@ export function initFavoritesPage(): void {
     if (empty) empty.hidden = hasQuestions;
     if (clearButton) clearButton.hidden = !hasQuestions;
     if (playLink) playLink.hidden = !hasQuestions;
+    if (focusId !== undefined) {
+      const card = Array.from(list.children).find(
+        (item) => (item as HTMLElement).dataset.questionId === focusId,
+      );
+      (card?.querySelector<HTMLButtonElement>('button') ?? $('favorites-heading'))?.focus();
+    }
 
     if (reconciliation.removed > 0) {
       announce(
@@ -191,11 +222,27 @@ export function initFavoritesPage(): void {
       return;
     }
 
-    void render();
+    void render(null);
     announce('All favorites removed.');
   });
 
-  window.addEventListener('pageshow', () => void render());
-  window.addEventListener('storage', () => void render());
+  retryButton?.addEventListener('click', () => {
+    catalogRequest = null;
+    void render();
+  });
+  window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+    catalogRequest = null;
+    void render();
+  });
+  window.addEventListener('storage', (event) => {
+    if (
+      event.key !== null &&
+      event.key !== STORAGE_KEYS.favorites &&
+      event.key !== STORAGE_KEYS.adultConfirmed
+    )
+      return;
+    void render();
+  });
   void render();
 }

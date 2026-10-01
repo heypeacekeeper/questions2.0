@@ -2,7 +2,6 @@
 /** Cloudflare Worker bindings: `vars` + secrets are plain strings. */
 type WorkerEnv = Record<string, string | undefined> & {
   ASSETS?: unknown;
-  FORM_RATE_LIMITER?: unknown;
 };
 type CloudflareRuntime = import('@astrojs/cloudflare').Runtime<WorkerEnv>;
 declare namespace App {

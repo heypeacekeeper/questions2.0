@@ -3,6 +3,7 @@ import type { GameQuestion, Question } from '@/domain/question';
 import { toGameQuestion } from '@/domain/question';
 import { CONTENT_LIMITS, GAME_DATA, ROUTES } from '@/config/site';
 import { SHARE_CODE_PATTERN } from '@/lib/crypto';
+import { fetchJson } from '@/lib/fetch-json';
 
 export interface FavoriteCatalogQuestion extends GameQuestion {
   /** True when any assigned category is mature or requires age confirmation. */
@@ -118,9 +119,7 @@ export async function fetchFavoritesCatalog(
   url: string = `${ROUTES.gameDataPrefix}${GAME_DATA.favoritesCatalogFile}`,
 ): Promise<readonly FavoriteCatalogQuestion[] | null> {
   try {
-    const response = await fetch(url, { credentials: 'omit' });
-    if (!response.ok) return null;
-    return parseFavoritesCatalog(await response.json());
+    return parseFavoritesCatalog(await fetchJson(url));
   } catch {
     return null;
   }

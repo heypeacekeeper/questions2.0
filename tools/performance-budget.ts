@@ -33,11 +33,27 @@ const categories = files.filter(
   (file) =>
     normalizePath(file).endsWith('index.html') &&
     pathIs(file, 'would-you-rather') &&
-    !pathIs(file, '/page/'),
+    !pathIs(file, '/s/'),
 );
 rows.push(['Largest category HTML', Math.max(0, ...categories.map(gz)), BUDGET_KB.categoryHtml]);
 const packs = files.filter((file) => pathIs(file, '/game-data/') && pathIs(file, 'pack-'));
 rows.push(['Largest game-data pack', Math.max(0, ...packs.map(gz)), BUDGET_KB.pack]);
+rows.push(['Favorites catalog', gz(join(DIST, 'game-data/favorites.json')), 25]);
+rows.push([
+  'Largest HTML page',
+  Math.max(0, ...files.filter((file) => file.endsWith('.html')).map(gz)),
+  150,
+]);
+rows.push([
+  'Largest public image (raw)',
+  Math.max(
+    0,
+    ...files
+      .filter((file) => /\.(png|jpe?g|webp|avif|svg|ico)$/.test(file))
+      .map((file) => statSync(file).size / 1024),
+  ),
+  200,
+]);
 const fonts = files.filter((file) => /\.(woff2?|ttf|otf)$/.test(normalizePath(file)));
 rows.push([
   'Self-hosted font transfer (all files)',
@@ -49,7 +65,7 @@ for (const [name, size, budget] of rows) {
   const over = size > budget;
   if (over) failed = true;
   console.log(
-    `${over ? '✖' : '✔'} ${name.padEnd(42)} ${size.toFixed(1).padStart(7)} ${name.includes('font transfer') ? 'KB raw' : 'KB gz '}  (budget ${budget} KB)`,
+    `${over ? '✖' : '✔'} ${name.padEnd(42)} ${size.toFixed(1).padStart(7)} ${name.includes('font transfer') || name.includes('(raw)') ? 'KB raw' : 'KB gz '}  (budget ${budget} KB)`,
   );
 }
 if (failed) {

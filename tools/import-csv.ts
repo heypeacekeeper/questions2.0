@@ -9,7 +9,15 @@
  * npm run import:csv -- --file ./questions.csv
  */
 import { randomUUID } from 'node:crypto';
-import { existsSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
+import {
+  copyFileSync,
+  existsSync,
+  readFileSync,
+  renameSync,
+  unlinkSync,
+  writeFileSync,
+} from 'node:fs';
+import { format, resolveConfig } from 'prettier';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -230,7 +238,7 @@ async function validatePlan(dataset: JsonDataset, plan: ImportPlan): Promise<voi
 }
 
 /** Stage touched category files and replace each only after the complete batch validates. */
-function writeImportedQuestions(plan: ImportPlan, directory: string): void {
+export async function writeImportedQuestions(plan: ImportPlan, directory: string): Promise<void> {
   const bySlug = new Map<string, Question[]>();
   for (const question of plan.accepted) {
     const slug = plan.primarySlugById.get(question.id)!;
@@ -238,7 +246,9 @@ function writeImportedQuestions(plan: ImportPlan, directory: string): void {
     list.push(question);
     bySlug.set(slug, list);
   }
-  const staged: Array<{ temp: string; target: string }> = [];
+  const staged: Array<{ temp: string; target: string; backup: string | null; committed: boolean }> =
+    [];
+  let successful = false;
   try {
     for (const [slug, questions] of bySlug) {
       const target = join(directory, 'questions', `${slug}.json`);
@@ -247,14 +257,48 @@ function writeImportedQuestions(plan: ImportPlan, directory: string): void {
         : [];
       if (!Array.isArray(existing)) throw new Error(`${target} must contain a JSON array.`);
       const temp = `${target}.${randomUUID()}.tmp`;
-      writeFileSync(temp, `${JSON.stringify([...existing, ...questions], null, 2)}\n`, {
-        flag: 'wx',
-      });
-      staged.push({ temp, target });
+      const backup = existsSync(target) ? `${target}.${randomUUID()}.backup` : null;
+      if (backup) copyFileSync(target, backup);
+      staged.push({ temp, target, backup, committed: false });
+      writeFileSync(
+        temp,
+        await format(JSON.stringify([...existing, ...questions]), {
+          ...(await resolveConfig(target)),
+          parser: 'json',
+        }),
+        {
+          flag: 'wx',
+        },
+      );
     }
-    for (const { temp, target } of staged) renameSync(temp, target);
+    for (const file of staged) {
+      renameSync(file.temp, file.target);
+      file.committed = true;
+    }
+    successful = true;
+  } catch (error) {
+    const failures: unknown[] = [error];
+    for (const file of [...staged].reverse()) {
+      if (!file.committed) continue;
+      try {
+        if (file.backup) renameSync(file.backup, file.target);
+        else unlinkSync(file.target);
+      } catch (rollbackError) {
+        failures.push(rollbackError);
+      }
+    }
+    if (failures.length > 1)
+      throw new AggregateError(
+        failures,
+        'Import failed; rollback was incomplete. Restore the retained .backup files.',
+        { cause: error },
+      );
+    successful = true;
+    throw error;
   } finally {
     for (const { temp } of staged) if (existsSync(temp)) unlinkSync(temp);
+    if (successful)
+      for (const { backup } of staged) if (backup && existsSync(backup)) unlinkSync(backup);
   }
 }
 
@@ -267,7 +311,7 @@ async function main(): Promise<void> {
   const plan = planImport(rows, dataset);
   await validatePlan(dataset, plan);
   if (!process.argv.includes('--dry-run') && plan.accepted.length > 0) {
-    writeImportedQuestions(plan, CONTENT_DATA_DIRECTORY);
+    await writeImportedQuestions(plan, CONTENT_DATA_DIRECTORY);
   }
   console.log(
     `${process.argv.includes('--dry-run') ? 'Dry run' : 'Import'} complete: ${plan.accepted.length} questions ${process.argv.includes('--dry-run') ? 'ready' : 'added'}, ${plan.skippedDuplicates} duplicates skipped.`,

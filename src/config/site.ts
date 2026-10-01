@@ -45,7 +45,6 @@ export const HOMEPAGE = {
   /** Questions in each compact homepage section. */
   questionsPerSection: 10,
   /** Category slugs (in order) shown as compact homepage sections. */
-  sectionSlugs: ['for-kids', 'for-adults', 'funny'] as const,
 } as const;
 
 export const NAVIGATION = {

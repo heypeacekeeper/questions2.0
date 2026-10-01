@@ -21,6 +21,12 @@ const breadcrumbs = [
 
 <BaseLayout meta={meta} breadcrumbs={breadcrumbs}>
   <Game mode="favorites" initial={null} setSlug="favorites" />
+  <noscript>
+    <p class="wrap">
+      Playing browser-local favorites requires JavaScript.{' '}
+      <a href={ROUTES.categories}>Browse question lists instead.</a>
+    </p>
+  </noscript>
 
   <section class="content-intro">
     <div class="wrap">

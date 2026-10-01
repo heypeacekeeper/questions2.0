@@ -116,7 +116,7 @@ export async function buildGameData(
       slug: category.slug,
       name: category.name,
       icon: category.icon,
-      requiresAgeGate: category.requiresAgeGate,
+      requiresAgeGate: category.requiresAgeGate || category.isMature,
       questions,
     });
     files.push(...set.files);

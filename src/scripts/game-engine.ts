@@ -8,6 +8,7 @@ import { pickNextUnseen } from '@/application/question-service';
 import type { Rng } from '@/lib/random';
 import { CONTENT_LIMITS } from '@/config/site';
 import { SHARE_CODE_PATTERN } from '@/lib/crypto';
+import { fetchJson } from '@/lib/fetch-json';
 
 export interface SeenStore {
   get(): Set<string>;
@@ -25,7 +26,12 @@ export class SessionSeenStore implements SeenStore {
     if (this.cache) return this.cache;
     try {
       const raw = this.storage?.getItem(this.key);
-      this.cache = new Set(raw ? (JSON.parse(raw) as string[]) : []);
+      const ids: unknown = raw ? JSON.parse(raw) : [];
+      this.cache = new Set(
+        Array.isArray(ids)
+          ? ids.filter((id): id is string => typeof id === 'string' && id.length > 0).slice(-2000)
+          : [],
+      );
     } catch {
       this.cache = new Set();
     }
@@ -51,7 +57,7 @@ export class SessionSeenStore implements SeenStore {
 }
 
 export interface PackFetcher {
-  (url: string): Promise<GameQuestion[]>;
+  (url: string, signal?: AbortSignal): Promise<GameQuestion[]>;
 }
 
 export interface PackFilePayload {
@@ -94,6 +100,7 @@ export function parsePackFilePayload(data: unknown): GameQuestion[] {
     if (
       !isRecord(item) ||
       !isNonEmptyString(item.id) ||
+      item.id.length > 128 ||
       !isNonEmptyString(item.a) ||
       item.a.length > CONTENT_LIMITS.optionMax ||
       !isNonEmptyString(item.b) ||
@@ -153,10 +160,8 @@ export function parseGameDataManifest(data: unknown): GameDataManifest | null {
   return data as unknown as GameDataManifest;
 }
 
-export const defaultFetcher: PackFetcher = async (url) => {
-  const res = await fetch(url, { credentials: 'omit' });
-  if (!res.ok) throw new Error(`pack ${res.status}`);
-  return parsePackFilePayload(await res.json());
+export const defaultFetcher: PackFetcher = async (url, signal) => {
+  return parsePackFilePayload(await fetchJson(url, { signal }));
 };
 
 export class GameEngine {
@@ -166,6 +171,7 @@ export class GameEngine {
   private loading: Promise<void> | null = null;
   private loadFailed = false;
   private generation = 0;
+  private controller = new AbortController();
 
   constructor(
     private seen: SeenStore,
@@ -186,6 +192,8 @@ export class GameEngine {
   }
 
   async useSet(entry: PackSetManifestEntry | null): Promise<void> {
+    this.controller.abort();
+    this.controller = new AbortController();
     this.generation += 1;
     this.loading = null;
     this.loadFailed = false;
@@ -197,6 +205,8 @@ export class GameEngine {
 
   /** Use an in-memory question set without downloading game-data packs. */
   useQuestions(questions: readonly GameQuestion[]): void {
+    this.controller.abort();
+    this.controller = new AbortController();
     this.generation += 1;
     this.loading = null;
     this.loadFailed = false;
@@ -236,12 +246,13 @@ export class GameEngine {
         const url = this.remainingPacks[0];
         if (!url) break;
         try {
-          const qs = await this.fetcher(url);
+          const qs = await this.fetcher(url, this.controller.signal);
           if (generation !== this.generation) return;
           this.loadedPacks.add(url);
           const ids = new Set(this.pool.map((q) => q.id));
           for (const q of qs) if (!ids.has(q.id)) this.pool.push(q);
         } catch {
+          if (generation !== this.generation) return;
           this.loadFailed = true;
           // Leave the pack unloaded so the next call can retry it.
           break;
@@ -292,11 +303,12 @@ export class GameEngine {
   }
 }
 
-export async function loadManifest(url: string): Promise<GameDataManifest | null> {
+export async function loadManifest(
+  url: string,
+  options: { signal?: AbortSignal; cache?: RequestCache } = {},
+): Promise<GameDataManifest | null> {
   try {
-    const res = await fetch(url, { credentials: 'omit' });
-    if (!res.ok) return null;
-    return parseGameDataManifest(await res.json());
+    return parseGameDataManifest(await fetchJson(url, options));
   } catch {
     return null;
   }

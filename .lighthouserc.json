@@ -2,8 +2,13 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist/client",
-      "url": ["http://localhost/", "http://localhost/funny-would-you-rather-questions/"],
-      "numberOfRuns": 1
+      "url": [
+        "http://localhost/",
+        "http://localhost/play/",
+        "http://localhost/would-you-rather-questions-for-kids/",
+        "http://localhost/blog/how-to-play-would-you-rather/"
+      ],
+      "numberOfRuns": 3
     },
     "assert": {
       "assertions": {

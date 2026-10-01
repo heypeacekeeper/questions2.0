@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { publisherDetailsComplete } from '@/config/publisher';
 import { homeBreadcrumb, type PageMeta } from '@/lib/seo';
 interface Props {
   meta: PageMeta;
@@ -16,7 +17,7 @@ const breadcrumbs = [homeBreadcrumb(), { name: heading, path: meta.path }];
     <div class="wrap">
       <Breadcrumbs items={breadcrumbs} />
       <h1>{heading}</h1>
-      {legal && (
+      {legal && !publisherDetailsComplete() && (
         <p class="notice" style="margin-top:14px">
           <strong>Template notice:</strong> this page is a customizable template published by{' '}
           <span class="placeholder">Would You Rather Questions</span>. It is not legal advice and

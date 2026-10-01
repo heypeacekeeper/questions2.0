@@ -30,7 +30,8 @@ function argument(name: string): string | undefined {
 
 function csvCell(value: string | number | boolean | null): string {
   if (value === null) return '';
-  const text = String(value);
+  const text =
+    typeof value === 'string' && /^[\s]*[=+\-@]/.test(value) ? `'${value}` : String(value);
   return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 

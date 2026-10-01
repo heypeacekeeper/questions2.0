@@ -6,26 +6,46 @@ import AdSlot from '@/components/AdSlot.astro';
 import { getContentContext } from '@/repositories/factory';
 import { ROUTES } from '@/config/site';
 import { initialGameQuestion } from '@/lib/page-data';
+import type { Question } from '@/domain/question';
 
 const ctx = await getContentContext();
-const visible = await ctx.categoryService.getVisibleCategories();
+const restrictedCategoryIds = new Set(
+  (await ctx.categories.getAllCategories())
+    .filter((category) => category.isMature || category.requiresAgeGate)
+    .map((category) => category.id),
+);
+const visible = (await ctx.categoryService.getVisibleCategories()).filter(
+  (category) => !category.isMature && !category.requiresAgeGate,
+);
 const packs = (await ctx.categoryService.getGamePackCategories()).map((c) => ({
   slug: c.slug,
   name: c.name,
   icon: c.icon,
   description: c.shortDescription,
-  requiresAgeGate: c.requiresAgeGate,
+  requiresAgeGate: c.requiresAgeGate || c.isMature,
 }));
 const initial = await initialGameQuestion(null);
 const sections = (
   await Promise.all(
     visible.map(async (category) => ({
       category,
-      questions: await ctx.questionService.getHomepageSample(category),
+      questions: (await ctx.questionService.getHomepageSample(category)).filter(
+        (question) => !question.categoryIds.some((id) => restrictedCategoryIds.has(id)),
+      ),
     })),
   )
 ).filter((section) => section.questions.length > 0);
-const featured = sections.flatMap((section) => section.questions.slice(0, 1)).slice(0, 10);
+const featured: Question[] = [];
+const featuredIds = new Set<string>();
+for (let index = 0; index < 10 && featured.length < 10; index++) {
+  for (const section of sections) {
+    const question = section.questions[index];
+    if (!question || featuredIds.has(question.id)) continue;
+    featured.push(question);
+    featuredIds.add(question.id);
+    if (featured.length === 10) break;
+  }
+}
 const tones = [
   ['#ffb3a3', '#ffe8e1'],
   ['#85dce3', '#e2f7f7'],
@@ -43,7 +63,7 @@ const totalQuestions = (await ctx.questionService.getPublished()).length;
 const meta = {
   title: 'Would You Rather Questions – Play Free Online',
   description:
-    'Play Would You Rather questions online. Funny, kids, teens, adults, couples, family and hard questions for parties, road trips, classrooms and game nights.',
+    'Play free Would You Rather questions online, save your favorites, or browse the currently published collections for your next conversation.',
   path: ROUTES.home,
 };
 ---
@@ -56,23 +76,15 @@ const meta = {
           Would You Rather <em>Questions</em>
         </h1>
         <p>
-          The best questions for parties, road trips, classrooms and date nights. Read them straight
-          from the list, or play one dilemma at a time.
+          Two options, one choice. Browse our published collections, read questions straight from
+          the list, or play one dilemma at a time.
         </p>
         <div class="reference-hero-actions">
-          <a
-            class="reference-button reference-button-hot"
-            href={ROUTES.play}
-            aria-label="Play the game"
-          >
+          <a class="reference-button reference-button-hot" href={ROUTES.play}>
             <span class="reference-action-long">Play the game →</span>
             <span class="reference-action-short">Play game →</span>
           </a>
-          <a
-            class="reference-button reference-button-ghost"
-            href="#best"
-            aria-label="Browse questions"
-          >
+          <a class="reference-button reference-button-ghost" href="#best">
             <span class="reference-action-long">Browse questions ↓</span>
             <span class="reference-action-short">Questions ↓</span>
           </a>
@@ -117,7 +129,7 @@ const meta = {
   <nav class="reference-sticky-jump" aria-label="Jump between question sections" inert>
     <div class="wrap reference-sticky-jump-inner">
       <a href="#best" data-jump-link="best" class="is-active">
-        <span class="reference-swatch" aria-hidden="true"></span>Best
+        <span class="reference-swatch" aria-hidden="true"></span>Start here
       </a>
       {sections.map((section, index) => (
         <a
@@ -136,9 +148,9 @@ const meta = {
     {featured.length > 0 ? (
       <section class="reference-question-section" id="best" aria-labelledby="best-heading">
         <div class="reference-section-copy">
-          <span class="reference-chip">● EDITOR'S PICKS</span>
-          <h2 id="best-heading">Best Would You Rather Questions</h2>
-          <p>Our favorites from every category. Start here for a great conversation.</p>
+          <span class="reference-chip">● START HERE</span>
+          <h2 id="best-heading">Would You Rather Questions to Try</h2>
+          <p>A sample of our published questions. Pick one to start a conversation.</p>
           <p class="reference-question-count">
             {totalQuestions} questions to explore across the site
           </p>

@@ -9,7 +9,7 @@ const categories = await ctx.categoryService.getVisibleCategories();
 const meta = {
   title: 'All Would You Rather Question Categories',
   description:
-    'Browse Would You Rather categories for kids, teens, adults, couples, friends and family, plus good, funny, hard, deep and spicy questions.',
+    'Browse currently published Would You Rather collections and see how many questions are available in each category.',
   path: ROUTES.categories,
 };
 const breadcrumbs = [homeBreadcrumb(), { name: 'Categories', path: ROUTES.categories }];

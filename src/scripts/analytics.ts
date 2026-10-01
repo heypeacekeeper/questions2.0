@@ -15,6 +15,7 @@ import {
   GoogleAnalytics4Provider,
 } from '@/infrastructure/analytics/providers';
 import type { AnalyticsEventName } from '@/repositories/interfaces';
+import { onCLS, onINP, onLCP, type Metric } from 'web-vitals';
 
 export interface AnalyticsConfig {
   ga4Id: string | null;
@@ -96,38 +97,13 @@ function installMonitoring(): void {
     track('js_error', { name: 'unhandledrejection' }),
   );
 
-  // Core Web Vitals via PerformanceObserver (no library).
+  // Report standard page-level metrics; track() retains consent/provider gating.
   try {
-    const po = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint')
-          track('web_vital', { name: 'LCP', value: Math.round(entry.startTime) });
-        if (
-          entry.entryType === 'layout-shift' &&
-          !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput
-        ) {
-          track('web_vital', {
-            name: 'CLS',
-            value:
-              Math.round(((entry as PerformanceEntry & { value: number }).value ?? 0) * 1000) /
-              1000,
-          });
-        }
-        if (
-          entry.entryType === 'event' &&
-          (entry as PerformanceEntry & { interactionId?: number }).interactionId
-        ) {
-          track('web_vital', { name: 'INP', value: Math.round(entry.duration) });
-        }
-      }
-    });
-    po.observe({ type: 'largest-contentful-paint', buffered: true });
-    po.observe({ type: 'layout-shift', buffered: true });
-    po.observe({
-      type: 'event',
-      buffered: true,
-      durationThreshold: 200,
-    } as PerformanceObserverInit);
+    const report = ({ name, value }: Metric) =>
+      track('web_vital', { name, value: Math.round(value * 1000) / 1000 });
+    onCLS(report);
+    onINP(report);
+    onLCP(report);
   } catch {
     /* unsupported browser */
   }

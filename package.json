@@ -31,7 +31,9 @@
     "import:csv": "tsx tools/import-csv.ts",
     "export:json": "tsx tools/export-questions.ts --format json",
     "export:csv": "tsx tools/export-questions.ts --format csv",
-    "deploy": "npm run build && wrangler deploy",
+    "validate:launch": "tsx tools/validate-launch.ts",
+    "release:check": "npm run lint && npm run format:check && npm run check && npm test && npm run test:e2e && npm run validate:launch",
+    "deploy": "npm run release:check && npm run build && wrangler deploy",
     "cf-typegen": "wrangler types",
     "audit": "npm audit --omit=dev",
     "format": "prettier --write .",
@@ -41,10 +43,12 @@
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.0",
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.1"
+    "astro": "^7.3.1",
+    "web-vitals": "^6.2.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.63.0",
     "cross-env": "^10.0.0",

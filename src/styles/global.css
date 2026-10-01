@@ -2321,7 +2321,7 @@ svg {
 
 .milestone-count {
   font-size: clamp(76px, 13vw, 144px);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.07em;
   text-shadow: 0 8px 35px rgba(0, 0, 0, 0.38);

@@ -20,11 +20,11 @@
   --surface: #fffdf9;
   --ink: #1c1915;
   --text: #4a443c;
-  --muted: #7f776c;
+  --muted: #696157;
   --line: #dcd4c7;
-  --pink: #e33e26;
+  --pink: #c3321d;
   --pink-dark: #c3321d;
-  --orange: #e33e26;
+  --orange: #c3321d;
   --yellow: #e3cd76;
   --blue: #68d8e0;
   --purple: #b87bd5;
@@ -177,7 +177,7 @@ h3 {
 }
 .reference-button-hot {
   color: #fff;
-  background: #e33e26;
+  background: #c3321d;
   box-shadow: 0 4px 0 var(--ink);
 }
 .reference-button-hot:hover {
@@ -208,7 +208,7 @@ h3 {
   letter-spacing: -0.035em;
 }
 .brand strong {
-  color: #e33e26;
+  color: #c3321d;
 }
 .brand-mark,
 .brand-domain {
@@ -271,7 +271,7 @@ h3 {
   justify-content: center;
   padding: 9px 22px;
   color: #fff;
-  background: #e33e26;
+  background: #c3321d;
   border: 2px solid var(--ink);
   border-radius: 99px;
   box-shadow: 0 4px 0 var(--ink);
@@ -312,7 +312,7 @@ h3 {
 }
 .reference-hero-copy h1 em {
   display: block;
-  color: #e33e26;
+  color: #c3321d;
   font-style: normal;
 }
 .reference-hero-copy > p {
@@ -356,7 +356,7 @@ h3 {
   box-shadow: 0 11px 0 var(--ink);
 }
 .reference-game-preview:focus-visible {
-  outline: 3px solid #e33e26;
+  outline: 3px solid #c3321d;
   outline-offset: 5px;
 }
 .reference-preview-label {
@@ -661,7 +661,7 @@ h3 {
   color: var(--surface);
   background: var(--ink);
   border-radius: 12px;
-  box-shadow: 0 4px 0 #e33e26;
+  box-shadow: 0 4px 0 #c3321d;
   font-size: 15px;
   font-weight: 700;
 }
@@ -682,7 +682,7 @@ h3 {
   font-size: clamp(40px, 4.6vw, 64px);
 }
 .reference-play-intro h1 em {
-  color: #e33e26;
+  color: #c3321d;
   font-style: normal;
 }
 .reference-play-intro > p {
@@ -991,7 +991,7 @@ h3 {
   font-size: clamp(40px, 4.5vw, 64px);
 }
 .reference-info-intro h1 em {
-  color: #e33e26;
+  color: #c3321d;
   font-style: normal;
 }
 .reference-info-intro > p {
@@ -1346,5 +1346,43 @@ h3 {
   .reference-button,
   .reference-game-preview {
     transition: none;
+  }
+}
+
+.generated-result-disclosure {
+  display: none;
+  margin: 0;
+  padding: 8px 12px;
+  color: var(--ink);
+  background: var(--surface);
+  font: 12px/1.5 var(--reference-mono);
+  text-align: center;
+}
+.game-shell:has(.game-stage.answered) .generated-result-disclosure {
+  display: block;
+}
+.choice:focus-visible {
+  outline: 4px solid var(--ink);
+  outline-offset: -8px;
+}
+.game-stage.answered .choice.not-picked,
+.game-stage.answered .choice.not-picked:hover {
+  filter: grayscale(1);
+}
+.game-stage.has-notice .next-button {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.game-stage.has-notice .skip-button {
+  display: none;
+}
+@media (min-width: 801px) and (max-width: 980px) {
+  .reference-nav-play {
+    padding-inline: 14px;
+  }
+  .nav-links {
+    gap: 12px;
   }
 }

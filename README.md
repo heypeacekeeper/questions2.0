@@ -22,9 +22,12 @@ npm test
 npm run build:demo
 npm run test:runtime:demo
 npm run test:e2e
+npm run test:visual
 ```
 
 `npm run build` is the production build. It rejects published questions marked `isDemo: true`. Do not set `ALLOW_DEMO_CONTENT=true` for production.
+
+Browser and screenshot tests use the production build and self-hosted fonts. Demo builds retain the local font preview control. Accessibility checks cover desktop and mobile page families as part of `test:e2e`.
 
 ## Editing questions
 
@@ -65,10 +68,19 @@ The contact and question-submission pages use email links. They do not store mes
 The site is configured for Cloudflare Workers in `wrangler.jsonc`. When real content is ready, run:
 
 ```bash
-npm run build
-npx wrangler deploy
+npm run deploy
 ```
 
 The production GitHub workflow builds the same checked-in JSON and verifies the deployed commit, content manifest, homepage, and game packs. Configure `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the GitHub production environment before using that workflow. Connect the custom domain when ready; local development does not require it.
 
 The deployment manifest and `/api/health/` expose the commit and content checksum for verification and rollback. See `docs/ROLLBACK.md` for the rollback procedure.
+
+`npm run deploy` runs the release checks before building and publishing. Complete `src/config/publisher.ts` and review the policy pages first; `npm run validate:launch` refuses a public release while those details are unfinished. This gate also runs in the production GitHub deployment workflow. Preview/build/test commands remain available without owner details. Keep ads disabled until the responsive slots and consent integration have been implemented and verified.
+
+Set `PUBLIC_SITE_URL` at build time for the final HTTPS origin. The sitemap, page metadata, and generated robots file use that build configuration. Runtime-only variable changes do not rebuild static pages.
+
+The content checksum includes all published category/question fields and all Markdown blog source files, including drafts. It complements the Git commit; asset changes are tracked by Git and hashed asset filenames.
+
+The CSV importer formats JSON and stages the entire batch before replacing files. If replacement fails it rolls back completed replacements. Interrupted/incompletely recovered imports retain sibling `.backup` files for manual recovery. CSV exports neutralize spreadsheet formula prefixes; use JSON exports when exact raw text is required.
+
+Favorites save up to 100 questions locally; an extra save is refused rather than evicting an existing favorite. Mixed mode currently contains up to 400 questions per build. Keep that limit in mind when the corpus grows.

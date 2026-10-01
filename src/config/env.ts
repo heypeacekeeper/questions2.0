@@ -92,6 +92,10 @@ export function buildAppEnv(
   if (features.FEATURE_ADS && !adsensePublisherId) {
     problems.push('PUBLIC_ADSENSE_PUBLISHER_ID is required when FEATURE_ADS=true');
   }
+  if (isProduction && features.FEATURE_ADS)
+    problems.push(
+      'Advertising is not launch-ready. Keep FEATURE_ADS=false until responsive slots and the consent integration are completed and verified.',
+    );
   if (adsensePublisherId && !/^ca-pub-\d{10,20}$/.test(adsensePublisherId)) {
     problems.push('PUBLIC_ADSENSE_PUBLISHER_ID must look like ca-pub-XXXXXXXXXXXXXXXX');
   }
@@ -117,19 +121,19 @@ export function readProcessEnv(): RawEnv {
 
 /** Astro/Vite inlines direct property reads into prerender chunks. */
 export function readImportMetaEnv(): RawEnv {
-  const env = (import.meta as unknown as { env?: ImportMetaEnv }).env ?? ({} as ImportMetaEnv);
+  if (!import.meta.env) return {};
   const values: RawEnv = {
-    MODE: env.MODE,
-    ASTRO_MODE: env.MODE,
-    ALLOW_DEMO_CONTENT: env.ALLOW_DEMO_CONTENT,
-    PUBLIC_SITE_URL: env.PUBLIC_SITE_URL,
-    FEATURE_ADS: env.FEATURE_ADS,
-    FEATURE_GA4: env.FEATURE_GA4,
-    FEATURE_CLOUDFLARE_ANALYTICS: env.FEATURE_CLOUDFLARE_ANALYTICS,
-    PUBLIC_GA4_MEASUREMENT_ID: env.PUBLIC_GA4_MEASUREMENT_ID,
-    PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN: env.PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN,
-    PUBLIC_SEARCH_CONSOLE_VERIFICATION: env.PUBLIC_SEARCH_CONSOLE_VERIFICATION,
-    PUBLIC_ADSENSE_PUBLISHER_ID: env.PUBLIC_ADSENSE_PUBLISHER_ID,
+    MODE: import.meta.env.MODE,
+    ASTRO_MODE: import.meta.env.MODE,
+    ALLOW_DEMO_CONTENT: import.meta.env.ALLOW_DEMO_CONTENT,
+    PUBLIC_SITE_URL: import.meta.env.PUBLIC_SITE_URL,
+    FEATURE_ADS: import.meta.env.FEATURE_ADS,
+    FEATURE_GA4: import.meta.env.FEATURE_GA4,
+    FEATURE_CLOUDFLARE_ANALYTICS: import.meta.env.FEATURE_CLOUDFLARE_ANALYTICS,
+    PUBLIC_GA4_MEASUREMENT_ID: import.meta.env.PUBLIC_GA4_MEASUREMENT_ID,
+    PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN: import.meta.env.PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN,
+    PUBLIC_SEARCH_CONSOLE_VERIFICATION: import.meta.env.PUBLIC_SEARCH_CONSOLE_VERIFICATION,
+    PUBLIC_ADSENSE_PUBLISHER_ID: import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID,
   };
   return Object.fromEntries(
     Object.entries(values).filter((entry): entry is [string, string] => entry[1] !== undefined),

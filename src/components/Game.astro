@@ -314,6 +314,7 @@ const packOptions =
         )}
       </div>
 
+      <p class="generated-result-disclosure">For-fun percentages — generated, not live votes.</p>
       {mode !== 'single' && (
         <>
           <div
@@ -344,8 +345,8 @@ const packOptions =
 
       {mode === 'favorites' && (
         <div class="game-empty" id="favorites-game-empty">
-          <p id="favorites-game-empty-text">Loading your saved questions…</p>
-          <a href={ROUTES.home}>Return to the main game</a>
+          <p id="favorites-game-empty-text">Enable JavaScript to load your saved questions.</p>
+          <a href={ROUTES.play}>Return to the main game</a>
         </div>
       )}
       <p class="sr-only" id="game-instructions">

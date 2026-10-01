@@ -16,6 +16,7 @@ interface FavoritesIdPayload {
 export interface FavoriteMutationResult {
   readonly ok: boolean;
   readonly saved: boolean;
+  readonly reason?: 'limit';
 }
 
 export interface FavoriteReconcileResult {
@@ -116,7 +117,9 @@ export class FavoriteStore {
     if (!isFavoriteId(questionId)) return { ok: false, saved: false };
     if (this.hasId(questionId)) return { ok: true, saved: true };
 
-    const ok = this.writeIds([questionId, ...this.getIds()].slice(0, MAX_FAVORITES));
+    const ids = this.getIds();
+    if (ids.length >= MAX_FAVORITES) return { ok: false, saved: false, reason: 'limit' };
+    const ok = this.writeIds([questionId, ...ids]);
     return { ok, saved: ok };
   }
 

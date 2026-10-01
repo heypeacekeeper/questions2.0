@@ -23,11 +23,7 @@ export async function getStaticPaths() {
   }));
 }
 
-interface Props {
-  post: BlogPost;
-}
-
-const { post } = Astro.props;
+const { post } = Astro.props as { post: BlogPost };
 const { Content, headings } = await render(post);
 const posts = await getPublishedBlogPosts();
 
@@ -197,7 +193,7 @@ const articleJsonLd = {
             <a class="article-primary-action" href={ROUTES.categories}>
               Browse questions
             </a>
-            <a class="article-secondary-action" href={ROUTES.home}>
+            <a class="article-secondary-action" href={ROUTES.play}>
               Play the game
             </a>
           </div>

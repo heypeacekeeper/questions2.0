@@ -1,6 +1,7 @@
 ---
 import ProseLayout from '@/layouts/ProseLayout.astro';
 import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+import { PUBLISHER } from '@/config/publisher';
 const meta = {
   title: 'Privacy Policy',
   description:
@@ -11,9 +12,15 @@ const meta = {
 
 <ProseLayout meta={meta} heading="Privacy Policy" legal>
   <p>
-    Last updated: <span class="placeholder">[DATE]</span>. Publisher:{' '}
+    Last updated:{' '}
+    <span class:list={{ placeholder: !PUBLISHER.policyUpdatedAt }}>
+      {PUBLISHER.policyUpdatedAt || '[DATE]'}
+    </span>
+    . Publisher:{' '}
     <span class="placeholder">
-      Would You Rather Questions — legal entity and address to be added
+      {PUBLISHER.name && PUBLISHER.address
+        ? `${PUBLISHER.name} — ${PUBLISHER.address}`
+        : 'Would You Rather Questions — legal entity and address to be added'}
     </span>
     . Contact: <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a>.
   </p>
@@ -33,8 +40,8 @@ const meta = {
       reply, review suggestions or handle your request. We do not use it for marketing.
     </li>
     <li>
-      <strong>Browser storage</strong> remembers your chosen pack, favorites and age confirmation on
-      your device. Session storage helps avoid repeating questions during a game session.
+      <strong>Browser storage</strong> remembers your favorites and age confirmation on your device.
+      Session storage helps avoid repeating questions during a game session.
     </li>
   </ul>
   <h2>How long we keep data</h2>

@@ -83,7 +83,7 @@ jobs:
         run: npm ci
 
       - name: Build production website
-        run: npm run build
+        run: npm run validate:launch && npm run build
 
       - name: Deploy Cloudflare Worker
         id: deploy
@@ -91,7 +91,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: 4.129.0
+          wranglerVersion: 4.144.0
           command: deploy
 
       - name: Verify deployed website

@@ -1,6 +1,7 @@
 ---
 /** Generic category route + pagination: /<canonical-path>/ and /<canonical-path>/page/N/ */
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentGate from '@/components/ContentGate.astro';
 import Game from '@/components/Game.astro';
 import QuestionList from '@/components/QuestionList.astro';
 import Pagination from '@/components/Pagination.astro';
@@ -40,6 +41,15 @@ const ctx = await getContentContext();
 const pagination = await ctx.questionService.getPage(category, page);
 const related = await ctx.categoryService.getRelatedCategories(category);
 const initial = await initialGameQuestion(category);
+const allCategories = await ctx.categories.getAllCategories();
+const restrictedIds = new Set(
+  allCategories.filter((c) => c.isMature || c.requiresAgeGate).map((c) => c.id),
+);
+const restricted =
+  restrictedIds.has(category.id) ||
+  (await ctx.questionService.getForCategory(category)).some((q) =>
+    q.categoryIds.some((id) => restrictedIds.has(id)),
+  );
 const { popular, seasonal } = await sidebarData(category.id);
 const path = categoryPagePath(category.canonicalPath, page);
 const pageSuffix = page > 1 ? ` – Page ${page}` : '';
@@ -86,25 +96,27 @@ const breadcrumbs = [
           )}
         </div>
       </header>
-      <Game mode="category" initial={initial} setSlug={category.slug} category={category} />
-      <section class="question-section reference-category-list" aria-labelledby="list-heading">
-        <header class="section-header">
-          <h2 id="list-heading">
-            {page > 1
-              ? `Questions ${pagination.startIndex}–${pagination.endIndex}`
-              : `All ${category.name} Would You Rather Questions`}
-          </h2>
-          <span class="reference-mono">{pagination.totalItems} QUESTIONS</span>
-        </header>
-        <QuestionList
-          id="category-questions"
-          questions={pagination.items}
-          startIndex={pagination.startIndex}
-          long={pagination.items.length > 20}
-          ariaLabel={`${category.name} questions`}
-        />
-        <Pagination pagination={pagination} basePath={category.canonicalPath} />
-      </section>
+      <ContentGate restricted={restricted}>
+        <Game mode="category" initial={initial} setSlug={category.slug} category={category} />
+        <section class="question-section reference-category-list" aria-labelledby="list-heading">
+          <header class="section-header">
+            <h2 id="list-heading">
+              {page > 1
+                ? `Questions ${pagination.startIndex}–${pagination.endIndex}`
+                : `All ${category.name} Would You Rather Questions`}
+            </h2>
+            <span class="reference-mono">{pagination.totalItems} QUESTIONS</span>
+          </header>
+          <QuestionList
+            id="category-questions"
+            questions={pagination.items}
+            startIndex={pagination.startIndex}
+            long={pagination.items.length > 20}
+            ariaLabel={`${category.name} questions`}
+          />
+          <Pagination pagination={pagination} basePath={category.canonicalPath} />
+        </section>
+      </ContentGate>
       <AdSlot slot="belowGame" />
       <AdSlot slot="inContent" class="inline-ad" />
       <RelatedCategories categories={related} />

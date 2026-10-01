@@ -1,6 +1,7 @@
 ---
 import ProseLayout from '@/layouts/ProseLayout.astro';
 import { ROUTES, PUBLIC_EMAIL } from '@/config/site';
+import { PUBLISHER } from '@/config/publisher';
 const meta = {
   title: 'DMCA & Copyright',
   description: 'How to report copyright concerns about content on Would You Rather Questions.',
@@ -12,9 +13,11 @@ const meta = {
   <p>
     We respect intellectual property. If you believe content on this site infringes your copyright,
     send a notice to <a href={`mailto:${PUBLIC_EMAIL}`}>{PUBLIC_EMAIL}</a> (designated agent:{' '}
-    <span class="placeholder">[NAME / ADDRESS]</span>) including: identification of the work, the
-    URL of the material, your contact details, a good-faith statement, a statement of accuracy under
-    penalty of perjury, and your signature.
+    <span class:list={{ placeholder: !PUBLISHER.copyrightContact }}>
+      {PUBLISHER.copyrightContact || '[NAME / ADDRESS]'}
+    </span>
+    ) including: identification of the work, the URL of the material, your contact details, a
+    good-faith statement, a statement of accuracy under penalty of perjury, and your signature.
   </p>
   <p>
     We will review notices promptly and may remove or archive material. Counter-notices follow the

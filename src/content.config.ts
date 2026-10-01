@@ -1,6 +1,8 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { existsSync } from 'node:fs';
+import { resolve, sep } from 'node:path';
 
 const blogSchema = z
   .object({
@@ -23,6 +25,16 @@ const blogSchema = z
     imageAlt: z.string().min(5).max(150).optional(),
   })
   .superRefine((data, context) => {
+    if (data.image) {
+      const directory = resolve('public/images/blog');
+      const imagePath = resolve('public', data.image.slice(1));
+      if (!imagePath.startsWith(directory + sep) || !existsSync(imagePath))
+        context.addIssue({
+          code: 'custom',
+          path: ['image'],
+          message: 'Article image must exist inside public/images/blog',
+        });
+    }
     if (data.image && !data.imageAlt) {
       context.addIssue({
         code: 'custom',

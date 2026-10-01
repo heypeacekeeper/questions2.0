@@ -1,6 +1,7 @@
 import type { GameQuestion } from '@/domain/question';
 import {
   FavoriteStore,
+  MAX_FAVORITES,
   type FavoriteMutationResult,
   type FavoriteReconcileResult,
 } from '@/lib/favorites';
@@ -69,7 +70,11 @@ export function createGameFavoritesController({
     const result = store.toggleId(question.id);
 
     if (!result.ok) {
-      showMessage('Favorites are unavailable in this browser.');
+      showMessage(
+        result.reason === 'limit'
+          ? `You can save up to ${MAX_FAVORITES} questions. Remove a favorite before saving another.`
+          : 'Favorites are unavailable in this browser.',
+      );
       return result;
     }
 

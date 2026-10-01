@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
+import { loadEnv } from 'vite';
 import { SITE_URL, isSitemapEligible } from './src/config/site-static.mjs';
 import buildArtifacts from './src/scripts/build-artifacts.ts';
 
@@ -17,9 +18,16 @@ import buildArtifacts from './src/scripts/build-artifacts.ts';
  *    deprecated Pages integration).
  */
 const demoMode = process.env.ALLOW_DEMO_CONTENT === 'true';
+const envDirectory = demoMode
+  ? fileURLToPath(new URL('./tools/mock-env', import.meta.url))
+  : process.cwd();
+const canonicalSite = (
+  loadEnv(demoMode ? 'demo' : 'production', envDirectory, 'PUBLIC_SITE_URL').PUBLIC_SITE_URL ||
+  SITE_URL
+).replace(/\/+$/, '');
 
 export default defineConfig({
-  site: SITE_URL,
+  site: canonicalSite,
   output: 'static',
   trailingSlash: 'always',
   prerenderConflictBehavior: 'error',
@@ -46,9 +54,12 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
     }),
-    buildArtifacts(),
+    buildArtifacts(canonicalSite),
   ],
   vite: {
+    define: {
+      'import.meta.env.PUBLIC_SITE_URL': JSON.stringify(canonicalSite),
+    },
     // Demo builds use an isolated env directory so an owner's .env cannot
     // accidentally alter the local preview.
     envDir: demoMode ? fileURLToPath(new URL('./tools/mock-env', import.meta.url)) : undefined,

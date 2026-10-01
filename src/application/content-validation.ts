@@ -35,6 +35,26 @@ const DEFAULT_RESERVED = Object.values(ROUTES).filter(
   (p) => p !== '/' && !p.endsWith('/s/') && !p.endsWith('/game-data/'),
 );
 
+function validId(value: string): boolean {
+  return value.trim().length > 0 && value.trim() === value && value.length <= 128;
+}
+
+function validDate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
+function validTimestamp(value: string): boolean {
+  return (
+    /^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/.test(
+      value,
+    ) &&
+    validDate(value.slice(0, 10)) &&
+    Number.isFinite(Date.parse(value))
+  );
+}
+
 export function validateContent(
   categories: readonly CategoryWithCount[],
   questions: readonly Question[],
@@ -51,12 +71,43 @@ export function validateContent(
 
   const categoryById = new Map(categories.map((c) => [c.id, c]));
   const published = questions.filter((q) => q.status === 'published');
+  if (!options.allowDemoContent && !published.length)
+    push('error', 'CONTENT_EMPTY', 'Production requires at least one published question.');
 
   // --- Categories ------------------------------------------------------------
   const slugs = new Map<string, string[]>();
   const paths = new Map<string, string[]>();
+  const categoryIds = new Map<string, string[]>();
   for (const c of categories) {
     const label = `category ${c.slug} (${c.id})`;
+    categoryIds.set(c.id, [...(categoryIds.get(c.id) ?? []), c.slug]);
+    if (!validId(c.id))
+      push(
+        'error',
+        'CATEGORY_INVALID_ID',
+        `${label} needs a nonempty ID of at most 128 characters`,
+        [c.id],
+      );
+    if (!Number.isSafeInteger(c.sortOrder))
+      push('error', 'CATEGORY_INVALID_ORDER', `${label} sort order must be a safe integer`, [c.id]);
+    if (
+      !validTimestamp(c.createdAt) ||
+      !validTimestamp(c.updatedAt) ||
+      Date.parse(c.updatedAt) < Date.parse(c.createdAt)
+    )
+      push(
+        'error',
+        'CATEGORY_INVALID_DATES',
+        `${label} needs valid creation/update timestamps in chronological order`,
+        [c.id],
+      );
+    if (
+      (c.seasonalStart !== null && !validDate(c.seasonalStart)) ||
+      (c.seasonalEnd !== null && !validDate(c.seasonalEnd))
+    )
+      push('error', 'CATEGORY_INVALID_SEASONAL_DATES', `${label} needs valid seasonal dates`, [
+        c.id,
+      ]);
     if (!CATEGORY_STATUSES.includes(c.status))
       push('error', 'CATEGORY_INVALID_STATUS', `${label} has invalid status "${c.status}"`, [c.id]);
     if (!SLUG_PATTERN.test(c.slug))
@@ -141,6 +192,11 @@ export function validateContent(
         );
     }
   }
+  for (const [id, slugs] of categoryIds)
+    if (slugs.length > 1)
+      push('error', 'CATEGORY_DUPLICATE_ID', `Category ID ${id} is shared by ${slugs.join(', ')}`, [
+        id,
+      ]);
   for (const [slug, ids] of slugs)
     if (ids.length > 1)
       push('error', 'CATEGORY_DUPLICATE_SLUG', `Duplicate category slug "${slug}"`, ids);
@@ -155,6 +211,33 @@ export function validateContent(
   const reversed = new Map<string, Map<string, string[]>>();
   for (const q of questions) {
     const label = `question ${q.id}`;
+    if (!validId(q.id))
+      push(
+        'error',
+        'QUESTION_INVALID_ID',
+        `${label} needs a nonempty ID of at most 128 characters`,
+        [q.id],
+      );
+    if (!Number.isSafeInteger(q.sortOrder))
+      push('error', 'QUESTION_INVALID_ORDER', `${label} sort order must be a safe integer`, [q.id]);
+    if (
+      !validTimestamp(q.createdAt) ||
+      !validTimestamp(q.updatedAt) ||
+      Date.parse(q.updatedAt) < Date.parse(q.createdAt) ||
+      (q.publishedAt !== null &&
+        (!validTimestamp(q.publishedAt) ||
+          Date.parse(q.publishedAt) < Date.parse(q.createdAt) ||
+          Date.parse(q.publishedAt) > Date.parse(q.updatedAt))) ||
+      (q.status === 'published' && q.publishedAt === null)
+    )
+      push(
+        'error',
+        'QUESTION_INVALID_DATES',
+        `${label} needs valid chronological timestamps and a publication date when published`,
+        [q.id],
+      );
+    if (new Set(q.categoryIds).size !== q.categoryIds.length)
+      push('error', 'QUESTION_DUPLICATE_CATEGORY', `${label} repeats a category ID`, [q.id]);
     const hasPublishedCategory = q.categoryIds.some(
       (categoryId) => categoryById.get(categoryId)?.status === 'published',
     );

@@ -8,7 +8,7 @@
  */
 import type { AstroIntegration } from 'astro';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
@@ -45,11 +45,11 @@ function appVersion(): string {
   }
 }
 
-export default function buildArtifacts(): AstroIntegration {
+export default function buildArtifacts(siteUrl: string): AstroIntegration {
   // The Cloudflare adapter replaces process.env with Wrangler vars before the
   // done hook. Preserve the invoking build environment without validating it
   // during config loading (so `astro check` remains credential-free).
-  const invocationEnv = { ...process.env };
+  const invocationEnv = { ...process.env, PUBLIC_SITE_URL: siteUrl };
   return {
     name: 'wyr:build-artifacts',
     hooks: {
@@ -59,6 +59,16 @@ export default function buildArtifacts(): AstroIntegration {
         const outDir = existsSync(join(root, 'client')) ? join(root, 'client') : root;
         Object.assign(process.env, invocationEnv);
         const ctx = await getContentContext();
+        const homeHtml = readFileSync(join(outDir, 'index.html'), 'utf8');
+        const canonical = homeHtml.match(/<link\s+rel="canonical"\s+href="([^"]+)"/);
+        if (canonical?.[1] !== `${siteUrl}/`) {
+          throw new Error('Homepage canonical differs from the configured build origin.');
+        }
+        await writeFile(
+          join(outDir, 'robots.txt'),
+          `User-agent: *\nAllow: /\nSitemap: ${ctx.env.siteUrl}/sitemap-index.xml\n`,
+          'utf8',
+        );
         const [categories, questions] = await Promise.all([
           ctx.categories.getAllCategories(),
           ctx.questions.getAllQuestions(),
@@ -110,6 +120,13 @@ export default function buildArtifacts(): AstroIntegration {
           appVersion: appVersion(),
           gitCommit: gitCommit(),
           dataProvider: ctx.env.dataProvider,
+          articles: readdirSync('src/content/blog')
+            .filter((file) => file.endsWith('.md'))
+            .map((file) => ({
+              id: file,
+              body: readFileSync(join('src/content/blog', file), 'utf8'),
+              data: {},
+            })),
         });
         await writeFile(
           join(outDir, 'deployment-manifest.json'),

@@ -52,7 +52,7 @@ const navCategories = await ctx.categoryService.getNavigationCategories();
 const structuredData: Record<string, unknown>[] = [
   websiteJsonLd(
     siteUrl,
-    'Free Would You Rather questions for kids, teens, adults, couples, friends, family, work and classrooms.',
+    'Free Would You Rather questions to browse, play and save from our published collections.',
   ),
   organizationJsonLd(siteUrl, PUBLIC_EMAIL),
   ...(breadcrumbs.length > 1 ? [breadcrumbJsonLd(siteUrl, breadcrumbs)] : []),

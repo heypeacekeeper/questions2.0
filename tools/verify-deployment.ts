@@ -1,3 +1,5 @@
+import { SITE_URL } from '../src/config/site-static.mjs';
+
 interface HealthResponse {
   ok?: boolean;
   status?: string;
@@ -41,6 +43,7 @@ async function fetchWithRetry(path: string): Promise<Response> {
   for (let attempt = 1; attempt <= 10; attempt += 1) {
     try {
       const response = await fetch(`${baseUrl}${path}`, {
+        signal: AbortSignal.timeout(10_000),
         headers: {
           accept: 'application/json,text/html',
           'cache-control': 'no-cache',
@@ -121,7 +124,9 @@ async function main(): Promise<void> {
 
   const homepage = await homepageResponse.text();
 
-  if (!homepage.includes('https://wouldyouratherquestions.org/')) {
+  const canonicalTag = homepage.match(/<link\b[^>]*\brel=["']canonical["'][^>]*>/i)?.[0];
+  const canonicalUrl = canonicalTag?.match(/\bhref=["']([^"']+)["']/i)?.[1];
+  if (canonicalUrl !== `${SITE_URL}/`) {
     throw new Error('Homepage does not contain the production canonical URL.');
   }
 

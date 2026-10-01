@@ -13,7 +13,15 @@ export const SITE_URL = (
 ).replace(/\/+$/, '');
 
 /** Route prefixes that must never appear in the XML sitemap. */
-export const SITEMAP_EXCLUDED_PREFIXES = ['/s/', '/api/', '/__', '/preview/', '/mock/', '/test/'];
+export const SITEMAP_EXCLUDED_PREFIXES = [
+  '/s/',
+  '/api/',
+  '/favorites/',
+  '/__',
+  '/preview/',
+  '/mock/',
+  '/test/',
+];
 
 /** Exact paths excluded from the sitemap. */
 export const SITEMAP_EXCLUDED_PATHS = ['/404/', '/404.html'];

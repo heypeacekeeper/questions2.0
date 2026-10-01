@@ -13,7 +13,7 @@ const packs = (await ctx.categoryService.getGamePackCategories()).map((category)
   name: category.name,
   icon: category.icon,
   description: category.shortDescription,
-  requiresAgeGate: category.requiresAgeGate,
+  requiresAgeGate: category.requiresAgeGate || category.isMature,
 }));
 const meta = {
   title: 'Play Would You Rather Questions',

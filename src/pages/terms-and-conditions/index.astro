@@ -1,6 +1,7 @@
 ---
 import ProseLayout from '@/layouts/ProseLayout.astro';
 import { ROUTES } from '@/config/site';
+import { PUBLISHER } from '@/config/publisher';
 const meta = {
   title: 'Terms and Conditions',
   description:
@@ -11,8 +12,15 @@ const meta = {
 
 <ProseLayout meta={meta} heading="Terms and Conditions" legal>
   <p>
-    Operator: <span class="placeholder">Would You Rather Questions — legal entity to be added</span>
-    . Governing law: <span class="placeholder">[JURISDICTION]</span>.
+    Operator:{' '}
+    <span class:list={{ placeholder: !PUBLISHER.name }}>
+      {PUBLISHER.name || 'Would You Rather Questions — legal entity to be added'}
+    </span>
+    . Governing law:{' '}
+    <span class:list={{ placeholder: !PUBLISHER.jurisdiction }}>
+      {PUBLISHER.jurisdiction || '[JURISDICTION]'}
+    </span>
+    .
   </p>
   <h2>Use of the site</h2>
   <p>

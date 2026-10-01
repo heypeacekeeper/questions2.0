@@ -7,22 +7,36 @@ import { sha256Hex } from '@/lib/crypto';
 export async function computeContentChecksum(
   categories: readonly CategoryWithCount[],
   questions: readonly Question[],
+  articles: readonly { id: string; body: string; data: Record<string, unknown> }[] = [],
 ): Promise<string> {
   const cats = categories
     .filter((c) => c.status === 'published')
-    .map(
-      (c) =>
-        `${c.id}|${c.slug}|${c.canonicalPath}|${c.h1}|${c.seoTitle}|${c.metaDescription}|${c.introduction}|${c.sortOrder}`,
-    )
-    .sort();
+    .map((c) => ({ ...c }))
+    .sort((a, b) => a.id.localeCompare(b.id));
   const qs = questions
     .filter((q) => q.status === 'published')
-    .map(
-      (q) =>
-        `${q.id}|${q.optionA}|${q.optionB}|${q.shareCode}|${q.sortOrder}|${[...q.categoryIds].sort().join(',')}`,
-    )
-    .sort();
-  return sha256Hex(`${cats.join('\n')}\n--\n${qs.join('\n')}`);
+    .map((q) => ({ ...q, categoryIds: [...q.categoryIds].sort() }))
+    .sort((a, b) => a.id.localeCompare(b.id));
+  const canonical = (value: unknown): unknown => {
+    if (value instanceof Date) return value.toISOString();
+    if (Array.isArray(value)) return value.map(canonical);
+    if (value && typeof value === 'object')
+      return Object.fromEntries(
+        Object.entries(value)
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([key, item]) => [key, canonical(item)]),
+      );
+    return value;
+  };
+  return sha256Hex(
+    JSON.stringify(
+      canonical({
+        categories: cats,
+        questions: qs,
+        articles: [...articles].sort((a, b) => a.id.localeCompare(b.id)),
+      }),
+    ),
+  );
 }
 
 export async function buildDeploymentManifest(input: {
@@ -32,6 +46,7 @@ export async function buildDeploymentManifest(input: {
   gitCommit: string | null;
   dataProvider: string;
   now?: Date;
+  articles?: readonly { id: string; body: string; data: Record<string, unknown> }[];
 }): Promise<DeploymentManifest> {
   return {
     buildTimestamp: (input.now ?? new Date()).toISOString(),
@@ -42,6 +57,10 @@ export async function buildDeploymentManifest(input: {
     publishedCategoryCount: input.categories.filter(
       (c) => c.status === 'published' && c.publishedQuestionCount > 0,
     ).length,
-    contentChecksum: await computeContentChecksum(input.categories, input.questions),
+    contentChecksum: await computeContentChecksum(
+      input.categories,
+      input.questions,
+      input.articles,
+    ),
   };
 }

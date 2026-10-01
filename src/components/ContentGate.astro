@@ -1,0 +1,58 @@
+---
+import { ROUTES, STORAGE_KEYS } from '@/config/site';
+interface Props {
+  restricted: boolean;
+}
+const { restricted } = Astro.props;
+---
+
+{restricted ? (
+  <section data-content-gate data-storage-key={STORAGE_KEYS.adultConfirmed}>
+    <div data-gate-notice class="content-intro">
+      <p>This collection contains mature questions. Confirm you are 18 or older to view them.</p>
+      <button class="secondary-button" type="button" data-confirm-age>
+        I'm 18 or older
+      </button>
+      <p>
+        <a href={ROUTES.play}>Return to the general-audience game</a>
+      </p>
+      <noscript>
+        <p>
+          Age confirmation requires JavaScript. The general-audience question lists remain
+          available.
+        </p>
+      </noscript>
+    </div>
+    <div data-gated-content hidden>
+      <slot />
+    </div>
+  </section>
+) : (
+  <slot />
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-content-gate]').forEach((gate) => {
+    const content = gate.querySelector<HTMLElement>('[data-gated-content]');
+    const notice = gate.querySelector<HTMLElement>('[data-gate-notice]');
+    const unlock = () => {
+      if (content) content.hidden = false;
+      if (notice) notice.hidden = true;
+    };
+    try {
+      if (localStorage.getItem(gate.dataset.storageKey!) === '1') unlock();
+    } catch {
+      /* Confirmation still works for this visit without storage. */
+    }
+    gate.querySelector('[data-confirm-age]')?.addEventListener('click', () => {
+      try {
+        localStorage.setItem(gate.dataset.storageKey!, '1');
+      } catch {
+        /* Visit-only confirmation. */
+      }
+      unlock();
+      const focusTarget = content?.querySelector<HTMLElement>('button, a, [tabindex]');
+      focusTarget?.focus();
+    });
+  });
+</script>

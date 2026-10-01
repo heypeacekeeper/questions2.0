@@ -11,8 +11,9 @@
 
 ## Owner setup before publication
 
-- [ ] Replace or archive all published demo questions, then add and review original questions in the JSON files.
+- [x] Remove published demo questions; the initial Kids collection contains 55 original questions.
+- [ ] Add and review the remaining collections supplied by the owner.
 - [ ] Run `npm run validate:content` and `npm run build` with demo content disallowed.
 - [ ] Confirm that the public contact email address can receive messages.
-- [ ] Replace legal-page placeholders and review privacy, editorial, and terms text.
+- [ ] Complete `src/config/publisher.ts` and review privacy, editorial, and terms text; `npm run validate:launch` must pass before deployment.
 - [ ] Review desktop and mobile pages with real content, then connect the Cloudflare domain and deploy.

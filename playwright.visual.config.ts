@@ -26,7 +26,7 @@ export default defineConfig({
     serviceWorkers: 'block',
   },
   webServer: {
-    command: `npm run build:demo && npx wrangler dev --config dist/server/wrangler.json --ip 127.0.0.1 --port ${port}`,
+    command: `npm run build && npx wrangler dev --config dist/server/wrangler.json --ip 127.0.0.1 --port ${port}`,
     url: `http://127.0.0.1:${port}`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
